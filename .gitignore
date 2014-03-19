@@ -1,0 +1,7 @@
+*.psd
+.directory
+.comments
+*.bak
+*.pdf
+*.swo
+*.swp
