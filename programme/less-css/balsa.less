@@ -1,0 +1,51 @@
+@import "print.less";
+
+@small-page-width: 130mm;
+@small-page-height: 200mm;
+
+
+.page {
+    height: @small-page-height;
+    width: @small-page-width;
+    margin: @crop;
+    outline: 1px solid silver;
+
+}
+
+div#container .page {
+    -webkit-flow-from: myFlow;
+    margin-bottom: @crop*2; 
+    margin-top: @page-height - @small-page-height + @crop*2; 
+
+    &:first-child {
+        margin-top: @page-height - @small-page-height + @crop; 
+    }
+    &:nth-child(odd) {
+        margin-right: @page-width - @small-page-width;
+    }
+    &:nth-child(even) {
+        margin-left: @page-width - @small-page-width + @crop;
+    }
+}
+div#content {
+    -webkit-flow-into: myFlow;
+}
+
+div#container-notes {
+    position: absolute;
+    top: @crop;
+}
+
+div#container-notes .page {
+    -webkit-flow-from: notesFlow;
+    height: @page-height - @small-page-height;
+    width: @page-width;
+    -webkit-region-break-after: always;
+    page-break-after: always;
+    margin-top: 0; 
+    margin-bottom: @page-height - (@page-height - @small-page-height) + @crop*2;
+}
+div#content-notes {
+    -webkit-flow-into: notesFlow;
+}
+
