@@ -44,6 +44,9 @@ an option; type in a terminal:
 If you have the error «pdf viewer is not available», you need to install
 chromium-libpdf (tested on Arch Linux).
 
+If you get an error saying that chromium is not a command, try 
+    chromium-browser --enable-print-preview
+
 
 
 First launch
