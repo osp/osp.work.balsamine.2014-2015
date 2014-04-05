@@ -18,7 +18,7 @@ html.debug {
     .page {
         outline: 1px solid purple;
     }
-    .bouge {
+    .moveable {
         outline: 1px solid yellow;
     }
 }
@@ -45,7 +45,7 @@ html.debug {
 
 @page {
     //size: @page-width @page-height; // format coupé
-    size: @page-width-crop @page-height-crop;  // format avec cropmarks
+    size: @page-width-crop @page-height-crop !important;  // format avec cropmarks
     margin: 0;
 }
 
@@ -207,15 +207,17 @@ p {
 }
 
 
-/* __________________________________ ABSOLUTE POSITIONNED OBJECTS __________________________________ */
+/* __________________________________ ABSOLUTE POSITIONED OBJECTS __________________________________ */
 /* Adding .moveable class to an object makes it absolutely positionned on the page.
  * You can then move it around and resize it.
  * Copy its properties (i.e. "top: 22px; left: 101px; width: 212px; height: 244px;).
  * Paste those properties back to the object's "style" attribute.
+ * You can resize proportionally by holding Shift (neat!)
  */
 .moveable {
     position: absolute;
     float: left;
+    overflow: hidden;
 
     &:hover {
         z-index: 1000;
@@ -276,4 +278,14 @@ p {
     &:hover {
         color: red;
     }
+}
+
+/* __________________________________ IMAGES __________________________________ */
+/* Use those classes for images to fit width or height of parent elements or both. */
+
+img.fit-height {
+    height: 100%;
+}
+img.fit-width {
+    width: 100%;
 }
