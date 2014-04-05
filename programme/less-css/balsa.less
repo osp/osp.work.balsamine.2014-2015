@@ -1,7 +1,11 @@
 @import "print.less";
 
+/* __________________________________ BALSA SPECIFIC DOUBLE STRUCTURE __________________________________ */
 @small-page-width: 130mm;
 @small-page-height: 200mm;
+
+@font-size: 16pt;
+@line-height: 1.2em;
 
 html.debug {
     .texte {
@@ -15,19 +19,19 @@ html.debug {
     position: absolute;
     top: 0;
     margin: 0;
-    margin-bottom: @crop*2; 
     margin-top: @page-height - @small-page-height; 
     width: @small-page-width;
     height: @small-page-height;
-
+    /* margins inside the main booklet */
+    padding-left: 10mm;
+    padding-right: 10mm;
+    padding-top: 10mm;
+    padding-bottom: 10mm;
 }
 .glose {
     position: absolute;
-    top: 0;
     height: @page-height - @small-page-height;
     width: @page-width;
-    margin-top: 0; 
-    margin-bottom: @page-height - (@page-height - @small-page-height) + @crop*2;
 }
 
 div#container .page {
@@ -69,3 +73,28 @@ div#content-notes {
     -webkit-flow-into: notesFlow;
 }
 
+
+
+/* __________________________________ TYPOGRAPHY __________________________________ */
+body {
+    font-family: "Ume P Mincho";
+}
+h2 {
+    font-family: "Ume Mincho Balsa";
+    text-transform: uppercase;
+    font-size: 4em;
+    text-align: center;
+}
+div.spectacle-infos {
+    font-family: "LS";
+    line-height: 1.3em;
+    -webkit-column-count: 2;
+    width: @small-page-width - 20mm;
+    text-align: center;
+    padding: 1em;
+}
+div.notes {
+    -webkit-region-break-before: always;
+    -webkit-region-break-after: always;
+    font-family: "Ume P Gothic Balsa";
+}

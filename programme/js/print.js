@@ -22,6 +22,7 @@ $(window).load(function(){
 
     $("div.moveable").append("<div class='properties'>Properties</div>").draggable(
             {
+                cursor: "move",
                 stack: "div.moveable", 
             }).resizable();
 
@@ -32,7 +33,7 @@ $(window).load(function(){
         var height = $(this).parent().height();
         var p = new Popelt({
             title: "Properties to copy/paste into this object's style attribute.",
-            content: 'style = "top: ' + top + '; left: ' + left + '; width: ' + width + 'px; height: ' + height + 'px;"',
+            content: 'style="top: ' + top + '; left: ' + left + '; width: ' + width + 'px; height: ' + height + 'px;"',
         }).show();
     });
 });
