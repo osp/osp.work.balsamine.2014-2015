@@ -68,6 +68,7 @@ html {
 
 }
 body {
+    position: absolute;
 }
 
 .page {
@@ -90,7 +91,7 @@ body {
     }
 
 }
-div#container .page {
+div#structure .page {
     -webkit-flow-from: myFlow;
     page-break-after: always;
 }
@@ -114,10 +115,6 @@ div.preview-page {
     outline-offset: -@crop;
     /*display: block;*/
     counter-increment: page-counter;
-
-    &:after {
-        content: counter(page-counter);
-    }
 }
  
 /* __________________________________ CROP MARKS  __________________________________ */
@@ -170,13 +167,16 @@ div.crop-left {
 }
  
 /* __________________________________ PAGINATION __________________________________ */
-/*div.folio {*/
+div.folio {
     /*position: absolute;*/
     /*bottom: 20mm;*/
     /*width: 100%;*/
     /*text-align: center;*/
     /*z-index: 1000;*/
-/*}*/
+    &:after {
+        content: counter(page-counter);
+    }
+}
 
 /* __________________________________ CONTENT __________________________________ */
 div#content {
@@ -190,13 +190,13 @@ h1, h2, h3, h4, h5, h6 {
     region-break-inside: avoid;
     /*-webkit-region-break-after: avoid;*/
 }
-.page-break {
-    /* Apply this class to an element to put it on a new page.
+.region-break {
+    /* Apply this class to an element to put it on a new region.
      * Hint: 
      * You can also use an empty <div class="page-break"></div> 
      * if you want to put manual page breaks without attaching it to an HTML element
      */
-    page-break-before: always;
+    -webkit-region-break-before: always;
 }
 
 /* AN EXAMPLE TO AVOID PAGE BREAK INSIDE, 

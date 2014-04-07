@@ -22,19 +22,26 @@ html.debug {
     margin-top: @page-height - @small-page-height; 
     width: @small-page-width;
     height: @small-page-height;
+
     /* margins inside the main booklet */
-    padding-left: 10mm;
-    padding-right: 10mm;
-    padding-top: 10mm;
-    padding-bottom: 10mm;
+    padding-left: 7mm;
+    padding-right: 7mm;
+    padding-top: 7mm;
+    padding-bottom: 7mm;
 }
 .glose {
     position: absolute;
     height: @page-height - @small-page-height;
     width: @page-width;
+
+    /* margins inside the main booklet */
+    padding-left: 7mm;
+    padding-right: 7mm;
+    padding-top: 7mm;
+    padding-bottom: 7mm;
 }
 
-div#container .page {
+div#structure .page {
     -webkit-flow-from: inherit;
     position: relative;
     padding: 0;
@@ -48,29 +55,31 @@ div#container .page {
         left: @page-width - @small-page-width;
     }
 }
-div#container .page div {
+div#structure .page div {
     -webkit-flow-from: myFlow;
 }
 div#content {
     -webkit-flow-into: myFlow;
 }
 
-div#container-notes {
-    position: absolute;
-    top: @crop;
-}
+.column20 {
+    float: left;
+    height: 100%;
+    width: 20%;
 
-div#container-notes .page {
-    -webkit-flow-from: notesFlow;
-    height: @page-height - @small-page-height;
-    width: @page-width;
-    -webkit-region-break-after: always;
-    page-break-after: always;
-    margin-top: 0; 
-    margin-bottom: @page-height - (@page-height - @small-page-height) + @crop*2;
+    & + .column20 {
+        padding-left: 0.5em;
+    }
 }
-div#content-notes {
-    -webkit-flow-into: notesFlow;
+.column50 {
+    float: left;
+    height: 100%;
+    width: 50%;
+    padding: 0.5em;
+
+    & + .column50 {
+        padding-left: 0.5em;
+    }
 }
 
 
@@ -78,17 +87,17 @@ div#content-notes {
 /* __________________________________ TYPOGRAPHY __________________________________ */
 body {
     font-family: "Ume P Mincho";
+    font-size: 16pt;
 }
 h2 {
     font-family: "Ume Mincho Balsa";
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
 }
 div.spectacle-infos {
     font-family: "LS";
-    line-height: 1.3em;
-    -webkit-column-count: 2;
+    line-height: 1em;
     width: @small-page-width - 20mm;
     text-align: center;
     padding: 1em;
@@ -97,4 +106,5 @@ div.notes {
     -webkit-region-break-before: always;
     -webkit-region-break-after: always;
     font-family: "Ume P Gothic Balsa";
+    font-size: 10pt;
 }
