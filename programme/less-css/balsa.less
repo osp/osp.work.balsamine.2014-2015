@@ -8,14 +8,14 @@
 @line-height: 1.2em;
 
 html.debug {
-    .texte {
+    .cahier {
         outline: 1px solid Magenta;
     }
     .glose {
         outline: 1px solid orange;
     }
 }
-.texte {
+.cahier {
     position: absolute;
     top: 0;
     margin: 0;
@@ -48,10 +48,10 @@ div#structure .page {
     /*margin-bottom: @crop*2; */
     /*margin-top: @page-height - @small-page-height + @crop*2; */
 
-    &:nth-child(odd) .texte {
+    &:nth-child(odd) .cahier {
         left: 0;
     }
-    &:nth-child(even) .texte {
+    &:nth-child(even) .cahier {
         left: @page-width - @small-page-width;
     }
 }
