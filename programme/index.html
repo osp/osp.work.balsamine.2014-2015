@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
-<html class="">
+<html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Balsa 2014-2015</title>
 
-    <link rel="stylesheet" type="text/css" href="less-css/reset.css" />
-    <link rel="stylesheet" href="less-css/print.less" type="text/less" media="all" charset="utf-8">
-    <link rel="stylesheet" href="less-css/balsa.less" type="text/less" media="all" charset="utf-8">
-    <link rel="stylesheet" href="js/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="balsa.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
 </head>
 <body>
     <!-- PRINT MARKS -->
@@ -30,104 +30,35 @@
                 <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
                 <div class="crop-top" style="left: 0cm; top: 0"></div>
             </div>
+
+            <section id="master-region" class="page">
+				<div class="cahier">
+            	</div>
+            	<section class="glose">
+                	<div class="column20">
+                	</div>
+                	<div class="column20">
+                	</div>
+                	<div class="column20">
+                	</div>
+                	<div class="column20">
+                	</div>
+                	<div class="column20">
+                	</div>
+            	</section>
+           	 	<section class="folio">
+            	</section>
+            </section>
         </div>
     </div>
 
-    <!-- STRUCTURE OF TEXT BLOCKS -->
-    <div id="structure">
-        <div class="page">
-            <div class="cahier">
-            </div>
-            <section class="glose">
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-            </section>
-            <section class="folio">
-            </section>
-        </div>
-        <div class="page">
-            <div class="cahier">
-            </div>
-            <section class="glose">
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-            </section>
-            <section class="folio">
-            </section>
-        </div>
-        <div class="page">
-            <div class="cahier">
-            </div>
-            <section class="glose">
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-            </section>
-            <section class="folio">
-            </section>
-        </div>
-        <div class="page">
-            <div class="cahier">
-            </div>
-            <section class="glose">
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-            </section>
-            <section class="folio">
-            </section>
-        </div>
-        <div class="page">
-            <div class="cahier">
-            </div>
-            <section class="glose">
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-                <div class="column20">
-                </div>
-            </section>
-            <section class="folio">
-            </section>
-        </div>
+    <div id="interface">
+        <a id="debug" class="button" href="#">Debug</a>
+        <a id="preview" class="button" href="#">Preview</a>
     </div>
 
     <section id="container">
+        <!-- Content will be loaded here with Jquery. -->
     </section>
 
     <!-- MOVEABLE ELEMENTS -->
@@ -139,10 +70,10 @@
     </div>
 
     <!-- JAVASCRIPT -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="js/popelt-v1.0.min.js"></script>
-    <script type="text/javascript" src="js/less-1.3.0.min.js"></script>
-    <script type="text/javascript" src="js/print.js"></script>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
 </body>
 </html>

@@ -1,11 +1,34 @@
-var nb_page = 32;
+// Choose the number of pages of the document
+var nb_page = 16;
 
+
+// Loads main content into <section id="container">
 $("section#container").load("content.html");
 
 $(window).load(function(){
+    // __________________________________ DEBUG __________________________________ //
+    $("#debug").click(function(e){
+        e.preventDefault();
+        $("html").toggleClass("debug");
+    });
+
+
+    // __________________________________ PRINT PREVIEW __________________________________ //
+    $("a#preview").click(function(e){
+        e.preventDefault();
+        $("html").toggleClass("export");
+        $("img").each(function(){
+            var hires = $(this).attr("data-alt-src");
+            var lores = $(this).attr("src");
+            $(this).attr("data-alt-src", lores)
+            $(this).attr("src", hires)
+        });
+    });
+
+
     // __________________________________ PRINT MARKS __________________________________ //
-    doc_height = $("body").height();
-    page_height = $("#master-page").height(); 
+    var doc_height = $("body").height();
+    var page_height = $("#master-page").height(); 
 
     for (i = 0; i < nb_page; i++){
         $("#master-page").clone().addClass("preview-page").attr("id","page"+i).insertBefore($("#master-page"));
@@ -15,7 +38,7 @@ $(window).load(function(){
 
     // __________________________________ MOVEABLE ELEMENTS __________________________________ //
     $("div.moveable").
-        append("<div class='properties'>Properties</div>").
+        append("<div class='properties button'>Properties</div>").
         draggable({
                 cursor: "move",
                 stack: "div.moveable", 

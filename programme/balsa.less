@@ -41,13 +41,7 @@ html.debug {
     padding-bottom: 7mm;
 }
 
-div#structure .page {
-    -webkit-flow-from: inherit;
-    position: relative;
-    padding: 0;
-    /*margin-bottom: @crop*2; */
-    /*margin-top: @page-height - @small-page-height + @crop*2; */
-
+.preview-page {
     &:nth-child(odd) .cahier {
         left: 0;
     }
@@ -55,7 +49,15 @@ div#structure .page {
         left: @page-width - @small-page-width;
     }
 }
-div#structure .page div {
+.page {
+    -webkit-flow-from: inherit;
+    position: relative;
+    padding: 0;
+    /*margin-bottom: @crop*2; */
+    /*margin-top: @page-height - @small-page-height + @crop*2; */
+
+}
+.page div {
     -webkit-flow-from: myFlow;
 }
 div#content {
