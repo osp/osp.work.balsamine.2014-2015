@@ -1,21 +1,25 @@
 @import "print.less";
 
-@font-face {
-        font-family: 'DauphineRegular';
-        src: url('../fonts/DauphineRegular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
+body {
+    font-family: "Ume P Mincho";
+    font-size: 16pt;
 }
-
-*, p {
+h2 {
     font-family: "Ume Mincho Balsa";
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
 }
-
-.fontdauf {
-    font-family: "DauphineRegular", sans-serif;
+div.spectacle-infos {
+    font-family: "LS";
+    line-height: 1em;
+    width: @small-page-width - 20mm;
+    text-align: center;
+    padding: 1em;
 }
-
-.avecfont {
-     font-size: 30px;
-     font-family: 'DauphineRegular';    
+div.notes {
+    -webkit-region-break-before: always;
+    -webkit-region-break-after: always;
+    font-family: "Ume P Gothic Balsa";
+    font-size: 10pt;
 }
