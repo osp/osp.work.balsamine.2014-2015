@@ -213,11 +213,9 @@ div#print-marks {
 div.preview-page {
     width: @page-width-crop; 
     height: @page-height-crop;
-    //position: absolute; 
     position: relative;
     z-index: -10;
     outline-offset: -@crop;
-    /*display: block;*/
     counter-increment: page-counter;
 
     &:after {
