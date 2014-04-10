@@ -57,11 +57,17 @@ html.debug {
     /*margin-top: @page-height - @small-page-height + @crop*2; */
 
 }
-.page div {
+.cahier {
     -webkit-flow-from: myFlow;
 }
-div#content {
+.glose div {
+    -webkit-flow-from: notesFlow;
+}
+div#content .texte {
     -webkit-flow-into: myFlow;
+}
+div#content .notes {
+    -webkit-flow-into: notesFlow;
 }
 
 .column20 {
