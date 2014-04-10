@@ -1,9 +1,11 @@
 @import "print.less";
 @import "balsa.less";
+@color:#193300;
 
 body {
     font-family: "Ume P Mincho";
     font-size: 16pt;
+    color:@color;
 }
 h2 {
     font-family: "Ume Mincho Balsa";
@@ -23,4 +25,23 @@ div.notes {
     -webkit-region-break-after: always;
     font-family: "Ume P Gothic Balsa";
     font-size: 10pt;
+}
+
+.bible {
+    font-size: 12pt;
+}
+
+dt {
+    font-family: Ume P Gothic Balsa;
+    text-transform: uppercase;
+}
+
+dd {
+    margin-bottom: 1px;
+    border: solid thin @color;
+    border-top: none;
+    border-left: none;
+    display: inline;
+    padding: 0px 3px 1px 3px;
+    margin: 0 2px 0 0;
 }
