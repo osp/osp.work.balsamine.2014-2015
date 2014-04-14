@@ -2,6 +2,7 @@
 
   EGGBOTHATCHPY=~/.config/inkscape/extensions/eggbot_hatch.py
   INKSCAPEEXTENSION=/usr/share/inkscape/extensions
+  export PYTHONPATH=$INKSCAPEEXTENSION
 
   SVG=graydient.svg
 
@@ -9,10 +10,11 @@
   HATCHED=${SVG%%.*}_hatched.svg
 
 # --------------------------------------------------------------------------- #
-# MODIFY SVG BODY FOR EASIER PARSING
+# CONVERT TO GRAYSCALE AND MODIFY SVG BODY FOR EASIER PARSING
 # --------------------------------------------------------------------------- #
 
-      sed 's/ / \n/g' $SVG | \
+      python /usr/share/inkscape/extensions/color_grayscale.py $SVG | \
+      sed 's/ / \n/g' | \
       sed '/^.$/d' | \
       sed 's/>/>\n/g'| \
       sed -n '/<\/metadata>/,/<\/svg>/p' | sed '1d;$d' | \
@@ -81,7 +83,6 @@
   sed "s/NAME/$NAME/g" | \
   sed "s/ID/$ID/g"                                           >> $HATCHED
 
-
   for ID in `cat $LAYERED | \
              sed 's/inkscape:groupmode="layer"/\n&/g' | \
              sed 's/>/>\n/g' | \
@@ -98,7 +99,7 @@
 
       DISTANCE=`expr $BRIGHTNESS / 15 + 2`
       ANGLE=-$BRIGHTNESS
-      ANGLE=90
+    # ANGLE=90
 
       echo $SVGHEADER              > tmp.svg
       echo $GROUPSTART | \
@@ -118,8 +119,6 @@
      #   --hatchSpacing=HATCHSPACING
      #                         Spacing between hatch lines
  
-      export PYTHONPATH=$INKSCAPEEXTENSION
- 
       python $EGGBOTHATCHPY \
              --id=$ID \
              --hatchAngle=$ANGLE \
@@ -127,12 +126,12 @@
              tmp.svg | \
              sed 's/</\n</g' | \
              grep "<path" | \
-             grep -v "fill:#$HEXCOLOR" >> $HATCHED
+             grep -v "fill:#$HEXCOLOR"                       >> $HATCHED
 
   done
 
-  echo $GROUPCLOSE                  >> $HATCHED
-  echo "</svg>"                     >> $HATCHED
+  echo $GROUPCLOSE                                           >> $HATCHED
+  echo "</svg>"                                              >> $HATCHED
 
 
 # --------------------------------------------------------------------------- #
