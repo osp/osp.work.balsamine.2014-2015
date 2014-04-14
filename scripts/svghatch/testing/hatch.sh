@@ -1,5 +1,7 @@
 #!/bin/bash
 
+  EGGBOTHATCHPY=~/.config/inkscape/extensions/eggbot_hatch.py
+  INKSCAPEEXTENSION=/usr/share/inkscape/extensions
 
   SVG=graydient.svg
 
@@ -116,9 +118,9 @@
      #   --hatchSpacing=HATCHSPACING
      #                         Spacing between hatch lines
  
-      export PYTHONPATH=/usr/share/inkscape/extensions
+      export PYTHONPATH=$INKSCAPEEXTENSION
  
-      python ~/.config/inkscape/extensions/eggbot_hatch.py \
+      python $EGGBOTHATCHPY \
              --id=$ID \
              --hatchAngle=$ANGLE \
              --hatchSpacing=$DISTANCE \
