@@ -4,7 +4,9 @@
   INKSCAPEEXTENSION=/usr/share/inkscape/extensions
   export PYTHONPATH=$INKSCAPEEXTENSION
 
-  SVG=graydient.svg
+  SVG=$1
+  if [[ -z "$1" ]]; then echo "please provide svg = $0 in.svg"; exit 0 ; fi
+
 
   LAYERED=${SVG%%.*}_layered.svg
   HATCHED=${SVG%%.*}_hatched.svg
@@ -16,6 +18,7 @@
       python /usr/share/inkscape/extensions/color_grayscale.py $SVG | \
       sed 's/ / \n/g' | \
       sed '/^.$/d' | \
+      sed ':a;N;$!ba;s/\n/ /g' | \
       sed 's/>/>\n/g'| \
       sed -n '/<\/metadata>/,/<\/svg>/p' | sed '1d;$d' | \
       sed ':a;N;$!ba;s/\n/ /g' | \
@@ -26,8 +29,12 @@
       sed 's/4Fgt7RfjIoPg7/\n</g' | \
       sed 's/display:none/display:inline/g' > ${SVG%%.*}.tmp
 
-  SVGHEADER=`tac $SVG | sed -n '/<\/metadata>/,$p' | tac`
-
+  SVGHEADER=`cat $SVG | \
+             sed ':a;N;$!ba;s/\n/ /g' | \
+             sed 's/</\n</g' | \
+             tac | \
+             sed -n '/<\/metadata>/,$p' | \
+             tac`
 
 # --------------------------------------------------------------------------- #
 # DISTRIBUTE DIFFERENT FILLS TO LAYERS (ONE LAYER PER LINE)
