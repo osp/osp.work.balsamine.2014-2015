@@ -86,10 +86,6 @@
 
   NAME="hatched"; ID=$NAME
 
-  echo $GROUPSTART | \
-  sed "s/NAME/$NAME/g" | \
-  sed "s/ID/$ID/g"                                           >> $HATCHED
-
   for ID in `cat $LAYERED | \
              sed 's/inkscape:groupmode="layer"/\n&/g' | \
              sed 's/>/>\n/g' | \
@@ -107,6 +103,12 @@
       DISTANCE=`expr $BRIGHTNESS / 15 + 2`
       ANGLE=-$BRIGHTNESS
     # ANGLE=90
+
+      NAME=$ID
+
+      echo $GROUPSTART | \
+      sed "s/NAME/$NAME/g" | \
+      sed "s/ID/$ID/g"                                       >> $HATCHED
 
       echo $SVGHEADER              > tmp.svg
       echo $GROUPSTART | \
@@ -135,16 +137,17 @@
              grep "<path" | \
              grep -v "fill:#$HEXCOLOR"                       >> $HATCHED
 
+       echo $GROUPCLOSE                                      >> $HATCHED
+
   done
 
-  echo $GROUPCLOSE                                           >> $HATCHED
   echo "</svg>"                                              >> $HATCHED
 
 
 # --------------------------------------------------------------------------- #
 # CLEAN UP
 # --------------------------------------------------------------------------- #
-  rm tmp.svg $LAYERED ${SVG%%.*}.tmp
+  rm tmp.svg ${SVG%%.*}.tmp # $LAYERED
 
 
 
