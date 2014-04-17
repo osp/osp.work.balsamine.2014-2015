@@ -82,7 +82,7 @@
 # HATCH FILL PER LAYER (= WERE FILLS)
 # --------------------------------------------------------------------------- #
 
-  echo $SVGHEADER                                            >  $HATCHED
+  echo $SVGHEADER                                               >  $HATCHED
 
   NAME="hatched"; ID=$NAME
 
@@ -104,11 +104,13 @@
       ANGLE=-$BRIGHTNESS
     # ANGLE=90
 
+      STROKECOLOR=$HEXCOLOR
+
       NAME=$ID
 
       echo $GROUPSTART | \
       sed "s/NAME/$NAME/g" | \
-      sed "s/ID/$ID/g"                                       >> $HATCHED
+      sed "s/ID/$ID/g"                                          >> $HATCHED
 
       echo $SVGHEADER              > tmp.svg
       echo $GROUPSTART | \
@@ -135,13 +137,15 @@
              tmp.svg | \
              sed 's/</\n</g' | \
              grep "<path" | \
-             grep -v "fill:#$HEXCOLOR"                       >> $HATCHED
+             grep -v "fill:#$HEXCOLOR" | \
+             sed "s/stroke:#[^;]*;/stroke:#$STROKECOLOR;/g" | \
+             sed "s/stroke:#[^\"]*\"/stroke:#$STROKECOLOR\"/g"  >> $HATCHED
 
-       echo $GROUPCLOSE                                      >> $HATCHED
+       echo $GROUPCLOSE                                         >> $HATCHED
 
   done
 
-  echo "</svg>"                                              >> $HATCHED
+  echo "</svg>"                                                 >> $HATCHED
 
 
 # --------------------------------------------------------------------------- #
