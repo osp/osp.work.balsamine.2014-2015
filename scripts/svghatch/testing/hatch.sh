@@ -98,10 +98,10 @@
       RHEX=`echo $HEXCOLOR | cut -c 1-2 | tr '[:lower:]' '[:upper:]'`
       BRIGHTNESS=`echo "ibase=16;obase=A;$RHEX" | bc`
 
-      DISTMIN=2
-      DISTMAX=50
-      ANGLEMIN=70
-      ANGLEMAX=110
+      DISTMIN=-10
+      DISTMAX=70
+      ANGLEMIN=30
+      ANGLEMAX=150
 
       function map {
         I=$1
