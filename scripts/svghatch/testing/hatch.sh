@@ -94,15 +94,29 @@
              grep id= | cut -d "\"" -f 2`  
    do
 
-    # echo $ID
-
       HEXCOLOR=`echo $ID | cut -d "-" -f 2`
       RHEX=`echo $HEXCOLOR | cut -c 1-2 | tr '[:lower:]' '[:upper:]'`
       BRIGHTNESS=`echo "ibase=16;obase=A;$RHEX" | bc`
 
-      DISTANCE=`expr $BRIGHTNESS / 15 + 2`
-      ANGLE=-$BRIGHTNESS
-    # ANGLE=90
+      DISTMIN=2
+      DISTMAX=50
+      ANGLEMIN=70
+      ANGLEMAX=110
+
+      function map {
+        I=$1
+        INLO=$2
+        INHI=$3
+        OUTLO=$4
+        OUTHI=$5
+        P=$(( (I*100) / (INHI-INLO) ))
+        O=$(( OUTLO + (P * (OUTHI-OUTLO) / 100) ))
+        echo $O
+      }
+
+      ANGLE=`map $BRIGHTNESS 0 255 $ANGLEMIN $ANGLEMAX`
+      DISTANCE=`map $BRIGHTNESS 0 255 $DISTMIN $DISTMAX`
+
 
       STROKECOLOR=$HEXCOLOR
 
