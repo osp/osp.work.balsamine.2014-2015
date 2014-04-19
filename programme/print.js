@@ -1,5 +1,5 @@
 // Choose the number of pages of the document
-var nb_page = 42;
+var nb_page = 47;
 
 
 // Loads main content into <section id="container">
