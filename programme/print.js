@@ -1,5 +1,5 @@
 // Choose the number of pages of the document
-var nb_page = 47;
+var nb_page = 52;
 
 
 // Loads main content into <section id="container">
@@ -7,15 +7,17 @@ $("section#container").load("content.html");
 
 $(window).load(function(){
     // __________________________________ DEBUG __________________________________ //
-    $("#debug").click(function(e){
+    $("button#debug").click(function(e){
         e.preventDefault();
+        $(this).toggleClass("button-active");
         $("html").toggleClass("debug");
     });
 
 
     // __________________________________ PRINT PREVIEW __________________________________ //
-    $("a#preview").click(function(e){
+    $("button#preview").click(function(e){
         e.preventDefault();
+        $(this).toggleClass("button-active");
         $("html").toggleClass("export");
         $("img").each(function(){
             var hires = $(this).attr("data-alt-src");
@@ -30,10 +32,21 @@ $(window).load(function(){
     var doc_height = $("body").height();
     var page_height = $("#master-page").height(); 
 
-    for (i = 0; i < nb_page; i++){
-        $("#master-page").clone().addClass("preview-page").attr("id","page"+i).insertBefore($("#master-page"));
+    for (i = 1; i < nb_page; i++){
+        $("#master-page").clone().addClass("preview-page").attr("id","page-"+i).insertBefore($("#master-page"));
     }
     $("#master-page").hide();
+
+    // __________________________________ TOC __________________________________ //
+    $(".preview-page").each(function(){
+        page = $(this).attr("id");
+        $("#toc-pages").append("<li><a href='#" + page + "'>" + page.replace("-", " ") + "</a></li>")
+    });
+    $("#goto").click(function(e){
+        e.preventDefault();
+        $(this).toggleClass("button-active");
+        $("#toc-pages").toggle();
+    });
 
 
     // __________________________________ MOVEABLE ELEMENTS __________________________________ //

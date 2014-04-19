@@ -42,17 +42,16 @@ html.debug {
 /* __________________________________ INTERFACE CLASSES  __________________________________ */
 .button {
     z-index: 1000;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
     background-color: black;
     font-family:sans-serif; 
     text-transform: uppercase;
     font-size: 12px !important;
     letter-spacing: 1px;
     color: white;
+    margin: 0;
     padding: 5px 7px;
     cursor: pointer;
+    border: 0;
 
     &:hover {
         background-color: white;
@@ -60,8 +59,18 @@ html.debug {
         outline: 1px solid black;
     }
 }
+.button-active {
+    background-color: white;
+    color: black;
+    outline: 1px solid black;
+}
 
 div#interface {
+    font-family:sans-serif; 
+    text-transform: uppercase;
+    font-size: 12px !important;
+    line-height: 16px;
+    letter-spacing: 1px;
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -69,6 +78,28 @@ div#interface {
     a {
         text-decoration: none;
         position: static;
+    }
+
+    div#toc {
+        display: inline-block;
+
+        ul#toc-pages {
+            display: none;
+            background-color: black;
+            position: absolute;
+            right: 0;
+            bottom: 2em;
+            height: 200px;
+            width: 80px;
+            overflow: auto;
+
+            a {
+                color: white;
+            }
+        }
+        button {
+            width: 80px;
+        }
     }
 }
 
