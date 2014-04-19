@@ -42,7 +42,7 @@
 
   GROUPSTART="<g inkscape:label=\"NAME\" inkscape:groupmode=\"layer\" id=\"ID\">"
   GROUPCLOSE="</g>"
-  COLORELEMENT="fill:"
+  COLORELEMENT="fill:#"
 
 # --------------------------------------------------------------------------- #
   echo $SVGHEADER                                            >  $LAYERED
@@ -51,14 +51,17 @@
                 sed "s/$COLORELEMENT/\n$COLORELEMENT/g" | \
                 sed 's/;/;\n/g' | \
                 sed 's/"/"\n/g' | \
-                grep $COLORELEMENT | \
+                grep "$COLORELEMENT" | \
                 cut -d ":" -f 2 | \
                 sort | uniq`
    do
-       NAME="fill-"`echo $COLOR | \
-             cut -d "#" -f 2 | \
-             cut -d ";" -f 1 | \
-             cut -d "\"" -f 1`
+
+       COLOR=`echo $COLOR | \
+              cut -d "#" -f 2 | \
+              cut -d ";" -f 1 | \
+              cut -d "\"" -f 1`
+
+       NAME="fill-"$COLOR
 
        ID=$NAME
      # ----------------------------------------------------------------- #
@@ -98,10 +101,10 @@
       RHEX=`echo $HEXCOLOR | cut -c 1-2 | tr '[:lower:]' '[:upper:]'`
       BRIGHTNESS=`echo "ibase=16;obase=A;$RHEX" | bc`
 
-      DISTMIN=-10
-      DISTMAX=70
-      ANGLEMIN=30
-      ANGLEMAX=150
+      DISTMIN=0
+      DISTMAX=30
+      ANGLEMIN=0
+      ANGLEMAX=90
 
       function map {
         I=$1
@@ -114,9 +117,9 @@
         echo $O
       }
 
+
       ANGLE=`map $BRIGHTNESS 0 255 $ANGLEMIN $ANGLEMAX`
       DISTANCE=`map $BRIGHTNESS 0 255 $DISTMIN $DISTMAX`
-
 
       STROKECOLOR=$HEXCOLOR
 
@@ -159,8 +162,45 @@
 
   done
 
-  echo "</svg>"                                                 >> $HATCHED
+# --------------------------------------------------------------------------- #
+# ADD THE STROKES
+# --------------------------------------------------------------------------- #
 
+  COLORELEMENT="stroke:#"
+
+  for COLOR in `cat ${SVG%%.*}.tmp | \
+                sed "s/$COLORELEMENT/\n$COLORELEMENT/g" | \
+                sed 's/;/;\n/g' | \
+                sed 's/"/"\n/g' | \
+                grep $COLORELEMENT | \
+                cut -d ":" -f 2 | \
+                sort | uniq`
+   do
+
+       COLOR=`echo $COLOR | \
+              cut -d "#" -f 2 | \
+              cut -d ";" -f 1 | \
+              cut -d "\"" -f 1`
+
+       NAME="stroke-"$COLOR
+
+       ID=$NAME
+     # ----------------------------------------------------------------- #
+
+       LAYER=`echo $GROUPSTART | \
+              sed "s/NAME/$NAME/g" | \
+              sed "s/ID/$ID/g"`
+
+       LAYER=$LAYER`grep -i ${COLORELEMENT}${COLOR} ${SVG%%.*}.tmp`
+       LAYER=$LAYER$GROUPCLOSE
+
+       echo $LAYER                                              >> $HATCHED
+
+  done
+
+
+
+  echo "</svg>"                                                 >> $HATCHED
 
 # --------------------------------------------------------------------------- #
 # CLEAN UP
