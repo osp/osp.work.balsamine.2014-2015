@@ -57,6 +57,9 @@ $(window).load(function(){
                 stack: "div.moveable", 
         }).
         resizable();
+    $("button#back2front").click(function(){
+        $("#print-marks").toggleClass("background");
+    });
 
     $('.properties').on('click', function() {
         var top = $(this).parent().css('top');

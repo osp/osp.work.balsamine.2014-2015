@@ -242,8 +242,13 @@ div#content {
 div#print-marks {
     position: absolute;
     top: 0;
-    z-index: -1000;
+    z-index: -500;
     width: 100%; 
+    z-index: -1000;
+
+    &.background {
+        z-index: -10000;
+    }
 }
 div.preview-page {
     width: @page-width-crop; 
