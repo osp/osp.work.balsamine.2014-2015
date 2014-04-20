@@ -15,7 +15,7 @@
 # CONVERT TO GRAYSCALE AND MODIFY SVG BODY FOR EASIER PARSING
 # --------------------------------------------------------------------------- #
 
-      python $PYTHONPATH/color_grayscale.py $SVG | \
+      python $INKSCAPEEXTENSION/color_grayscale.py $SVG | \
       sed 's/ / \n/g' | \
       sed '/^.$/d' | \
       sed ':a;N;$!ba;s/\n/ /g' | \
