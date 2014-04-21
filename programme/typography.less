@@ -4,7 +4,7 @@
 
 body {
     font-family: "Ume P Mincho";
-    font-size: 13pt;
+    font-size: 12.5pt;
     color:@color;
     
 }
@@ -21,7 +21,7 @@ h1 {
 h2 {
     font-family: "Ume Mincho Balsa";
     text-transform: uppercase;
-    font-size: 2.2em;
+    font-size: 2.1em;
     text-align: center;
     -webkit-region-break-before: always;
     margin-bottom:5px;
@@ -34,7 +34,10 @@ h3 {
     text-transform: uppercase;
     font-size: 1em;
     text-align: center;
-    -webkit-region-break-before: always;
+    /*-webkit-region-break-before: always;*/
+}
+.avoid-break{
+    -webkit-region-break-before: avoid;
 }
 
 div.spectacle-infos {
@@ -75,7 +78,7 @@ dd {
 
 .chant {
     font-family: "Ume P Mincho";
-    line-height: 1.2em;
+    line-height: 1.1em;
 
 }
 .spectacle-texte {
