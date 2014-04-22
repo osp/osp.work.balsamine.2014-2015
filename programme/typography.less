@@ -1,6 +1,19 @@
 @import "print.less";
 @import "balsa.less";
-@color: #193300;
+
+
+
+
+@font-face {
+    font-family: 'herscheytimes';
+    src: url(/fonts/herscheytimes.ttf);
+}
+
+@font-face {
+    font-family: 'Umeuto_40P_Gothic';
+    src: url(/fonts/Umeuto_40P_Gothic.ttf);
+}
+
 
 body {
     font-family: "Ume P Mincho";
@@ -18,6 +31,17 @@ h1 {
     margin-bottom:13px;
 
 }
+
+p:first-child:first-letter {
+    font-family: herscheytimes;
+    float:left; 
+    padding: 6px;
+    margin: -5px 11px -21px 0px;
+    font-size: 80px;
+    line-height: 1.4em;
+    color:@color-70;
+}
+
 h2 {
     font-family: "Ume Mincho Balsa";
     text-transform: uppercase;
@@ -25,7 +49,6 @@ h2 {
     text-align: center;
     -webkit-region-break-before: always;
     margin-bottom:5px;
-
 }
 
 
@@ -42,23 +65,47 @@ h3 {
 
 div.spectacle-infos {
     font-family: "LS";
+    font-size: 1.1em;
     line-height: 1em;
     width: @small-page-width - 20mm;
     text-align: center;
     padding: 1em;
 }
+
+
+div.spectacle-infos p:first-child:first-letter {
+ clear: both;
+    font-family: "LS";
+    font-size: 12.5pt;
+    text-align: center;
+    color:@color;
+    line-height: 1em;
+    float:left; 
+    padding: 0px;
+    margin: 0px;
+
+}
+
+
 div.notes {
     -webkit-region-break-before: always;
     -webkit-region-break-after: always;
     font-family: "Ume P Gothic Balsa";
     font-size: 8.3pt;
     line-height: 1.1em;
+}
 
+div.notes p:first-child:first-letter {
+    font-family: "Ume P Gothic Balsa";
+    font-size: 8.3pt;
+    line-height: 1.1em;
 }
 
 .bible {
     font-size: 10pt;
     margin-top:10px;
+    color:@color-50;
+
 }
 
 dt {
