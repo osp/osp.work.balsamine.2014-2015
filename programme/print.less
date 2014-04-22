@@ -37,6 +37,19 @@ html.debug {
 @page-margin-top: 10mm;
 @page-margin-bottom: 25mm;
 
+@color: black;
+@color-0: lighten(@color, 10%);
+@color-10: lighten(@color, 10%);
+@color-20: lighten(@color, 20%);
+@color-30: lighten(@color, 30%);
+@color-40: lighten(@color, 40%);
+@color-50: lighten(@color, 50%);
+@color-60: lighten(@color, 60%);
+@color-70: lighten(@color, 70%);
+@color-80: lighten(@color, 80%);
+@color-90: lighten(@color, 90%);
+@color-100: lighten(@color, 100%);
+
 
 
 /* __________________________________ INTERFACE CLASSES  __________________________________ */
@@ -119,6 +132,7 @@ div#interface {
     position: absolute;
     float: left;
     overflow: hidden;
+    z-index: -1010;
 
     &:hover {
         z-index: 1000;

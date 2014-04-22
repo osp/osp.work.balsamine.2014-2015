@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rotation Raster</title>
+	<script type="text/javascript" src="/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="/lib/paper-full.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $("#canvas").width($("#bitmap").width());
+            $("#canvas").height($("#bitmap").height());
+        });
+    
+
+    </script>
+	<script type="text/paperscript" canvas="canvas">
+		var raster = new Raster('bitmap');
+		var size = new Size(150, 150);
+		var colSize = raster.size / size * 1.;
+		var fullSize = size * colSize;
+
+		raster.visible = false;
+		raster.size = size;
+		for (var x = 0; x < size.width; x++) {
+			for (var y = 0; y < size.height; y++) {
+				var color = raster.getPixel(x, y);
+				var gray = (1 - color.gray) * 0.9;
+				if (gray > 0.1) {
+					var pos = new Point(x, y) * colSize + colSize / 2;
+					var rectSize = gray * colSize.width;
+					//var path = new Path.Rectangle([0, 0], [rectSize*5, rectSize]);
+					
+					var path = new Path.Arc({
+                        from: [gray * colSize.width*5, 0],
+                        through: [6, 2],
+                        to: [8, 18],
+                        strokeColor: 'black',
+                        strokeWidth: gray * colSize.width/2
+                    });
+					
+					
+					//path.fillColor = color;
+					path.position = pos;
+					path.rotate(gray * 180);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<img id="bitmap" src="/images/aile.jpg" />
+</body>
+</html>
