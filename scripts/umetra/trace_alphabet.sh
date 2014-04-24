@@ -24,8 +24,8 @@
   e() { echo $1 >> ${DUMP}; }
  
  
-  for LETTER in A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \
-                a b c d e f g h i j k l m n o p q r s t u v w x y z
+  for LETTER in A B C D E F G H I J K L M N O P Q R S T U V W X Y Z À Á Â Ã Ä Å Æ Œ Ç È É Ê Ë Ì Í Î Ï Ñ Ò Ó Ô Õ Ö Ù Ú Û Ü Ý 0 1 2 3 4 5 6 7 8 9 « » \
+                a b c d e f g h i j k l m n o p q r s t u v w x y z à á â ã ä å æ œ ç è é ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ
 # for LETTER in A g W M
    do
  
@@ -71,7 +71,7 @@
                 -output-file=$DUMP \
                 ${DUMP%%.*}.png
 
-      STYLE="style=\"stroke:#000000;fill:none;stroke-width:$WEIGHT;stroke-linecap:square\""
+      STYLE="style=\"stroke:#000000;fill:none;stroke-width:$WEIGHT;stroke-linecap:round\""
 
       sed -i "s/style=\"[^\"]*\"/$STYLE/g" $DUMP
 

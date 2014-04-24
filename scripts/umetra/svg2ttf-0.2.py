@@ -19,7 +19,7 @@ LETTERS_DIR = "./tmp"
 BLANK_FONT = "./i/utils/blank.sfd"
 
 #letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆŒÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ0123456789«»abcdefghijklmnopqrstuvwxyzàáâãäåæœçèéêëìíîïñòóôõöùúûüýÿ"
 #letters = "AgWM"
 
 # right-o, here we go
