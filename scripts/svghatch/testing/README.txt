@@ -11,3 +11,5 @@ KNOWN ISSUES:
 
 - transform for complete layers will not be copied
 - needs fill
+- define end of header unclear </metadata> or </defs>
+  </defs> does not exist when defs are empty

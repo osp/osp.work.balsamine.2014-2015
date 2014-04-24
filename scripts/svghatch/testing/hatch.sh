@@ -117,7 +117,6 @@
         echo $O
       }
 
-
       ANGLE=`map $BRIGHTNESS 0 255 $ANGLEMIN $ANGLEMAX`
       DISTANCE=`map $BRIGHTNESS 0 255 $DISTMIN $DISTMAX`
 
@@ -130,11 +129,11 @@
       sed "s/ID/$ID/g"                                          >> $HATCHED
 
       echo $SVGHEADER              > tmp.svg
-      echo $GROUPSTART | \
-      sed "s/NAME/$NAME/g" | \
-      sed "s/ID/$ID/g"             >> tmp.svg
+#     echo $GROUPSTART | \
+#     sed "s/NAME/$NAME/g" | \
+#     sed "s/ID/$ID/g"             >> tmp.svg
       grep "id=\"$ID\"" $LAYERED   >> tmp.svg
-      echo $GROUPCLOSE             >> tmp.svg
+#     echo $GROUPCLOSE             >> tmp.svg
       echo "</svg>"                >> tmp.svg
 
      # Options:
@@ -147,18 +146,18 @@
      #   --hatchSpacing=HATCHSPACING
      #                         Spacing between hatch lines
  
-      python $EGGBOTHATCHPY \
-             --id=$ID \
-             --hatchAngle=$ANGLE \
-             --hatchSpacing=$DISTANCE \
-             tmp.svg | \
-             sed 's/</\n</g' | \
-             grep "<path" | \
-             grep -v "fill:#$HEXCOLOR" | \
-             sed "s/stroke:#[^;]*;/stroke:#$STROKECOLOR;/g" | \
-             sed "s/stroke:#[^\"]*\"/stroke:#$STROKECOLOR\"/g"  >> $HATCHED
+     python $EGGBOTHATCHPY \
+            --id=$ID \
+            --hatchAngle=$ANGLE \
+            --hatchSpacing=$DISTANCE \
+            tmp.svg | \
+            sed 's/</\n</g' | \
+            grep "<path" | \
+            grep -v "fill:#$HEXCOLOR" | \
+            sed "s/stroke:#[^;]*;/stroke:#$STROKECOLOR;/g" | \
+            sed "s/stroke:#[^\"]*\"/stroke:#$STROKECOLOR\"/g"  >> $HATCHED
 
-       echo $GROUPCLOSE                                         >> $HATCHED
+       echo $GROUPCLOSE                                        >> $HATCHED
 
   done
 
@@ -206,7 +205,6 @@
 # CLEAN UP
 # --------------------------------------------------------------------------- #
   rm tmp.svg ${SVG%%.*}.tmp $LAYERED
-
 
 
 exit 0;
