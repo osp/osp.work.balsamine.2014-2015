@@ -11,8 +11,8 @@
 
 
 
- for WEIGHT in 2 5 10 15 20 30 40 50 60
-#for WEIGHT in 2 60
+#for WEIGHT in 2 5 10 15 20 30 40 50 60
+ for WEIGHT in 60
   do
 
   WNAME=`echo 00$WEIGHT | rev | cut -c 1-2 | rev`
@@ -24,12 +24,26 @@
   e() { echo $1 >> ${DUMP}; }
  
  
-  for LETTER in A B C D E F G H I J K L M N O P Q R S T U V W X Y Z À Á Â Ã Ä Å Æ Œ Ç È É Ê Ë Ì Í Î Ï Ñ Ò Ó Ô Õ Ö Ù Ú Û Ü Ý 0 1 2 3 4 5 6 7 8 9 « » \
-                a b c d e f g h i j k l m n o p q r s t u v w x y z à á â ã ä å æ œ ç è é ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ
-# for LETTER in A g W M
+  for CHARACTER in A B C D E F G H I J K L M N O P Q R S T U V W X Y Z À Á Â Ã Ä Å Æ Œ Ç È É Ê Ë Ì Í Î Ï Ñ Ò Ó Ô Õ Ö Ù Ú Û Ü Ý 0 1 2 3 4 5 6 7 8 9 « » \
+                   a b c d e f g h i j k l m n o p q r s t u v w x y z à á â ã ä å æ œ ç è é ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ
+#  for CHARACTER in À Á Â Ã Ä Å Æ Œ Ç È É Ê Ë Ì Í Î Ï Ñ Ò Ó Ô Õ Ö Ù Ú Û Ü Ý 0 1 2 3 4 5 6 7 8 9 « » \
+#                   à á â ã ä å æ œ ç è é ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ
+# for CHARACTER in A g W M
    do
- 
-      DUMP=$TMPDIR/${LETTER}.svg
+      INFO=`echo $CHARACTER | \
+            recode utf-8..dump-with-names | \
+            tail -2 | \
+            head -1`
+
+      UNICODE=`echo $INFO | cut -d " " -f 1`
+      DESCRIPTION=`echo $INFO | cut -d " " -f 3-`
+
+      echo $UNICODE
+      echo $DESCRIPTION
+
+    # DUMP=$TMPDIR/${CHARACTER}.svg
+      DUMP=$TMPDIR/${UNICODE}.svg
+
  
       e '<?xml version="1.0" encoding="UTF-8" standalone="no"?>'
       e '<svg width="200" height="300" id="svg" version="1.1"'
@@ -56,14 +70,14 @@
                 -inkscape-font-specification:$FONTFAMILY\""
       e '><flowRegion id="flowRegion">'
       e "<rect id=\"rect\" width=\"200\" height=\"300\" x=\"0\" y=\"-$SHIFT\" />"
-      e "</flowRegion><flowPara id=\"flowPara\">$LETTER</flowPara></flowRoot>"
+      e "</flowRegion><flowPara id=\"flowPara\">$CHARACTER</flowPara></flowRoot>"
       e '</g>'
       e '</svg>'
  
       inkscape --export-png=${DUMP%%.*}.png \
                --export-background=#ffffff \
                --export-width=$TRACEWIDTH \
-              $DUMP
+              $DUMP > /dev/null 2>&1
 
       autotrace -centerline \
                 -color-count=2 \
@@ -79,7 +93,7 @@
                --verb StrokeToPath  \
                --verb FileSave \
                --verb FileClose \
-               $DUMP
+               $DUMP > /dev/null 2>&1
 
       rm ${DUMP%%.*}.png
 
@@ -94,7 +108,7 @@
     sed -i "s/YYYY/$HUNAME/g" $BLANKFONT
     sed -i "s/ZZZZ/$FAMILY/g" $BLANKFONT
 
-       ./svg2ttf-0.2.py
+       ./svg2ttf-0.3.py
 
     mv ${BLANKFONT%%.*}_backup.sfd $BLANKFONT 
     mv output.ttf ${OUTPUTDIR}/${NAME}.ttf
