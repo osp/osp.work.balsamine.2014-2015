@@ -4,7 +4,7 @@
   FONTFAMILY="Ume P Mincho"
 
   # AFFECTS PRECISENESS
-  TRACEWIDTH=200 
+  TRACEWIDTH=400 
 
   BLANKFONT=i/utils/blank_unicode.sfd
   OUTPUTDIR=o
