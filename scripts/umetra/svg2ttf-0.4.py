@@ -23,9 +23,10 @@ from xml.dom.minidom import parse as parseXml
 # files are; they ought to be named according to their unicode value
 
 LETTERS_DIR = "./tmp"
+FONT_NAME = "%s".replace(" ", "-") % sys.argv[1]
 BLANK_FONT = "./i/utils/blank_unicode.sfd"
-BASE_FONT = "./i/Ume-P-Mincho.sfd"
-STROKE_FONT = "Ume-P-Mincho-stroke.ufo"
+BASE_FONT = "./i/%s.sfd" % FONT_NAME
+STROKE_FONT = "%s-stroke.ufo" % FONT_NAME
 
 
 files = glob.glob("%s/*.svg" % LETTERS_DIR)
@@ -34,14 +35,6 @@ original = fontforge.open(BASE_FONT)
 font = fontforge.open(BLANK_FONT)
 
 def importGlyph(f, letter, char): 
-    # Gets original font bearings
-    try:
-        left = original[char].left_side_bearing
-        right = original[char].right_side_bearing
-    except TypeError:
-        ## Happens when glyph was not existing
-        left = 0
-        right = 0
 
     # make new glyph
     font.createMappedChar(letter)
@@ -53,16 +46,6 @@ def importGlyph(f, letter, char):
     # Set bearings to 0
     font[char].left_side_bearing = 0
     font[char].right_side_bearing = 0
-
-    # As bearings are null, the glyph width equals the drawing width
-    width = font[char].width
-
-    # Put back the overall bearing
-    font[char].width = left + width + right
-
-    # Apply the original font bearings
-    font[char].left_side_bearing = left
-    font[char].right_side_bearing = right
 
 for f in files:
         letter = f.split("/")[-1].replace(".svg", "")
