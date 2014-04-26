@@ -23,25 +23,32 @@ from xml.dom.minidom import parse as parseXml
 # files are; they ought to be named according to their unicode value
 
 LETTERS_DIR = "./tmp"
+BLANK_FONT = "./i/utils/blank_unicode.sfd"
 BASE_FONT = "./i/Ume-P-Mincho.sfd"
 STROKE_FONT = "Ume-P-Mincho-stroke.ufo"
 
 
-letters = glob.glob("%s/*.svg" % LETTERS_DIR)
+files = glob.glob("%s/*.svg" % LETTERS_DIR)
 
-font = fontforge.open(BASE_FONT)
+original = fontforge.open(BASE_FONT)
+font = fontforge.open(BLANK_FONT)
 
-def importGlyph(letter, char): 
+def importGlyph(f, letter, char): 
     # Gets original font bearings
-    left = font[char].left_side_bearing
-    right = font[char].right_side_bearing
+    try:
+        left = original[char].left_side_bearing
+        right = original[char].right_side_bearing
+    except TypeError:
+        ## Happens when glyph was not existing
+        left = 0
+        right = 0
 
-    # Removes original drawing of the glyph
-    font.selection.select(font[char])
-    font.cut()
+    # make new glyph
+    font.createMappedChar(letter)
+    font.createChar(char)
 
     # Import outline file
-    font[char].importOutlines(LETTERS_DIR + "/" + letter + ".svg")
+    font[char].importOutlines(f)
 
     # Set bearings to 0
     font[char].left_side_bearing = 0
@@ -57,44 +64,47 @@ def importGlyph(letter, char):
     font[char].left_side_bearing = left
     font[char].right_side_bearing = right
 
-for letter in letters:
-        letter = letter.split("/")[-1].replace(".svg", "")
-        print letter
+for f in files:
+        letter = f.split("/")[-1].replace(".svg", "")
+        char = fontforge.unicodeFromName(letter)
 
-        # make new glyph
-        #font.createMappedChar(letter)
-        #font.createChar(char)
+        if char == -1:
+            char = letter.replace("&#", "").replace(";", "")
+            letter = fontforge.nameFromUnicode(int(char))
+        print "letter: %s" % letter
+        print "char: %s" % char
+        importGlyph(f, letter, int(char))
 
-        try:
-            importGlyph(letter, letter)
-        except TypeError:
-            # In case of HTML entities
-            try:
-                char = letter.replace("&#", "").replace(";", "")
-                char = fontforge.nameFromUnicode(int(char))
-                print font[char]
-                importGlyph(letter, char)
-            except TypeError, ValueError:
-                # In case it still doesn't work, it passes. i.e: €
-                print "%s was not imported." % char
-                pass
-
-# generate TrueType hints
-# font[char].autoInstr()
 
 # create the output ufo file
 font.generate(STROKE_FONT)
+
+
+#####################################################
 
 
 print "cleaning UFO"
 
 GLYPH_DIR = "%s/glyphs/" % STROKE_FONT
 
-for letter in letters:
+for letter in files:
     letter = letter.split("/")[-1].replace(".svg", "")
+    char = fontforge.unicodeFromName(letter)
+
+    if char == -1:
+        char = letter.replace("&#", "").replace(";", "")
+        letter = fontforge.nameFromUnicode(int(char))
+    print "letter: %s" % letter
+    print "char: %s" % char
 
     # In UFO, capital characters have an underscore in their name: "A" -> "A_.glif"
-    if letter.isupper(): letter = letter + "_"
+    if letter[0].isupper(): 
+        if len(letter) == 1:
+            letter = letter + "_"
+        elif len(letter) == 2:
+            letter = letter[0] + "_" + letter[1] + "_"
+        else:
+            letter = letter[0] + "_" + letter[1:]
 
 
     # Gets the XML of the glyph
@@ -118,17 +128,22 @@ for letter in letters:
         # Checks type of first node of the countour
         type= contour.childNodes[1].attributes["type"].value
 
-        if type == "move":
-            # Should be ok already
+        try:
+            if type == "move":
+                # Should be ok already
+                pass
+            elif type == "line":
+                # Changing type "line" to "move"
+                contour.childNodes[1].attributes["type"].value = "move"
+            elif type == "curve":
+                # Putting curve point at the end of the contour
+                contour.appendChild(contour.childNodes[1])
+                # Changing first "line" to "move"
+                contour.childNodes[2].attributes["type"].value = "move"
+        except KeyError:
+            print "Did not work."
             pass
-        elif type == "line":
-            # Changing type "line" to "move"
-            contour.childNodes[1].attributes["type"].value = "move"
-        elif type == "curve":
-            # Putting curve point at the end of the contour
-            contour.appendChild(contour.childNodes[1])
-            # Changing first "line" to "move"
-            contour.childNodes[2].attributes["type"].value = "move"
+
 
     # Saves XML
     f = open("%s%s.glif" % (GLYPH_DIR, letter), "w")
