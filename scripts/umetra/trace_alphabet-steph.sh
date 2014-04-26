@@ -5,9 +5,7 @@
 
   TRACEWIDTH=3500 
 
-  BLANKFONT=i/utils/blank.sfd
   OUTPUTDIR=o
-
 
 
   WNAME=`echo 00$WEIGHT | rev | cut -c 1-2 | rev`
@@ -19,9 +17,14 @@
   e() { echo $1 >> ${DUMP}; }
  
  
-  for LETTER in Q S —
-  #for LETTER in A B C D E F G H I J K L M N O P Q R S T U V W X Y Z À Á Â Ã Ä Å Æ Œ Ç È É Ê Ë Ì Í Î Ï Ñ Ò Ó Ô Õ Ö Ù Ú Û Ü Ý 0 1 2 3 4 5 6 7 8 9 « » \
-                #a b c d e f g h i j k l m n o p q r s t u v w x y z à á â ã ä å æ œ ç è é ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ
+ for LETTER in A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \
+                  À Á Â Ã Ä Å Æ Œ Ç È É Ê Ë Ì Í Î Ï Ñ Ò Ó Ô Õ Ö Ù Ú Û Ü Ý \
+                  0 1 2 3 4 5 6 7 8 9 « » ^ ° ~ + \` \´ \ ß ü ö ä Ö Ü Ä \
+                  a b c d e f g h i j k l m n o p q r s t u v w x y z \
+                  à á â ã ä å æ œ ç è é ê ë ì í î ï ñ ò ó ô õ ö ù ú û ü ý ÿ \
+                 \; - — _ . ,  \# \§ \$ \% "&#38;" / \( \) \= { } [ ] \ \| ¶ \
+                 "&#8216;" "&#8217;" "&#8218;" "&#8220;" "&#8221;" "&#8222;" \
+                 "&quot;" "&gt;" "&lt;" "&#39;" "&#8364;" "&#8230;" "&#42;"
 # for LETTER in A g W M
    do
  
@@ -62,7 +65,8 @@
                --export-width=$TRACEWIDTH \
               $DUMP
         
-      convert ${DUMP%%.*}.png ${DUMP%%.*}.gif
+      # This is only for Steph's machine which fails on autotracing png, but it makes the script super slow
+      #convert ${DUMP%%.*}.png ${DUMP%%.*}.gif
 
       # Vectorize bitmap with stroke
       autotrace -centerline \
@@ -83,31 +87,25 @@
     done
 
     # Font naming
-   HUNAME=`echo $NAME | sed 's/_/ /g'`
-    HUNAME=$NAME
-    FAMILY=$NAME
+    #HUNAME=`echo $NAME | sed 's/_/ /g'`
+    #HUNAME=$NAME
+    #FAMILY=$NAME
 
-    # Makes a backup of the blank font file
-    cp $BLANKFONT ${BLANKFONT%%.*}_backup.sfd 
-
-    # Changes font info
-    sed -i "s/XXXX/$NAME/g" $BLANKFONT  
-    sed -i "s/YYYY/$HUNAME/g" $BLANKFONT
-    sed -i "s/ZZZZ/$FAMILY/g" $BLANKFONT
+    ## Changes font info
+    #sed -i "s/XXXX/$NAME/g" $BLANKFONT  
+    #sed -i "s/YYYY/$HUNAME/g" $BLANKFONT
+    #sed -i "s/ZZZZ/$FAMILY/g" $BLANKFONT
 
     echo "Launching Ana and Ricardo's script"
-    # Launches Ana and Ricardo's script (takes a set of SVG files and puts them into a blank .sfd)
-       python2 svg2ttf-0.2.py
-
-    # Reset the blank font to blank
-    mv ${BLANKFONT%%.*}_backup.sfd $BLANKFONT 
+    # Launches Ana and Ricardo's script (takes a set of SVG files and puts it into an sfd file)
+    python2 svg2ttf-0.4.py
 
     # Moves "output.ttf" into "o" folder
-    mv output.ttf ${OUTPUTDIR}/${NAME}.ttf
+    #mv output.ttf ${OUTPUTDIR}/${NAME}.ttf
 
 
     # Clean the "tmp" folder
-    rm $TMPDIR/*.*
+    #rm $TMPDIR/*.*
 
 
 
