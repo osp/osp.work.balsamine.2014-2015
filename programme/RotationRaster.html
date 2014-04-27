@@ -28,19 +28,36 @@
 				if (gray > 0.1) {
 					var pos = new Point(x, y) * colSize + colSize / 2;
 
-		/*			var rectSize = gray * colSize.width;
-					var path = new Path.Rectangle([0, 0], [rectSize*5, rectSize]);
-					path.fillColor = color;
-		*/			
-                    var path = new Path.Arc({
-                        from: [gray * colSize.width*5, 0],
-                        through: [6, 2],
-                        to: [8, 18],
-                        strokeColor: 'black',
-                        strokeWidth: gray * colSize.width/2
-                    });
+                    // RECTANGLE
+					//var rectSize = gray * colSize.width;
+					//var path = new Path.Rectangle([0, 0], [rectSize*5, rectSize]);
+					//path.fillColor = color;
 					
+                    // ARC DE CERCLE
+					//var path = new Path.Arc({
+                    //    from: [gray * colSize.width*5, 0],
+                    //    through: [6, 2],
+                    //    to: [8, 18],
+                    //    strokeColor: 'black',
+                    //    strokeWidth: gray * colSize.width/2
+                    //});
+
+                    // VER DE TERRE
+                    var path = new Path();
+                    path.moveTo(0, 0);
+                    var Point1 = new Point(2, 4);
+                    var Point2 = new Point(4, 2);
+                    var Point3 = new Point(6, 4);
+                    var Point4 = new Point(8, 4);
+                    path.arcTo(Point1, Point2);
+                    path.arcTo(Point2, Point3);
+                    path.arcTo(Point3, Point4);
+                    path.smooth();
+                    path.scale(gray*5);
+                    path.strokeColor = 'black';
+>>>>>>> 20e79893d3b353a41167d381f7be5b9966c5c87a
 					
+                    // THIS CHANGES POSITION AND ROTATES THE ELEMENT
 					path.position = pos;
 					path.rotate(gray * 180);
 				}
@@ -50,6 +67,8 @@
 </head>
 <body>
 	<canvas id="canvas"></canvas>
-	<img id="bitmap" src="/images/rhinicerus.jpg" />
+    <!-- CHANGE IMAGE URL HERE -->
+    <img id="bitmap" src="/images/rhinicerus.jpg" />
+>>>>>>> 20e79893d3b353a41167d381f7be5b9966c5c87a
 </body>
 </html>
