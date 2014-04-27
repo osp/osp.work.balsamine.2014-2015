@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="greater" format="1">
+  <advance width="1221"/>
+  <unicode hex="003E"/>
+  <outline>
+    <contour>
+      <point x="0" y="2784" type="move"/>
+      <point x="918" y="1866" type="line"/>
+      <point x="1146" y="1638" type="line" smooth="yes"/>
+      <point x="1169" y="1614"/>
+      <point x="1204" y="1589"/>
+      <point x="1215" y="1558" type="curve" smooth="yes"/>
+      <point x="1217" y="1552"/>
+      <point x="1220" y="1545"/>
+      <point x="1220" y="1539" type="curve" smooth="yes"/>
+      <point x="1220" y="1514"/>
+      <point x="1200" y="1494"/>
+      <point x="1185" y="1479" type="curve" smooth="yes"/>
+      <point x="1170" y="1464"/>
+      <point x="1155" y="1448"/>
+      <point x="1140" y="1434" type="curve" smooth="yes"/>
+      <point x="1113" y="1411"/>
+      <point x="1089" y="1384"/>
+      <point x="1064" y="1359" type="curve" smooth="yes"/>
+      <point x="1016" y="1311"/>
+      <point x="967" y="1264"/>
+      <point x="920" y="1217" type="curve" smooth="yes"/>
+      <point x="615" y="912"/>
+      <point x="304" y="612"/>
+      <point x="0" y="308" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

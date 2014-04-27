@@ -1,0 +1,31 @@
+
+
+@GDEF_Simple = [\macron \acircumflex \Ecircumflex \thorn \icircumflex \semicolon 
+	\Ocircumflex \Ntilde \colon \period \at \yacute \Icircumflex \uni0099 \A \uni0095 
+	\ampersand \eth \exclam \Y \slash \edieresis \oslash \ocircumflex \six \igrave 
+	\uni009A \Iacute \n \b \numbersign \uni00A0 \guillemotright \uni008B \paragraph 
+	\two \e \B \adieresis \uni00B3 \Thorn \uni0088 \plusminus \h \less \brokenbar \mu 
+	\Acircumflex \yen \cent \four \registered \ucircumflex \ordfeminine \Q \uni009F 
+	\Oacute \ordmasculine \plus \p \degree \x \seven \ograve \j \multiply \Otilde 
+	\Aring \d \Ograve \y \asciicircum \five \greater \W \X \uni008A \uni0085 \uni0080 
+	\equal \zero \comma \T \J \ccedilla \q \uni0089 \quotesingle \m \r \Eth \currency \u 
+	\K \v \G \braceleft \sterling \z \uni0083 \guillemotleft \Igrave \questiondown 
+	\otilde \agrave \E \uni008D \divide \M \backslash \c \a \S \Ccedilla \onequarter 
+	\egrave \uni0087 \uni0084 \V \U \uni0091 \f \O \AE \bar \uni0097 \cedilla \uacute 
+	\asciitilde \atilde \Odieresis \uni009D \eacute \odieresis \ae \threequarters 
+	\ntilde \braceright \quotedbl \Uacute \onehalf \Edieresis \uni0092 \F 
+	\bracketright \logicalnot \Ugrave \parenright \uni008F \L \aring \aacute 
+	\uni0086 \three \C \Idieresis \copyright \uni00AD \uni0090 \nine \Yacute \Aacute 
+	\uni008E \Atilde \eight \uni009C \Agrave \oacute \l \uni0082 \dieresis \i \grave \R 
+	\uni0098 \H \hyphen \Oslash \uni00B2 \one \uni0096 \D \Ucircumflex \o \uni008C 
+	\section \uni0094 \iacute \w \underscore \question \exclamdown \uni0081 \uni007F 
+	\parenleft \Udieresis \uni00B9 \percent \uni0093 \ugrave \dollar \g \acute 
+	\asterisk \N \bracketleft \Euro \uni009E \t \uni009B \germandbls \Egrave 
+	\Adieresis \Z \ecircumflex \udieresis \I \P \idieresis \k \Eacute \s 
+	\periodcentered ];
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, , , ;
+
+} GDEF;
+
