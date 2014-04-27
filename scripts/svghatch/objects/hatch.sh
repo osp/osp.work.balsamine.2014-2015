@@ -3,9 +3,14 @@
 
   OUTPUTDIR=o
 
-  EGGBOTHATCHPY=~/.config/inkscape/extensions/eggbot_hatch.py
-  INKSCAPEEXTENSION=/usr/share/inkscape/extensions
+# EGGBOTHATCHPY=~/.config/inkscape/extensions/eggbot_hatch.py
+# INKSCAPEEXTENSION=/usr/share/inkscape/extensions
+# export PYTHONPATH=$INKSCAPEEXTENSION
+
+  EGGBOTHATCHPY=extensions/eggbot_hatch.py
+  INKSCAPEEXTENSION=extensions
   export PYTHONPATH=$INKSCAPEEXTENSION
+
 
   SVG=$1
   if [[ -z "$1" ]]; then echo "please provide svg = $0 in.svg"; exit 0 ; fi
