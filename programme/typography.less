@@ -29,6 +29,39 @@
     src: url("/fonts/Umetra-15P_Mincho_IB.ttf");
 }
 
+@font-face {
+    font-family: 'UmePlumePGothic-30';
+    src: url("/fonts/UmePlumePGothic-30.otf");
+}
+@font-face {
+    font-family: 'UmePlumePGothic-600';
+    src: url("/fonts/UmePlumePGothic-600.otf");
+}
+@font-face {
+    font-family: 'UmePlumePMincho-600';
+    src: url("/fonts/UmePlumePMincho-600.otf");
+}
+@font-face {
+    font-family: 'UmePlumePMincho-30';
+    src: url("/fonts/UmePlumePMincho-30.otf");
+}
+@font-face {
+    font-family: 'UmePlumePMincho-100';
+    src: url("/fonts/UmePlumePMincho-100.otf");
+}
+@font-face {
+    font-family: 'UmePlumePGothic-100';
+    src: url("/fonts/UmePlumePMincho-100.otf");
+}
+@font-face {
+    font-family: 'UmePlumePMincho-200';
+    src: url("/fonts/UmePlumePMincho-200.otf");
+}
+@font-face {
+    font-family: 'UmePlumePGothic-200';
+    src: url("/fonts/UmePlumePMincho-200.otf");
+}
+
 body {
     font-family: "Ume P Mincho";
     font-size: 12.5pt;
@@ -76,7 +109,7 @@ h3 {
 }
 
 div.spectacle-infos {
-    font-family: "Umeuto_40P_Gothic";
+    font-family: "UmePlumePGothic-600";
     font-size: 1.1em;
     line-height: 1em;
     width: @small-page-width - 16mm;
@@ -86,7 +119,7 @@ div.spectacle-infos {
 }
 
 div.spectacle-infos-small {
-    font-family: "Umeuto_40P_Gothic";
+    font-family: "UmePlumePGothic-600";
     font-size: 0.9em;
     line-height: 1.2em;
     width: @small-page-width - 16mm;
@@ -101,14 +134,14 @@ div.spectacle-infos-small {
 div.notes {
     -webkit-region-break-before: always;
     -webkit-region-break-after: always;
-    font-family: "Ume P Gothic Balsa";
+    font-family: "UmePlumePGothic-600";
     font-size: 8.3pt;
     line-height: 1.1em;
-    color:@color-50;
+    /*color:@color-50;*/
 }
 
 div.notes p:first-child:first-letter {
-    font-family: "Ume P Gothic Balsa";
+    font-family: "UmePlumePGothic-200";
     font-size: 8.3pt;
     line-height: 1.1em;
 }
@@ -123,7 +156,7 @@ div.notes p:first-child:first-letter {
 }
 
 dt {
-    font-family: Ume P Gothic Balsa;
+    font-family: "UmePlumePGothic-200";
     text-transform: uppercase;
     font-size: 8pt;
     display: inline; 
@@ -143,14 +176,29 @@ dd {
 }
 
 .chant {
-    font-family: "IB";
+    font-family: "UmePlumePGothic-100";
     line-height: 1.1em;
     background-color:white;
 
 }
+.edito * {
+    font-family: "UmePlumePGothic-200";
+
+
+}
+.chant2 * {
+    font-family: "UmePlumePGothic-100";
+
+
+}
+.chant3 * {
+    font-family: "UmePlumePGothic-600";
+
+
+}
 
 div.chant p:first-child:first-letter {
-    font-family: "Umetra-10P_Mincho";
+    font-family: "UmePlumePMincho-200";
     float:left; 
     padding: 6px;
     margin: -5px 11px -21px 0px;
@@ -159,7 +207,7 @@ div.chant p:first-child:first-letter {
 }
 
 .spectacle-texte {
-    font-family: "Ume P Gothic Balsa";
+    font-family: "UmePlumePGothic-200";
     font-size: 10pt;
     line-height: 1.3em;
 
