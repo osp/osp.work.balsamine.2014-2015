@@ -89,15 +89,6 @@ for LETTER in "&#33;" "&#34;" "&#35;" "&#36;" "&#37;" "&#38;" "&#39;" "&#40;" "&
 
     done
 
-    # Font naming
-    #HUNAME=`echo $NAME | sed 's/_/ /g'`
-    #HUNAME=$NAME
-    #FAMILY=$NAME
-
-    ## Changes font info
-    #sed -i "s/XXXX/$NAME/g" $BLANKFONT  
-    #sed -i "s/YYYY/$HUNAME/g" $BLANKFONT
-    #sed -i "s/ZZZZ/$FAMILY/g" $BLANKFONT
 
     echo "Launching Ana and Ricardo's script"
     # Launches Ana and Ricardo's script (takes a set of SVG files and puts it into an sfd file)
