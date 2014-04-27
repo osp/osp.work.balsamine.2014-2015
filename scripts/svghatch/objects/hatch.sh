@@ -1,5 +1,14 @@
 #!/bin/bash
 
+  DISTMIN=5
+  DISTMAX=15
+  ANGLEMIN=60
+  ANGLEMAX=120
+
+  # NO SUPPORTS FOR FLOAT VALUES -> MULTIPLY WITH 10
+  STROKEMIN=0
+  STROKEMAX=20
+
 
   OUTPUTDIR=o
 
@@ -14,14 +23,6 @@
 
   SVG=$1
   if [[ -z "$1" ]]; then echo "please provide svg = $0 in.svg"; exit 0 ; fi
-
-
-      DISTMIN=5
-      DISTMAX=15
-      ANGLEMIN=60
-      ANGLEMAX=120
-
-
 
   LAYERED=${SVG%%.*}_layered.svg
   HATCHED=${SVG%%.*}_hatched.svg
@@ -131,6 +132,10 @@
       DISTANCE=`map $BRIGHTNESS 0 255 $DISTMIN $DISTMAX`
 
       STROKECOLOR=$HEXCOLOR
+      STROKECOLOR=000000
+      STROKEWIDTH=`map $BRIGHTNESS 0 255 ${STROKEMIN} ${STROKEMAX}`
+      STROKEWIDTH=`echo $STROKEWIDTH | cut -c 1`.`echo $STROKEWIDTH | cut -c 2`
+
 
       NAME=$ID
 
@@ -160,8 +165,10 @@
             sed 's/</\n</g' | \
             grep "<path" | \
             grep -v "fill:#$HEXCOLOR" | \
-            sed "s/stroke:#[^;]*;/stroke:#$STROKECOLOR;/g" | \
-            sed "s/stroke:#[^\"]*\"/stroke:#$STROKECOLOR\"/g"  >> $HATCHED
+            sed 's/stroke-width:[^;]*;//g' | \
+            sed 's/stroke-width:[^"]*"//g' | \
+            sed "s/stroke:#[^;]*;/stroke:#$STROKECOLOR;stroke-width:$STROKEWIDTH;/g" | \
+            sed "s/stroke:#[^\"]*\"/stroke:#$STROKECOLOR;stroke-width:$STROKEWIDTH\"/g"  >> $HATCHED
 
        echo $GROUPCLOSE                                        >> $HATCHED
 
