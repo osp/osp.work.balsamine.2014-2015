@@ -15,7 +15,7 @@
     </script>
 	<script type="text/paperscript" canvas="canvas">
 		var raster = new Raster('bitmap');
-		var size = new Size(150, 150);
+		var size = new Size(100, 100);
 		var colSize = raster.size / size * 1.;
 		var fullSize = size * colSize;
 
@@ -27,19 +27,20 @@
 				var gray = (1 - color.gray) * 0.9;
 				if (gray > 0.1) {
 					var pos = new Point(x, y) * colSize + colSize / 2;
+
 					var rectSize = gray * colSize.width;
-					//var path = new Path.Rectangle([0, 0], [rectSize*5, rectSize]);
+					var path = new Path.Rectangle([0, 0], [rectSize*5, rectSize]);
+					path.fillColor = color;
 					
-					var path = new Path.Arc({
-                        from: [gray * colSize.width*5, 0],
-                        through: [6, 2],
-                        to: [8, 18],
-                        strokeColor: 'black',
-                        strokeWidth: gray * colSize.width/2
-                    });
+					//var path = new Path.Arc({
+                    //    from: [gray * colSize.width*5, 0],
+                    //    through: [6, 2],
+                    //    to: [8, 18],
+                    //    strokeColor: 'black',
+                    //    strokeWidth: gray * colSize.width/2
+                    //});
 					
 					
-					//path.fillColor = color;
 					path.position = pos;
 					path.rotate(gray * 180);
 				}
@@ -49,6 +50,6 @@
 </head>
 <body>
 	<canvas id="canvas"></canvas>
-	<img id="bitmap" src="/images/aile.jpg" />
+	<img id="bitmap" src="/hichem/pieces/crisscross/crisscross-full-objects/crisscross_canards.png" />
 </body>
 </html>
