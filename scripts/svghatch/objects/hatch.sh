@@ -11,6 +11,13 @@
   if [[ -z "$1" ]]; then echo "please provide svg = $0 in.svg"; exit 0 ; fi
 
 
+      DISTMIN=5
+      DISTMAX=15
+      ANGLEMIN=60
+      ANGLEMAX=120
+
+
+
   LAYERED=${SVG%%.*}_layered.svg
   HATCHED=${SVG%%.*}_hatched.svg
 
@@ -103,11 +110,6 @@
       HEXCOLOR=`echo $ID | cut -d "-" -f 2`
       RHEX=`echo $HEXCOLOR | cut -c 1-2 | tr '[:lower:]' '[:upper:]'`
       BRIGHTNESS=`echo "ibase=16;obase=A;$RHEX" | bc`
-
-      DISTMIN=5
-      DISTMAX=15
-      ANGLEMIN=60
-      ANGLEMAX=120
 
       function map {
         I=$1
