@@ -55,10 +55,14 @@
                     path.smooth();
                     path.scale(gray*5);
                     path.strokeColor = 'black';
+                    path.fillColor = "white";
+                    path.fillColor.alpha = 0;
 					
                     // THIS CHANGES POSITION AND ROTATES THE ELEMENT
 					path.position = pos;
 					path.rotate(gray * 180);
+                    // OUTPUTS IN SVG
+                    document.getElementById("svg").appendChild(path.exportSVG());
 				}
 			}
 		}
@@ -68,5 +72,6 @@
 	<canvas id="canvas"></canvas>
     <!-- CHANGE IMAGE URL HERE -->
     <img id="bitmap" src="/images/rhinicerus.jpg" />
+    <svg id="svg" width="1200" height="1000"></svg>
 </body>
 </html>
