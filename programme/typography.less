@@ -2,17 +2,17 @@
 @import "balsa.less";
 @import "fonts.less";
 
+@weights: 30, 45, 65, 90, 120, 158, 200, 260, 330, 410, 500, 600;
 
 body {
-    font-family: "UmePlumePMincho-200";
+    font-family: "UmePlumePGothic-200";
     font-size: 12.5pt;
     color:@color;
-    
 }
 
 a{
-text-decoration:none;
-color:@color;
+    text-decoration:none;
+    color: inherit;
 }
 
 h1 {
@@ -22,9 +22,7 @@ h1 {
     text-align: center;
     -webkit-region-break-before: always;
     margin-bottom:13px;
-
 }
-
 
 h2 {
     font-family: "Ume Mincho Balsa";
@@ -35,42 +33,34 @@ h2 {
     margin-bottom:5px;
 }
 
-
 h3 {
     font-family: "Ume Mincho Balsa";
     text-transform: uppercase;
     font-size: 1em;
     text-align: center;
-    /*-webkit-region-break-before: always;*/
     margin-top:10px;
-
 }
 .avoid-break{
     -webkit-region-break-before: avoid;
 }
 
 div.spectacle-infos {
-    font-family: "UmePlumePGothic-600";
+    /*font-family: "UmePlumePGothic-600";*/
     font-size: 1.1em;
     line-height: 1em;
     width: @small-page-width - 16mm;
     text-align: center;
     padding: 1em;
-    
 }
 
 div.spectacle-infos-small {
-    font-family: "UmePlumePGothic-600";
+    /*font-family: "UmePlumePGothic-600";*/
     font-size: 0.9em;
     line-height: 1.2em;
     width: @small-page-width - 16mm;
     text-align: center;
     padding: 0.5em;
-    
 }
-
-
-
 
 div.notes {
     -webkit-region-break-before: always;
@@ -78,7 +68,6 @@ div.notes {
     font-family: "UmePlumePGothic-600";
     font-size: 8.3pt;
     line-height: 1.1em;
-    /*color:@color-50;*/
 }
 
 div.notes p:first-child:first-letter {
@@ -90,10 +79,7 @@ div.notes p:first-child:first-letter {
 .bible {
     font-size: 10pt;
     margin-top:10px;
-    color:@color-50;
     display: inline; 
-
-
 }
 
 dt {
@@ -101,57 +87,58 @@ dt {
     text-transform: uppercase;
     font-size: 8pt;
     display: inline; 
-
 }
 
 dd {
     display: inline; 
-    /*margin-bottom: 5px;*/
-    /*border: solid thin @color;*/
-    /*border-top: none;*/
-    /*border-left: none;*/
-    /*display: inline;*/
-    /*padding: 0px 3px 1px 3px;*/
-    /*margin: 0 2px 0 0;*/
-
 }
 
 .chant {
     font-family: "UmePlumePGothic-90";
     line-height: 1.1em;
     background-color:white;
+    padding: 1em;
 }
 
-.edito * {
-    font-family: "UmePlumePGothic-45";
-}
-.chant1 * {
-    font-family: "UmePlumePGothic-30";
-}
-.chant2 * {
-    font-family: "UmePlumePGothic-120";
-}
-.chant3 * {
-    font-family: "UmePlumePGothic-200";
-}
-.chant4 * {
-    font-family: "UmePlumePGothic-330";
-}
-.chant5 * {
-    font-family: "UmePlumePGothic-500";
-}
-.chant6 * {
-    font-family: "UmePlumePGothic-600";
-}
-.chant7 * {
-    font-family: "UmePlumePGothic-410";
-}
-.chant8 * {
-    font-family: "UmePlumePGothic-260";
+.chant-typo(@weight) {
+    * {
+        font-family: %("UmePlumePGothic-%s", @weight);
+    }
+    .chant p {
+        font-family: %("UmePlumePMincho-%s", @weight);
+    }
 }
 
-div.chant p:first-child:first-letter {
-    font-family: "UmePlumePMincho-200";
+.edito {
+    .chant-typo("45");
+}
+.chant1 {
+    .chant-typo("30");
+}
+.chant2 {
+    .chant-typo("120");
+}
+.chant3 {
+    .chant-typo("200");
+}
+.chant4 {
+    .chant-typo("330");
+}
+.chant5 {
+    .chant-typo("500");
+}
+.chant6 {
+    .chant-typo("600");
+}
+.chant7 {
+    .chant-typo("410");
+}
+.chant8 {
+    .chant-typo("260");
+}
+
+.chant p:first-child:first-letter {
+    /*font-family: "UmePlumePMincho-200";*/
     float:left; 
     padding: 6px;
     margin: -5px 11px -21px 0px;
@@ -160,7 +147,7 @@ div.chant p:first-child:first-letter {
 }
 
 .spectacle-texte {
-    font-family: "UmePlumePGothic-200";
+    /*font-family: "UmePlumePGothic-200";*/
     font-size: 10pt;
     line-height: 1.3em;
 
