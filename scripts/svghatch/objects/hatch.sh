@@ -134,8 +134,8 @@
       STROKECOLOR=$HEXCOLOR
       STROKECOLOR=000000
       STROKEWIDTH=`map $BRIGHTNESS 0 255 ${STROKEMIN} ${STROKEMAX}`
+      STROKEWIDTH=`echo 00$STROKEWIDTH | rev | cut -c 1-2 | rev`
       STROKEWIDTH=`echo $STROKEWIDTH | cut -c 1`.`echo $STROKEWIDTH | cut -c 2`
-
 
       NAME=$ID
 
