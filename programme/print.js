@@ -13,6 +13,13 @@ $(window).load(function(){
         $(this).toggleClass("button-active");
         $("html").toggleClass("debug");
     });
+    
+    // __________________________________ SPREAD __________________________________ //
+    $("button#spread").click(function(e){
+        e.preventDefault();
+        $(this).toggleClass("button-active");
+        $("html").toggleClass("spread");
+    });
 
 
     // __________________________________ PRINT PREVIEW __________________________________ //
