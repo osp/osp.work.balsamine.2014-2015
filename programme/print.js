@@ -1,5 +1,6 @@
 // Choose the number of pages of the document
-var nb_page = 32;
+//var nb_page = 32;
+var nb_page = $(".preview-page").length;
 
 
 // Loads main content into <section id="container">
@@ -32,9 +33,12 @@ $(window).load(function(){
     var doc_height = $("body").height();
     var page_height = $("#master-page").height(); 
 
-    for (i = 1; i < nb_page; i++){
-        $("#master-page").clone().addClass("preview-page").attr("id","page-"+i).insertBefore($("#master-page"));
-    }
+    $(".preview-page").each(function(){
+        $(this).append("<div class='inside'>");
+        $("#master-page").children().clone().appendTo($(".inside", $(this)));
+        $(".moveable", $(this)).appendTo($(".inside", $(this)));
+        //$("#master-page").clone().addClass("preview-page").attr("id","page-"+i).insertBefore($("#master-page"));
+    });
     $("#master-page").hide();
 
     // __________________________________ TOC __________________________________ //
@@ -58,7 +62,9 @@ $(window).load(function(){
         }).
         resizable();
     $("button#back2front").click(function(){
-        $("#print-marks").toggleClass("background");
+        $(this).toggleClass("button-active");
+        $(".moveable").toggleClass("foreground");
+        $(".preview-page").toggleClass("overflow");
     });
 
     $('.properties').on('click', function() {
