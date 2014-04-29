@@ -40,6 +40,12 @@ h3 {
     text-align: center;
     margin-top:10px;
 }
+h4 {
+text-align:center;
+
+}
+
+
 .avoid-break{
     -webkit-region-break-before: avoid;
 }
@@ -93,6 +99,13 @@ dd {
     display: inline; 
 }
 
+table {
+border-spacing:5px ! important;
+ border-collapse:separate;
+}
+
+
+
 .chant {
     font-family: "UmePlumePGothic-90";
     line-height: 1.1em;
@@ -107,10 +120,19 @@ dd {
     .chant p {
         font-family: %("UmePlumePMincho-%s", @weight);
     }
+    .piece {
+/*text-transform:uppercase;*/
+font-family: %("UmePlumePMincho-%s", @weight);
+font-size:1.2em;
+
+    }
 }
 
 .edito {
     .chant-typo("45");
+}
+.ouverture {
+    .chant-typo("158");
 }
 .chant1 {
     .chant-typo("30");
@@ -136,6 +158,9 @@ dd {
 .chant8 {
     .chant-typo("260");
 }
+.infos-pratiques {
+    .chant-typo("90");
+}
 
 .chant p:first-child:first-letter {
     /*font-family: "UmePlumePMincho-200";*/
@@ -157,4 +182,22 @@ dd {
     font-size: 10pt;
     line-height: 1.1em;
 
+}
+
+
+.pratique1 {
+  text-align:center;
+  width:21%;
+    vertical-align: middle;
+    font-family: 'UmePlumePGothic-330';
+}
+
+.pratique2 {
+  border:2px solid black;
+  padding:8px 4px;
+  vertical-align: middle;
+
+}
+.pratique3 {
+  font-size:8.3pt;
 }
