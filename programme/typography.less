@@ -16,12 +16,12 @@ a{
 }
 
 h1 {
-    font-family: "Ume Mincho Balsa";
     text-transform: uppercase;
-    font-size: 2.7em;
     text-align: center;
     -webkit-region-break-before: always;
     margin-bottom:13px;
+    line-height: 1em;
+    font-size: 2.7em;
 }
 
 h2 {
@@ -57,7 +57,6 @@ article {
 }
 
 div.spectacle-infos {
-    /*font-family: "UmePlumePGothic-600";*/
     font-size: 1.1em;
     line-height: 1em;
     text-align: center;
@@ -65,7 +64,6 @@ div.spectacle-infos {
 }
 
 div.spectacle-infos-small {
-    /*font-family: "UmePlumePGothic-600";*/
     font-size: 0.9em;
     line-height: 1.2em;
     width: @small-page-width - 16mm;
@@ -122,33 +120,40 @@ p + p {
 
 
 .chant {
-    font-family: "UmePlumePGothic-90";
     line-height: 1.1em;
     background-color:white;
     padding: 1em;
 }
+.piece {
+        font-size:1.2em;
+    }
 
 .chant-typo(@weight) {
     * {
         font-family: %("UmePlumePGothic-%s", @weight);
     }
-    .chant p {
-        font-family: %("UmePlumePMincho-%s", @weight);
+
+    .chant.chant-titre,
+    .texte h2 {
+	font-family: %("UmePlumePGothic-%s", @weight);
     }
+    
+    .chant h1,
+    .chant p,
     .piece {
         font-family: %("UmePlumePMincho-%s", @weight);
-        font-size:1.2em;
     }
+
 }
 
 .edito {
-    .chant-typo("45");
+    .chant-typo("120");
 }
 .ouverture {
     .chant-typo("158");
 }
 .chant1 {
-    .chant-typo("30");
+    .chant-typo("120");
 }
 .chant2 {
     .chant-typo("120");
@@ -172,11 +177,10 @@ p + p {
     .chant-typo("260");
 }
 .infos-pratiques {
-    .chant-typo("90");
+    .chant-typo("120");
 }
 
 .chant p:first-child:first-letter {
-    /*font-family: "UmePlumePMincho-200";*/
     float:left; 
     padding: 6px;
     margin: -5px 11px -21px 0px;
@@ -185,7 +189,6 @@ p + p {
 }
 
 .spectacle-texte {
-    /*font-family: "UmePlumePGothic-200";*/
     font-size: 10pt;
     line-height: 1.3em;
 
