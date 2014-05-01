@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="semicolon" format="1">
-  <advance width="336"/>
+  <advance width="0"/>
   <unicode hex="003B"/>
   <outline>
+    <contour>
+      <point x="210" y="1605" type="move"/>
+      <point x="210" y="1604" type="line"/>
+    </contour>
     <contour>
       <point x="212" y="880" type="move" smooth="yes"/>
       <point x="230" y="862"/>
