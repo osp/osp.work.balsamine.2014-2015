@@ -221,3 +221,26 @@ article#infos-pratiques {
         font-size:8.3pt;
     }
 }
+ul#quizz-bleu {
+    text-align: center;
+    padding: 1em;
+
+    li {
+        font-size: 8.3pt;
+        display: inline-block;
+        /*outline: 1px solid @color;*/
+        padding: 0.5em;
+        margin: 0.5em;
+
+        &:before {
+            content: "• ";
+        }
+
+        &.proverbe {
+            outline: 1px solid @color;
+            &:before {
+                content: "";
+            }
+        }
+    }
+}
