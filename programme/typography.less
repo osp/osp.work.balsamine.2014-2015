@@ -54,7 +54,6 @@ div.spectacle-infos {
     /*font-family: "UmePlumePGothic-600";*/
     font-size: 1.1em;
     line-height: 1em;
-    width: @small-page-width - 16mm;
     text-align: center;
     padding: 1em;
 }
@@ -88,6 +87,10 @@ div.notes p:first-child:first-letter {
     display: inline; 
 }
 
+li:before {
+    content: "– ";
+}
+
 dt {
     font-family: "UmePlumePGothic-200";
     text-transform: uppercase;
@@ -104,6 +107,12 @@ border-spacing:5px ! important;
  border-collapse:separate;
 }
 
+blockquote {
+    padding: 1em;
+}
+p + p {
+    text-indent: 1em;
+}
 
 
 .chant {
@@ -121,9 +130,8 @@ border-spacing:5px ! important;
         font-family: %("UmePlumePMincho-%s", @weight);
     }
     .piece {
-font-family: %("UmePlumePMincho-%s", @weight);
-font-size:1.2em;
-
+        font-family: %("UmePlumePMincho-%s", @weight);
+        font-size:1.2em;
     }
 }
 
