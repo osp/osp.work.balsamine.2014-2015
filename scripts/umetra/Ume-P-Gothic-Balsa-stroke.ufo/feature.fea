@@ -22,7 +22,8 @@
 	\parenleft \Udieresis \uni00B9 \percent \uni0093 \ugrave \dollar \g \acute 
 	\asterisk \N \bracketleft \Euro \uni009E \t \uni009B \germandbls \Egrave 
 	\Adieresis \Z \ecircumflex \udieresis \I \P \idieresis \k \Eacute \s 
-	\periodcentered ];
+	\periodcentered \ellipsis \quoteright \quoteleft \quotedblright \quotedblleft 
+	\endash \emdash ];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, , , ;
