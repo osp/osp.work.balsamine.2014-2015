@@ -77,10 +77,10 @@ div.spectacle-infos {
 }
 
 div.spectacle-infos-small {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.1em;
     text-align: center;
-    padding: 0.4em;
+    padding: 0.1em;
 }
 
 div.notes {
@@ -118,6 +118,7 @@ dt {
 }
 
 dd {
+    font-family: "UmePlumePMincho-200";
     display: inline; 
 }
 
@@ -127,7 +128,7 @@ border-spacing:5px ! important;
 }
 
 blockquote {
-    padding: 1em;
+    padding: 0.5em;
 }
 p + p {
     text-indent: 1em;
@@ -143,6 +144,8 @@ p + p {
 }
 .piece {
         font-size:1.2em;
+	font-family: "UmePlumePMincho-330";
+
     }
     
 
@@ -184,12 +187,14 @@ p + p {
 .spectacle-texte {
     font-size: 10pt;
     line-height: 1.2em;
+    margin-bottom:7px;
 
 }
 
 .production{
     font-size: 9.5pt;
     line-height: 1.2em;
+    font-family: "UmePlumePMincho-200";
 
 }
 
@@ -278,4 +283,27 @@ dl.quizz-proust {
     text-align: center;
     font-size: 1.2em;
 
+}
+.madeleines{
+    border-bottom: 1px solid @color;
+    margin:20px 0px 3px 0px;
+    
+    .partie{
+    text-transform:uppercase;
+    padding: 0; 
+    width: 100%;
+    font-size:0.9em;
+    font-family: 'UmePlumePGothic-330';
+
+    }
+    .dates{
+    margin:5px 0px;
+    padding: 0; width: 100%;
+    font-family: 'UmePlumePGothic-330';
+    border-top: 1px solid @color;
+    }
+    .liste{
+    margin-top:8px;
+    }
+       
 }
