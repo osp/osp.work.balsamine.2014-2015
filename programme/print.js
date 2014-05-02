@@ -44,6 +44,8 @@ $(window).load(function(){
         $(this).append("<div class='inside'>");
         $("#master-page").children().clone().appendTo($(".inside", $(this)));
         $(".moveable", $(this)).appendTo($(".inside", $(this)));
+        $(".titre-courant", $(this)).appendTo($(".inside", $(this)));
+
         //$("#master-page").clone().addClass("preview-page").attr("id","page-"+i).insertBefore($("#master-page"));
     });
     $("#master-page").hide();
