@@ -30,8 +30,13 @@ $(window).load(function(){
         $("img").each(function(){
             var hires = $(this).attr("data-alt-src");
             var lores = $(this).attr("src");
-            $(this).attr("data-alt-src", lores)
-            $(this).attr("src", hires)
+            $(this).attr("data-alt-src", lores);
+            $(this).attr("src", hires);
+
+            // Redlights images too small for printing
+            if (this.naturalHeight / $(this).height() < 3) {
+                $(this).css("outline", "10px solid red");
+            }
         });
     });
 
