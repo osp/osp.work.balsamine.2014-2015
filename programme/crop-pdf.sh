@@ -1,11 +1,14 @@
 #! /usr/bin/env bash
 
+./colorize.sh
+
 mkdir cahier
+mkdir chutes
 mkdir pages
 mkdir pages/odd
 
 # sans les crop marks
-gs -o "Balsa 2014-2015-nocrop.pdf" -sDEVICE=pdfwrite -c "[/CropBox [34 34 671.81 884.4] /PAGES pdfmark"  -f "Balsa 2014-2015.pdf"
+gs -o "Balsa 2014-2015-nocrop.pdf" -sDEVICE=pdfwrite -c "[/CropBox [34 34 671.81 884.4] /PAGES pdfmark"  -f "Balsa 2014-2015-colors.pdf"
 
 # fait un PDF pages paires et impaires
 gs -o "pages/Balsa2014-2015-%02d.pdf" -sDEVICE=pdfwrite   -f "Balsa 2014-2015.pdf"
@@ -36,7 +39,6 @@ gs -o "Balsa2014-2015-chutes.pdf" -sDEVICE=pdfwrite   chutes/Balsa2014-2015-*.pd
 rm Balsa2014-2015-odd-chutes.pdf Balsa2014-2015-even-chutes.pdf
 rm Balsa2014-2015-odd-cahier.pdf Balsa2014-2015-even-cahier.pdf
 rm Balsa2014-2015-odd.pdf Balsa2014-2015-even.pdf
-rm cahier/*.pdf
-rm chutes/*.pdf
-rm pages/odd/*.pdf
-rm pages/*.pdf
+rm -r cahier
+rm -r chutes
+rm -r pages
