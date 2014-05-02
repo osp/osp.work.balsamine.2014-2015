@@ -133,6 +133,7 @@ div#interface {
  */
 .inside {
     position: relative;
+    height: @page-height;
 }
 .moveable {
     position: absolute;
@@ -222,7 +223,7 @@ img.fit-width {
 
 @page {
     //size: @page-width @page-height; // format coupé
-    size: @page-width-crop @page-height-crop;  // format avec cropmarks
+    size: @page-width-crop 326mm;  // format avec cropmarks
     margin: 0;
 }
 
@@ -259,7 +260,7 @@ body {
     height: @page-height;
     width: @page-width;
     margin: @crop;
-    margin-bottom: @crop*2;
+    margin-bottom: 0;
     padding-top: @page-margin-top;
     padding-bottom: @page-margin-bottom;
     -webkit-flow-from: myFlow;
@@ -285,6 +286,9 @@ div#master-page {
     position: absolute;
     width: 100%;
     height: @page-height-crop;
+    /*height: 1180px;*/
+    top: 0;
+    bottom: 0;
 }
 div.preview-page {
     width: @page-width-crop; 

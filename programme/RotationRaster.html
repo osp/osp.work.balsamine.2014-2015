@@ -15,7 +15,7 @@
     </script>
 	<script type="text/paperscript" canvas="canvas">
 		var raster = new Raster('bitmap');
-		var size = new Size(100, 100);
+		var size = new Size(150, 150);
 		var colSize = raster.size / size * 1.;
 		var fullSize = size * colSize;
 
@@ -43,26 +43,104 @@
                     //});
 
                     // VER DE TERRE
+                    //var path = new Path();
+                    //path.moveTo(0, 0);
+                    //var Point1 = new Point(2, 4);
+                    //var Point2 = new Point(4, 2);
+                    //var Point3 = new Point(6, 4);
+                    //var Point4 = new Point(8, 4);
+                    //path.arcTo(Point1, Point2);
+                    //path.arcTo(Point2, Point3);
+                    //path.arcTo(Point3, Point4);
+                    //path.smooth();
+                    //path.scale(gray*5);
+                    //path.strokeColor = 'black';
+                    //path.fillColor = "white";
+                    //path.fillColor.alpha = 0;
+
+                    // Steph: Bézier = cubic !
+
+                    // UNE ESPÈCE DE FEUILLE?
                     var path = new Path();
                     path.moveTo(0, 0);
-                    var Point1 = new Point(2, 4);
-                    var Point2 = new Point(4, 2);
-                    var Point3 = new Point(6, 4);
-                    var Point4 = new Point(8, 4);
-                    path.arcTo(Point1, Point2);
-                    path.arcTo(Point2, Point3);
-                    path.arcTo(Point3, Point4);
-                    path.smooth();
+                    path.cubicCurveBy((5.2730397,-1.44555), (10.94243,-1.41512), (16.19965,0.0869));
+                    path.cubicCurveBy(( 21.45687,1.58896 ), (26.28658,4.55828), ( 30,8.57139)) ;
+                        //path.cubicCurveBy((2.44993,2.64765), ( 4.43127,5.77118),(5.49442,9.2182)) ; 
+                        //path.cubicCurveBy(( 1.06315,3.44701), (1.1742,7.22702), ( 0.0294,10.64778)) ;
                     path.scale(gray*5);
                     path.strokeColor = 'black';
                     path.fillColor = "white";
                     path.fillColor.alpha = 0;
+
+                    // VAN GOGH
+                    //var path = new Path();
+                    //path.moveTo(0, 0);
+                    //path.quadraticCurveTo((5.2730397,-1.44555), (10.94243,-1.41512), (16.19965,0.0869));
+                    //path.quadraticCurveTo(( 21.45687,1.58896 ), (26.28658,4.55828), ( 30,8.57139)) ;
+                    //path.quadraticCurveTo((2.44993,2.64765), ( 4.43127,5.77118),(5.49442,9.2182)) ; 
+                    //path.quadraticCurveTo(( 1.06315,3.44701), (1.1742,7.22702), ( 0.0294,10.64778)) ;
+                    //path.quadraticCurveTo((-1.14479,3.42077), ( -3.59521,6.44189),(-6.84164,8.01443)) ; 
+                    //path.quadraticCurveTo(( -1.62321,0.78628), (-3.42646,1.20796), ( -5.22993,1.18488)) ;
+                    //path.quadraticCurveTo((-1.80347,-0.0231), ( -3.60411,-0.49449), (-5.16902,-1.3912));
+                    //path.quadraticCurveTo(( -2.70987,-1.55278),(-4.61284,-4.35779), ( -5.28889,-7.40696)) ;
+                    //path.quadraticCurveTo((-0.67605,-3.04918), ( -0.17359,-6.30498),(1.17156,-9.12368)) ;
+                    //path.quadraticCurveTo(( 1.34516,-2.8187),(3.50007,-5.21083), ( 6.02204,-7.05316)) ;
+                    //path.quadraticCurveTo((2.52197,-1.84233), ( 5.40452,-3.15207),(8.38349,-4.09029)) ;
+                    //path.quadraticCurveTo(( 8.82875,-2.7806),(18.65478,-2.26344), ( 27.14286,1.42857));
+                    //path.strokeColor = 'black';
+                    //path.fillColor = "white";
+                    //path.fillColor.alpha = 0;
+
+                    // VRILLE
+                    //var path = new Path();
+                    //path.moveTo(0, 0);
+                    //path.quadraticCurveBy((5.2730397,-1.44555), (10.94243,-1.41512), (16.19965,0.0869));
+                    //path.quadraticCurveBy(( 21.45687,1.58896 ), (26.28658,4.55828), ( 30,8.57139)) ;
+                    //path.quadraticCurveBy((2.44993,2.64765), ( 4.43127,5.77118),(5.49442,9.2182)) ; 
+                    //path.quadraticCurveBy(( 1.06315,3.44701), (1.1742,7.22702), ( 0.0294,10.64778)) ;
+                    //path.quadraticCurveBy((-1.14479,3.42077), ( -3.59521,6.44189),(-6.84164,8.01443)) ; 
+                    //path.quadraticCurveBy(( -1.62321,0.78628), (-3.42646,1.20796), ( -5.22993,1.18488)) ;
+                    //path.quadraticCurveBy((-1.80347,-0.0231), ( -3.60411,-0.49449), (-5.16902,-1.3912));
+                    //path.quadraticCurveBy(( -2.70987,-1.55278),(-4.61284,-4.35779), ( -5.28889,-7.40696)) ;
+                    //path.quadraticCurveBy((-0.67605,-3.04918), ( -0.17359,-6.30498),(1.17156,-9.12368)) ;
+                    //path.quadraticCurveBy(( 1.34516,-2.8187),(3.50007,-5.21083), ( 6.02204,-7.05316)) ;
+                    //path.quadraticCurveBy((2.52197,-1.84233), ( 5.40452,-3.15207),(8.38349,-4.09029)) ;
+                    //path.quadraticCurveBy(( 8.82875,-2.7806),(18.65478,-2.26344), ( 27.14286,1.42857));
+                    //path.strokeColor = 'black';
+                    //path.fillColor = "white";
+                    //path.fillColor.alpha = 0;
+
+                    // CROLLE?
+                    //var path = new Path();
+                    //path.moveTo(0, 0);
+                    //path.quadraticCurveTo((5.2730397,-1.44555), (10.94243,-1.41512));
+                    //path.quadraticCurveTo((16.19965,0.0869), ( 21.45687,1.58896 ));
+                    //path.quadraticCurveTo((26.28658,4.55828), ( 30,8.57139)) ;
+                    //path.quadraticCurveTo((2.44993,2.64765), ( 4.43127,5.77118))
+                    //path.quadraticCurveTo((5.49442,9.2182), ( 1.06315,3.44701)) ; 
+                    //path.quadraticCurveTo((1.1742,7.22702), ( 0.0294,10.64778)) ;
+                    //path.quadraticCurveTo((-1.14479,3.42077), ( -3.59521,6.44189))
+                    //path.quadraticCurveTo((-6.84164,8.01443),( -1.62321,0.78628)) ; 
+                    //path.quadraticCurveTo((-3.42646,1.20796), ( -5.22993,1.18488)) ;
+                    //path.quadraticCurveTo((-1.80347,-0.0231), ( -3.60411,-0.49449));
+                    //path.quadraticCurveTo((-5.16902,-1.3912), ( -2.70987,-1.55278));
+                    //path.quadraticCurveTo((-4.61284,-4.35779), ( -5.28889,-7.40696)) ;
+                    //path.quadraticCurveTo((-0.67605,-3.04918), ( -0.17359,-6.30498));
+                    //path.quadraticCurveTo((1.17156,-9.12368), ( 1.34516,-2.8187)) ;
+                    //path.quadraticCurveTo((3.50007,-5.21083), ( 6.02204,-7.05316)) ;
+                    //path.quadraticCurveTo((2.52197,-1.84233), ( 5.40452,-3.15207));
+                    //path.quadraticCurveTo((8.38349,-4.09029), ( 8.82875,-2.7806)) ;
+                    //path.quadraticCurveTo((18.65478,-2.26344), ( 27.14286,1.42857));
+                    //path.strokeColor = 'black';
+                    //path.fillColor = "white";
+                    //path.fillColor.alpha = 0;
+
 					
                     // THIS CHANGES POSITION AND ROTATES THE ELEMENT
 					path.position = pos;
 					path.rotate(gray * 180);
                     // OUTPUTS IN SVG
-                    document.getElementById("svg").appendChild(path.exportSVG());
+                    //document.getElementById("svg").appendChild(path.exportSVG());
 				}
 			}
 		}
@@ -71,7 +149,8 @@
 <body>
 	<canvas id="canvas"></canvas>
     <!-- CHANGE IMAGE URL HERE -->
-    <img id="bitmap" src="/images/rhinicerus.jpg" />
+    <!--<img id="bitmap" src="/hichem/finaux/katchen/katchen-full-objects/katchen_0001_armure.png" style="display: none;" />-->
+    <img id="bitmap" src="tmp-ludi/hantologie-arbre-full.png" style="display: none;" />
     <svg id="svg" width="1200" height="1000"></svg>
 </body>
 </html>
