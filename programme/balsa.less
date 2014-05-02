@@ -24,10 +24,19 @@ html.debug {
     height: @small-page-height;
 
     /* margins inside the main booklet */
-    padding-left: 10mm;
-    padding-right: 10mm;
+    /*padding-left: 10mm;*/
+    /*padding-right: 10mm;*/
     padding-top: 5mm;
     padding-bottom: 25mm;
+
+    &:nth-child(odd) {
+        padding-left: 7mm;
+        padding-right: 13mm;
+    }
+    &:nth-child(even) {
+        padding-left: 13mm;
+        padding-right: 7mm;
+    }
 }
 .glose {
     position: absolute;
