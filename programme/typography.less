@@ -17,6 +17,7 @@ a{
 
 h1 {
     text-transform: uppercase;
+    font-family: "UmePlumePGothic-90";
     text-align: center;
     margin-bottom:13px;
     line-height: 1em;
@@ -25,6 +26,7 @@ h1 {
 
 h2 {
     text-transform: uppercase;
+    font-family: "UmePlumePGothic-120";
     font-size: 2em;
     text-align: center;
     margin-bottom:5px;
@@ -39,6 +41,7 @@ h5 {
 
 h3 {
     text-transform: uppercase;
+    font-family: "UmePlumePGothic-330";
     font-size: 1.4em;
     text-align: center;
     margin-top:22px;
@@ -52,6 +55,7 @@ text-align:center;
 text-transform: uppercase;
 font-size: 1.1em;
 line-height: 1.2em;
+letter-spacing: 0.1em;
 
 }
 
@@ -66,7 +70,7 @@ article {
 
 div.spectacle-infos {
     font-size: 1.1em;
-    line-height: 1em;
+    line-height: 1.1em;
     text-align: center;
     padding: 1em;
     width: 114mm;
@@ -74,12 +78,13 @@ div.spectacle-infos {
 
 div.spectacle-infos-small {
     font-size: 1.1em;
-    line-height: 1em;
+    line-height: 1.1em;
     text-align: center;
     padding: 0.4em;
 }
 
 div.notes {
+    font-family: "UmePlumePGothic-260";
     -webkit-region-break-before: always;
     -webkit-region-break-after: always;
     font-size: 8.3pt;
@@ -99,7 +104,7 @@ div.notes p:first-child:first-letter {
 }
 
 li:before {
-    content: "– ";
+    content: "𝅝",
 }
 
 dt {
@@ -129,6 +134,7 @@ p + p {
 }
 
 .chant {
+    font-family: "UmePlumePMincho-200";
     line-height: 1.1em;
     background-color:white;
     padding: 1em;
@@ -165,49 +171,14 @@ p + p {
 
 }
 
-.edito {
-    .chant-typo("120");
-}
-.ouverture {
-    .chant-typo("158");
-}
-.chant1 {
-    .chant-typo("120");
-}
-.chant2 {
-    .chant-typo("120");
-}
-.chant3 {
-    .chant-typo("200");
-}
-.chant4 {
-    .chant-typo("330");
-}
-.chant5 {
-    .chant-typo("410");
-}
-.chant6 {
-    .chant-typo("500");
-}
-.chant7 {
-    .chant-typo("410");
-}
-.chant8 {
-    .chant-typo("260");
-}
-.infos-pratiques {
-    .chant-typo("120");
-}
-.making-off {
-    .chant-typo("120");
-}
+
 
 .chant h1 + p:first-letter {
+    font-family: "UmePlumePMincho-65";
     float:left; 
-    padding: 6px;
+    padding: 12px;
     margin: -10px 5px -21px 0px;
     font-size: 80px;
-    line-height: 1em;
 }
 
 .spectacle-texte {
@@ -233,13 +204,16 @@ h3 {
 
     .pratique1 {
         text-align:center;
+        border-bottom: 1px solid @color;
         vertical-align: middle;
         font-family: 'UmePlumePGothic-330';
-	margin:25px 0px 3px 0px;
+	margin:20px 0px 3px 0px;
 	font-size:1.1em;
     }
     .pratique2 {
-        outline: 2px solid black;
+/*         outline: 2px solid black; */
+        border-bottom: 1px solid @color;
+        border-top: 1px solid @color;
         padding: 2px 4px;
         vertical-align: middle;
 
@@ -295,4 +269,14 @@ dl.quizz-proust {
 
 .titre-courant {
     color:black;
+    border-top: 1px solid black;
+    padding-top: 3px;
+}
+
+
+.legendes{
+    font-family: "UmePlumePMincho-200";
+    text-align: center;
+    font-size: 1.2em;
+
 }

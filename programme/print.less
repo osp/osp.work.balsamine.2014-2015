@@ -50,10 +50,10 @@ html.debug {
 @color-90: lighten(@color, 90%);
 @color-100: lighten(@color, 100%);
 
-@color-blue: #330099;
-@color-rouche:#cc3300;
-@color-green:#4c6633;
-
+@color-blue: #003399;
+@color-rouge:#cc3300;
+@color-vert:#4c6633;
+@color-gris:#727171;
 
 /* __________________________________ INTERFACE CLASSES  __________________________________ */
 @media print {
@@ -399,4 +399,22 @@ h1, h2, h3, h4, h5, h6 {
  * BUT YOU MIGHT WANT TO DEACTIVATE THIS */
 p {
     /*-webkit-region-break-inside: avoid;*/
+}
+
+
+/* __________________________________ PLAQUES __________________________________ */
+
+.blue{
+color: @color-blue;
+}
+
+.rouge{
+color: @color-rouge;
+}
+.vert{
+color:@color-vert;
+}
+
+.gris{
+color:@color-gris;
 }
