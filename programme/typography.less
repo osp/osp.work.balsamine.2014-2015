@@ -41,7 +41,7 @@ h5 {
 
 h3 {
     text-transform: uppercase;
-    font-family: "UmePlumePGothic-330";
+    font-family: "UmePlumePGothic-200";
     font-size: 1.4em;
     text-align: center;
     margin-top:18px;
@@ -67,14 +67,20 @@ margin-bottom: 0.8em;
 article {
     -webkit-region-break-before: always;
 }
-
+.artiste{
+    text-align:center;
+    margin-top: 23px;
+}
+.relache{
+    font-size:0.8em;
+}
 div.spectacle-infos {
     font-size: 1.1em;
     line-height: 1.1em;
     text-align: center;
-    padding: 1em;
+    padding: 0em 1em 1em 1em;
     width: 114mm;
-    
+	
   /*  .dates, 
     .artiste,
     .type{
@@ -265,7 +271,6 @@ ul#quizz-bleu {
 
         &:before {
             content: "• ";
-	    font-size: 8.3pt;
 
         }
 
@@ -312,21 +317,30 @@ dl.quizz-proust {
     margin:20px 0px 3px 0px;
     
     .partie{
+    margin-bottom:10px;
     text-transform:uppercase;
     padding: 0; 
     width: 100%;
-    font-size:0.9em;
-    font-family: 'UmePlumePGothic-330';
+    font-size:0.7em;
+    font-family: 'UmePlumePGothic-200';
+    border-bottom: 0px solid @color;
+
 
     }
     .dates{
     margin:5px 0px;
     padding: 0; width: 100%;
-    font-family: 'UmePlumePGothic-330';
+    font-family: 'UmePlumePGothic-200';
     border-top: 1px solid @color;
     }
     .liste{
     margin-top:8px;
+    border-bottom: 0px solid @color;
+    }
+    .separateur{
+    margin: -3px;
+    text-align: center;
+    font-size:1.4em;
     }
        
 }
