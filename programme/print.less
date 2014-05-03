@@ -304,30 +304,30 @@ div.preview-page {
         overflow: visible;
     }
 
-    &:after {
+    .folio {
+        font-size: 0.7em;
+        position: absolute;
+        bottom: 20mm;
+        width: 10mm;
     }
-
-    &:nth-child(odd) .page {
-        padding-left: @page-margin-inside;
-        padding-right: @page-margin-outside;
+    &:nth-child(odd) { 
+        .page {
+            padding-left: @page-margin-inside;
+            padding-right: @page-margin-outside;
+        }
+        .folio {
+            left: 75mm;
+        }
     }
-    &:nth-child(even) .page {
-        padding-left: @page-margin-outside;
-        padding-right: @page-margin-inside;
+    &:nth-child(even) {
+        .page {
+            padding-left: @page-margin-outside;
+            padding-right: @page-margin-inside;
+        }
+        .folio {
+            right: 75mm;
+        }
     }
-}
-/* __________________________________ PAGINATION __________________________________ */
-.folio {
-    font-size: 0.7em;
-    position: absolute;
-    bottom: 20mm;
-    left: 50%;
-}
-.folio:before {
-    content: "page ";
-}
-.folio:after {
-    content: counter(page-counter);
 }
  
 /* __________________________________ CROP MARKS  __________________________________ */
