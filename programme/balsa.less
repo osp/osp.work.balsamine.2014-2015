@@ -103,26 +103,9 @@ div#content .notes {
 }
 
 .titre-courant {
-    height: 23px;
-    width: 70mm;
-    /*text-align: center;*/
-    text-align: right;
-}
-.bloc-courant-impair{
+    width: @page-width;
     position:absolute;
-    right: 17mm;
-    top: 17mm;
-    -webkit-transform:rotate(270deg); /* Opera, Chrome, and Safari */
-    -webkit-transform-origin: right bottom;
-    border-top: 1px solid black;
+    top: 15mm;
+    left: @crop;
+    padding: 3px 0;
 }
-
-.bloc-courant-pair{
-    position:absolute;
-    left: 17mm;
-    top: 92mm;
-    -webkit-transform:rotate(270deg); /* Opera, Chrome, and Safari */
-    -webkit-transform-origin: left top;
-    border-bottom: 1px solid black;
-}
-
