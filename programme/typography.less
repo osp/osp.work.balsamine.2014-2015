@@ -63,6 +63,9 @@ margin-bottom: 0.8em;
 .avoid-break{
     -webkit-region-break-before: avoid;
 }
+.force-break{
+    -webkit-region-break-before: always;
+}
 
 article {
     -webkit-region-break-before: always;
@@ -94,6 +97,7 @@ div.spectacle-infos-small {
     line-height: 1.1em;
     text-align: center;
     padding: 0.1em;
+    margin:4px 0px;
 }
 
 div.notes {
@@ -135,13 +139,9 @@ dd {
     display: inline; 
 }
 
-table {
-border-spacing:5px ! important;
- border-collapse:separate;
-}
 
 blockquote {
-    padding: 0.2em;
+    padding: 0.1em 0em 0.1em 1em;
 }
 p + p {
     text-indent: 1em;
@@ -155,6 +155,17 @@ p + p {
     font-size:1em;
 
 }
+.chant2{
+    h3{
+    margin-top:0px;
+    }
+    .separateur2{
+    margin: 4px;
+    text-align: center;
+    font-size:1.4em;
+    }
+
+}
 .piece {
         font-size:1.2em;
 	font-family: "UmePlumePMincho-200";
@@ -162,9 +173,9 @@ p + p {
 
     }
 .piece-autre{
-    font-size:0.8em;
+    font-size:0.9em;
     font-family: "UmePlumePGothic-200" ! important;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
 
 }
  .sommaire { 
