@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rotation Raster</title>
+	<script type="text/javascript" src="/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="/lib/paper-full.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $("#canvas").width($("#bitmap").width());
+            $("#canvas").height($("#bitmap").height());
+        });
+
+    </script>
+	<script type="text/paperscript" canvas="canvas">
+		var raster = new Raster('bitmap');
+		var size = new Size(88, 104);
+		// var size = new Size(176, 208);
+		// var size = new Size(17, 20);
+		var colSize = raster.size / size * 1.;
+		var fullSize = size * colSize;
+		var ajoutRand = 0;
+
+		raster.visible = false;
+		raster.size = size;
+		for (var x = 0; x < size.width; x++) {
+			for (var y = 0; y < size.height; y++) {
+				var color = raster.getPixel(x, y);
+				var gray = (1 - color.gray) * 0.9;
+				if (gray > 0.1) {
+					var pos = new Point(x, y) * colSize + colSize / 2;
+
+                  // Une fourmi
+
+var pathData = 'm 932.21259,89.5 -11.1875,4.3125 17.5,25.5625 23,4.40625 c -7.64383,7.46482 -12.65625,19.22783 -12.65625,29.03125 0,13.12125 9.01103,18.54335 21.25,20 -9.23244,4.70394 -16.67466,17.94334 -19.90625,36.65625 l -9.03125,-6.375 -8.9375,-24.34375 -23.84375,-35.53125 -9.4375,7.46875 22.65625,33.96875 9.5625,26.0625 17.53125,12.34375 0.53125,23.59375 -20.78125,7.21875 -38.25,-11.84375 -38.9375,5.3125 1.0625,11.9375 36.5,-5.09375 39.84375,12.34375 22.09375,-7.71875 7.78125,30.40625 -52.0625,13.59375 -9.40625,78.4375 -21.65625,30.0625 9.75,7 22.625,-31.40625 8.21875,-75.09375 47.53125,-11.65625 5.90625,8 c 0,0 -21,11.28175 -21,40.6875 0,35.76628 13.12178,64.75 29.28125,64.75 16.15946,0 29.24996,-28.98372 29.24996,-64.75 0,-29.38871 -20.96871,-40.6875 -20.96871,-40.6875 l 5.875,-8.03125 47.56251,11.6875 8.2187,75.09375 22.625,31.40625 9.75,-7 -21.6562,-30.0625 -9.4063,-78.4375 -52.09371,-13.59375 7.78121,-30.40625 22.125,7.71875 39.8438,-12.34375 36.5,5.09375 1.0625,-11.9375 -38.9375,-5.3125 -38.25,11.84375 -20.7813,-7.21875 0.5,-23.5625 17.5625,-12.375 9.5625,-26.0625 22.6563,-33.96875 -9.4375,-7.46875 -23.8438,35.53125 -8.9375,24.34375 -9.0625,6.40625 c -3.2282,-18.72507 -10.64007,-31.97871 -19.87496,-36.6875 12.22869,-1.46026 21.24996,-6.88595 21.24996,-20 0,-9.80342 -5.0436,-21.56643 -12.68746,-29.03125 l 23.03126,-4.40625 17.5,-25.5625 -11.1875,-4.3125 -15.125,19.34375 -30.40626,5.8125 -30.40625,-5.8125';
+var path = new Path(pathData);
+path.fillColor = "black";
+					
+                    // THIS CHANGES POSITION AND ROTATES THE ELEMENT
+
+			if(ajoutRand==1){
+			ajoutRand=0;
+			}
+			ajoutRand=ajoutRand+0.1;
+
+			path.rotate(Math.random()*360);
+			// path.rotate(17);
+			// path.scale(gray/28);
+			path.scale(gray/14);
+			path.position = pos + (Math.random()*15);
+
+                    // OUTPUTS IN SVG
+                        document.getElementById("svg").appendChild(path.exportSVG());
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+    <canvas id="canvas" style="display: none;" ></canvas>
+    <!-- CHANGE IMAGE URL HERE -->
+    <img id="bitmap" src="test/hantologie-arbre-660-780.png" style="display: none;" />
+    <svg id="svg" width="1000" height="1000"></svg>
+</body>
+</html>
