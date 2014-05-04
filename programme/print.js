@@ -39,8 +39,7 @@ $(window).load(function(){
             // Redlights images too small for printing
             $("img").each(function(){
                 if (Math.ceil(this.naturalHeight / $(this).height()) < 6) {
-                    //console.log($(this).attr("src") + ": " + Math.floor(this.naturalHeight / $(this).height()) );
-                    console.log($(this).attr("src") + ": " + Math.floor(this.naturalHeight / $(this).height()) + " -- natural: " + this.naturalHeight + " -- height: " + $(this).height());
+                    console.log($(this).attr("src") + ": " + Math.floor(this.naturalHeight / $(this).height()) );
                     if($(this).parent().hasClass("moveable")) {
                         $(this).parent().toggleClass("lo-res");
                     } else {
