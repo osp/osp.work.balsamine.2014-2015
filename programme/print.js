@@ -60,6 +60,7 @@ $(window).load(function(){
         $("#master-page").children().clone().appendTo($(".inside", $(this)));
         $(".moveable", $(this)).appendTo($(".inside", $(this)));
         $(".titre-courant", $(this)).appendTo($(".inside", $(this)));
+        $(".images-chant", $(this)).appendTo($(".inside", $(this)));
     });
     $("#master-page").hide();
 
