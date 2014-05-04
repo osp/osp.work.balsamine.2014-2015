@@ -81,7 +81,7 @@ div.spectacle-infos {
     font-size: 1.1em;
     line-height: 1.1em;
     text-align: center;
-    padding: 0em 1em 1em 1em;
+    /*padding: 0em 1em 1em 1em;*/
     width: 114mm;
 	
   /*  .dates, 
@@ -170,9 +170,9 @@ p + p {
 
 .chant {
     font-family: "UmePlumePMincho-200";
-    line-height: 1.1em;
-    padding: 12mm 15mm;
-    font-size:10.5pt;
+    line-height: 1.05em;
+    padding: 1em;
+    font-size:1em;
 
 }
 .chant2{
@@ -215,12 +215,12 @@ p + p {
     h3{
     border-bottom:1px solid @color;
     line-height: 1.1em;
-
+    margin-top: 16px;
 
     }
           .date{
       margin-top: 2px ! important;
-      padding-top: 0px ! important;
+      padding-top: 0px;
       padding-bottom: 0px ! important;
       margin-bottom: 4px;
       }
@@ -230,6 +230,25 @@ p + p {
     }
 }
 
+.edito{
+  margin-bottom:10px;
+}
+.biblio{
+font-size:0.7em;
+    h5{
+    margin-bottom:5px;
+    margin-top:0.7em;
+    }
+    .liste{
+    text-align:left;
+    }
+    .separateur{
+      margin-top:2px;
+      margin-bottom:3px;
+
+
+    }
+}
 .chant-typo(@weight) {
     * {
         font-family: %("UmePlumePGothic-%s", @weight);
