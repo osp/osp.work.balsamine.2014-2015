@@ -101,4 +101,24 @@ $(window).load(function(){
             content: 'style="top: ' + top + '; left: ' + left + '; width: ' + width + 'px; height: ' + height + 'px;"',
         }).show();
     });
+
+
+    // __________________________________ FIGURE COUNTING __________________________________ //
+    var figCount = 1;
+    var subFigCount = 0;
+    var figName = $(".preview-page figure:first-child").attr("class");
+    var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    $(".preview-page figure").each(function(){
+        console.log(figName);
+        console.log(figCount);
+        if ($(this).attr("class") == figName) {
+            $("figcaption", $(this)).prepend("Fig." + figCount + alphabet[subFigCount] + " ");
+            subFigCount ++;
+        } else {
+            figCount ++;
+            $("figcaption", $(this)).prepend("Fig." + figCount + " ");
+            subFigCount = 0;
+            figName = $(this).attr("class");
+        }
+    });
 });
