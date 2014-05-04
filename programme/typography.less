@@ -171,8 +171,8 @@ p + p {
 .chant {
     font-family: "UmePlumePMincho-200";
     line-height: 1.1em;
-    padding: 1em;
-    font-size:1em;
+    padding: 12mm 15mm;
+    font-size:10.5pt;
 
 }
 .chant2{
@@ -208,11 +208,28 @@ p + p {
     font-size: 1.1em;
     line-height: 1.1em;
     text-align: center;
-    padding: 0em 1em 1em 1em;
+    padding: 0em 1em 0em 1em;
     width: 55mm;
 
 }
+    h3{
+    border-bottom:1px solid @color;
+    line-height: 1.1em;
+
+
     }
+          .date{
+      margin-top: 2px ! important;
+      padding-top: 0px ! important;
+      padding-bottom: 0px ! important;
+      margin-bottom: 4px;
+      }
+    .separateur {
+      font-size:1.8em;
+      margin-bottom: 0.2em;
+    }
+}
+
 .chant-typo(@weight) {
     * {
         font-family: %("UmePlumePGothic-%s", @weight);

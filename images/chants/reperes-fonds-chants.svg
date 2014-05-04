@@ -639,54 +639,6 @@
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath43162">
-      <rect
-         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none"
-         id="rect43164"
-         width="387.40961"
-         height="1151.4286"
-         x="428.30469"
-         y="-66.209282"
-         transform="matrix(0,1,-1,0,0,0)" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath43175">
-      <rect
-         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none"
-         id="rect43177"
-         width="114.55247"
-         height="1151.4286"
-         x="-102.85715"
-         y="-61.923565"
-         transform="matrix(0,1,-1,0,0,0)" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath43183">
-      <rect
-         transform="matrix(0,1,-1,0,0,0)"
-         y="-923.62976"
-         x="-262.54437"
-         height="1151.4286"
-         width="283.1239"
-         id="rect43185"
-         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath43196">
-      <rect
-         transform="matrix(0,1,-1,0,0,0)"
-         y="-923.6297"
-         x="-136.0891"
-         height="1151.4286"
-         width="283.1239"
-         id="rect43198"
-         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
        id="clipPath96223">
       <rect
          style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none"
@@ -717,6 +669,66 @@
          in2="BackgroundImage"
          id="feBlend3276" />
     </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3294">
+      <rect
+         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none"
+         id="rect3296"
+         width="58.838196"
+         height="709.5293"
+         x="-413.29807"
+         y="271.97754"
+         transform="matrix(0,1,-1,0,0,0)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3314">
+      <rect
+         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none"
+         id="rect3316"
+         width="43.622471"
+         height="492.52277"
+         x="-323.5437"
+         y="-772.44092"
+         transform="matrix(0,1,-1,0,0,0)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3319">
+      <rect
+         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none"
+         id="rect3321"
+         width="134.07886"
+         height="843.10327"
+         x="900.56677"
+         y="-70.662369"
+         transform="matrix(0,1,-1,0,0,0)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3324">
+      <rect
+         y="254.11366"
+         x="732.40253"
+         height="773.44531"
+         width="40.038464"
+         id="rect3326"
+         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none"
+         transform="matrix(0,1,-1,0,0,0)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3359">
+      <rect
+         style="fill:#c5c6c3;fill-opacity:0.91091273;stroke:none"
+         id="rect3361"
+         width="218.8382"
+         height="754.72437"
+         x="-336.61417"
+         y="279.92123"
+         transform="matrix(0,1,-1,0,0,0)" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -726,8 +738,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497474"
-     inkscape:cx="675.04703"
-     inkscape:cy="262.06437"
+     inkscape:cx="241.34794"
+     inkscape:cy="515.33349"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -741,11 +753,15 @@
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:object-paths="true"
-     inkscape:object-nodes="true">
+     inkscape:object-paths="false"
+     inkscape:object-nodes="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-page="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-to-guides="true">
     <sodipodi:guide
        orientation="1,0"
-       position="460.67052,401.03057"
+       position="772.44092,359.61431"
        id="guide42985" />
     <sodipodi:guide
        orientation="0,1"
@@ -757,20 +773,40 @@
        id="guide96152" />
     <sodipodi:guide
        orientation="0,1"
-       position="329.30973,797.04065"
+       position="336.61417,797.24408"
        id="guide3271" />
     <sodipodi:guide
        orientation="1,0"
-       position="24.843758,538.41128"
+       position="382.67716,476.79201"
        id="guide3281" />
     <sodipodi:guide
        orientation="1,0"
-       position="414.60754,491.9443"
+       position="336.61417,499.01536"
        id="guide3283" />
     <sodipodi:guide
        orientation="0,1"
-       position="275.77165,779.32411"
+       position="464.67017,779.52754"
        id="guide3285" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="714.88812,17.716521"
+       id="guide3264" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="361.41733,308.09653"
+       id="guide3266" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="709.79932,772.44092"
+       id="guide3272" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="712.8678,24.80319"
+       id="guide3274" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="481.42858,908.57144"
+       id="guide3376" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -785,10 +821,10 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,10.629915)" />
+     id="layer5"
+     inkscape:label="chant"
+     style="display:inline" />
   <g
      inkscape:groupmode="layer"
      id="layer3"
@@ -797,6 +833,26 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="m3" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,10.629915)">
+    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke:none"
+       id="rect3185"
+       width="46.062992"
+       height="260.61935"
+       x="2053.8735"
+       y="430.10815" />
+    <rect
+       y="486.6767"
+       x="2267.4668"
+       height="260.61935"
+       width="24.80315"
+       id="rect3187"
+       style="fill:#ffff00;fill-opacity:1;stroke:none" />
+  </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
