@@ -22,8 +22,8 @@ $(window).load(function(){
     });
 
 
-    // __________________________________ PRINT PREVIEW __________________________________ //
-    $("button#preview").click(function(e){
+    // __________________________________ HIGH RESOLUTION __________________________________ //
+    $("button#hi-res").click(function(e){
         e.preventDefault();
         $(this).toggleClass("button-active");
         $("html").toggleClass("export");
@@ -32,13 +32,23 @@ $(window).load(function(){
             var lores = $(this).attr("src");
             $(this).attr("data-alt-src", lores);
             $(this).attr("src", hires);
-
-            // Redlights images too small for printing
-            if (Math.floor(this.naturalHeight / $(this).height()) < 6) {
-                console.log($(this).attr("src") + ": " + Math.floor(this.naturalHeight / $(this).height()));
-                $(this).css("outline", "10px solid red");
-            }
         });
+        console.log("Wait for hi-res images to load");
+        window.setTimeout(function(){
+            console.log("Check image resolution");
+            // Redlights images too small for printing
+            $("img").each(function(){
+                if (Math.ceil(this.naturalHeight / $(this).height()) < 6) {
+                    //console.log($(this).attr("src") + ": " + Math.floor(this.naturalHeight / $(this).height()) );
+                    console.log($(this).attr("src") + ": " + Math.floor(this.naturalHeight / $(this).height()) + " -- natural: " + this.naturalHeight + " -- height: " + $(this).height());
+                    if($(this).parent().hasClass("moveable")) {
+                        $(this).parent().toggleClass("lo-res");
+                    } else {
+                        $(this).toggleClass("lo-res");
+                    }
+                }
+            });
+        }, 500);
     });
 
 
