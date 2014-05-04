@@ -2,7 +2,7 @@
 
 \paper  {
   #(define fonts
-    (make-pango-font-tree "Ume P Gothic Balsa"
+    (make-pango-font-tree "UmePlumePGothic"
                           "Ume P Mincho"
                           "Ume Mincho Balsa"
                            (/ staff-height pt 20)))
