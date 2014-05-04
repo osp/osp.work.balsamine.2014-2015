@@ -14,6 +14,9 @@ html.debug {
     .glose {
         outline: 1px solid orange;
     }
+    .images-chant {
+        outline: 1px solid cyan;
+    }
 }
 
 
@@ -108,4 +111,29 @@ div#content .notes {
     top: @crop;
     left: @crop;
     padding: 5mm;
+}
+
+.images-chant {
+    position: absolute;
+    top: @page-height - @small-page-height + @crop;
+    left: @crop;
+    height: @small-page-height - (@page-height - @small-page-height);
+    width: @page-width - @small-page-width;
+    padding-left: 10em;
+
+    figure {
+        max-width: 100%;
+        margin-bottom: 2em;
+    }
+}
+.images-chant.bas {
+    position: absolute;
+    top: @small-page-height + @crop;
+    width: @page-width;
+
+    figure {
+        float: left;
+        max-width: 25%;
+        margin-right: 2em;
+    }
 }
