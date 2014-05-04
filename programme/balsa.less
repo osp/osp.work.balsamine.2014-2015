@@ -120,6 +120,7 @@ div#content .notes {
     height: @small-page-height - (@page-height - @small-page-height);
     width: @page-width - @small-page-width;
     padding-left: 10em;
+    z-index:-800px;
 
     figure {
         max-width: 100%;
@@ -130,6 +131,7 @@ div#content .notes {
     position: absolute;
     top: @small-page-height + @crop;
     width: @page-width;
+    z-index:-800;
 
     figure {
         float: left;
