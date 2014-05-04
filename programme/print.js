@@ -34,7 +34,8 @@ $(window).load(function(){
             $(this).attr("src", hires);
 
             // Redlights images too small for printing
-            if (this.naturalHeight / $(this).height() < 3) {
+            if (Math.floor(this.naturalHeight / $(this).height()) < 6) {
+                console.log($(this).attr("src") + ": " + Math.floor(this.naturalHeight / $(this).height()));
                 $(this).css("outline", "10px solid red");
             }
         });

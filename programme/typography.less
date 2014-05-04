@@ -171,7 +171,6 @@ p + p {
 .chant {
     font-family: "UmePlumePMincho-200";
     line-height: 1.1em;
-    background-color:white;
     padding: 1em;
     font-size:1em;
 
@@ -203,6 +202,16 @@ p + p {
     font-family: "UmePlumePGothic-260" ! important;
     font-size: 8.3pt;
     line-height: 1.1em;
+    text-align:center;
+    
+    div.spectacle-infos {
+    font-size: 1.1em;
+    line-height: 1.1em;
+    text-align: center;
+    padding: 0em 1em 1em 1em;
+    width: 55mm;
+
+}
     }
 .chant-typo(@weight) {
     * {
@@ -251,7 +260,7 @@ p + p {
 /* ---------------- INFOS PRATIQUES ------------------*/
 article#infos-pratiques {
 
-    font-size: 10pt;
+    font-size: 9.5pt;
     line-height: 1.2em;
     margin-bottom:7px;
 h3 {
@@ -265,22 +274,51 @@ h3 {
         text-align:center;
         border-bottom: 1px solid @color;
         vertical-align: middle;
-        font-family: 'UmePlumePGothic-330';
-	margin:16px 0px 3px 0px;
-	font-size:1.1em;
+        font-family: 'UmePlumePGothic-200';
+	margin:10px 0px 3px 0px;
+	font-size:1.2em;
+	text-transform:uppercase;
+	
     }
+    	  .pratique11 {
+	  font-size: 9pt;
+	  margin-top:5px;
+	  font-family: 'UmePlumePGothic-260';
+	  text-align:center;
+	  border-bottom: 1px solid @color;
+	  vertical-align: middle;
+	  margin:16px 0px 3px 0px;
+	  text-transform:uppercase;
+	
+	  }
     .pratique2 {
 /*         outline: 2px solid black; */
         border-bottom: 1px solid @color;
-        border-top: 1px solid @color;
         padding: 2px 4px;
         vertical-align: middle;
-
+	line-height:1.15em;
     }
     .pratique3 {
         font-size:10pt;
 	margin-top:5px;
 
+    }
+    .after-show{
+    /*border-bottom:1px solid black;*/
+    text-align:center;
+    }
+    .separateur{
+    margin: -3px;
+    text-align: center;
+    font-size:1.4em;
+    }
+        .separateur2{
+    margin-top: 12px;
+    text-align: center;
+    font-size:1.4em;
+    }
+        .resa{
+    /*border-bottom:1px solid black;*/
     }
 }
 
@@ -372,5 +410,26 @@ dl.quizz-proust {
     text-align: center;
     font-size:1.4em;
     }
-       
+      .avant-bible{
+    padding-top: 3px;
+    text-align:center;
+    border-top:1px solid black;
+    line-height:0em; 
+    }
+    
+    .production{
+    font-size: 9.5pt;
+    font-family: "UmePlumePMincho-200";
+    text-align:center;
+    border-bottom:1px solid black;
+    border-top:0px solid black;
+    line-height: 1.2em;
+    padding-bottom: 3px;
+    }
+    .spectacle-texte {
+    font-size: 10pt;
+    line-height: 1.2em;
+    margin-bottom:6px;
+
+}
 }
