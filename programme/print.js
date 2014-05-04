@@ -60,10 +60,9 @@ $(window).load(function(){
         $("#master-page").children().clone().appendTo($(".inside", $(this)));
         $(".moveable", $(this)).appendTo($(".inside", $(this)));
         $(".titre-courant", $(this)).appendTo($(".inside", $(this)));
-
-        //$("#master-page").clone().addClass("preview-page").attr("id","page-"+i).insertBefore($("#master-page"));
     });
     $("#master-page").hide();
+
 
     // __________________________________ TOC __________________________________ //
     $(".preview-page").each(function(){
@@ -83,6 +82,7 @@ $(window).load(function(){
         draggable({
                 cursor: "move",
                 stack: "div.moveable", 
+                cancel: ".properties",
         }).
         resizable();
     $("button#back2front").click(function(){
@@ -91,15 +91,12 @@ $(window).load(function(){
         $(".preview-page").toggleClass("overflow");
     });
 
-    $('.properties').on('click', function() {
-        var top = $(this).parent().css('top');
-        var left = $(this).parent().css('left');
-        var width = $(this).parent().width();
-        var height = $(this).parent().height();
-        var p = new Popelt({
-            title: "Properties to copy/paste into this object's style attribute.",
-            content: 'style="top: ' + top + '; left: ' + left + '; width: ' + width + 'px; height: ' + height + 'px;"',
-        }).show();
+    $('.properties').on('mouseover', function() {
+        var top = Math.floor(parseInt($(this).parent().css('top')));
+        var left = Math.floor(parseInt($(this).parent().css('left')));
+        var width = Math.floor($(this).parent().width());
+        var height = Math.floor($(this).parent().height());
+        $(this).text('top: ' + top + 'px; left: ' + left + 'px; width: ' + width + 'px; height: ' + height + 'px;')
     });
 
 
