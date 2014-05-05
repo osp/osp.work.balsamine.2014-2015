@@ -1,13 +1,20 @@
 #!/bin/bash
 
-  DISTMIN=5
-  DISTMAX=15
-  ANGLEMIN=60
-  ANGLEMAX=120
+  # CRISS CROSS
+  #DISTMIN=30
+  #DISTMAX=50
+  #ANGLEMIN=90
+  #ANGLEMAX=90
+
+  # ENFONCURES
+  DISTMIN=3
+  DISTMAX=30
+  ANGLEMIN=0
+  ANGLEMAX=90
 
   # NO SUPPORTS FOR FLOAT VALUES -> MULTIPLY WITH 10
-  STROKEMIN=0
-  STROKEMAX=20
+  STROKEMIN=18
+  STROKEMAX=18
 
 
   OUTPUTDIR=o
@@ -31,7 +38,7 @@
 # CONVERT TO GRAYSCALE AND MODIFY SVG BODY FOR EASIER PARSING
 # --------------------------------------------------------------------------- #
 
-      python $INKSCAPEEXTENSION/color_grayscale.py $SVG | \
+      python2 $INKSCAPEEXTENSION/color_grayscale.py $SVG | \
       sed 's/ / \n/g' | \
       sed '/^.$/d' | \
       sed ':a;N;$!ba;s/\n/ /g' | \
@@ -157,7 +164,7 @@
      #   --hatchSpacing=HATCHSPACING
      #                         Spacing between hatch lines
  
-     python $EGGBOTHATCHPY \
+     python2 $EGGBOTHATCHPY \
             --id=$ID \
             --hatchAngle=$ANGLE \
             --hatchSpacing=$DISTANCE \
