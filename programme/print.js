@@ -102,21 +102,24 @@ $(window).load(function(){
 
 
     // __________________________________ FIGURE COUNTING __________________________________ //
-    var figCount = 1;
+    var figCount = 0;
     var subFigCount = 0;
-    var figName = $(".preview-page figure:first-child").attr("class");
+    var figName = "";
     var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    var figures = {}
     $(".preview-page figure").each(function(){
-        console.log(figName);
-        console.log(figCount);
-        if ($(this).attr("class") == figName) {
-            $("figcaption", $(this)).prepend("Fig." + figCount + alphabet[subFigCount] + " ");
-            subFigCount ++;
-        } else {
+        figName = $(this).attr("class");
+        // Si la figure n'existe pas dans le dict
+        if (! figures[figName]){
+            // on incrémente le compteur
             figCount ++;
-            $("figcaption", $(this)).prepend("Fig." + figCount + " ");
-            subFigCount = 0;
-            figName = $(this).attr("class");
+            figures[figName] = figCount;
+            figures[figName + "-count"] = 0;
+            $("figcaption", $(this)).prepend("Fig." + figures[figName] + " ");
+        } else {
+        // si la figure existe dans le dict
+            $("figcaption", $(this)).prepend("Fig." + figures[figName]  + alphabet[figures[figName + '-count']] + " ");
+            figures[figName + "-count"] ++;
         }
     });
 });
