@@ -23,7 +23,11 @@
 	\asterisk \N \bracketleft \Euro \uni009E \t \uni009B \germandbls \Egrave 
 	\Adieresis \Z \ecircumflex \udieresis \I \P \idieresis \k \Eacute \s 
 	\periodcentered \quoteright \uni0007 \quotedblright \quotedblleft \quoteleft 
-	\ellipsis \endash \emdash ];
+	\ellipsis \endash \emdash \uni2461 \uni2160 \oe \uni2463 \uni266D \uni266E 
+	\uni266C \uni2464 \uni2165 \musicalnote \uni2465 \uni2166 \uni2467 \uni2462 
+	\uni266F \uni2167 \uni2468 \uni2164 \musicalnotedbl \uni24EA \uni2161 \uni216A 
+	\uni2162 \uni216E \uni216C \uni2163 \uni2466 \uni2169 \uni216B \uni2460 \uni216D 
+	\uni216F \uni2168 \uni2669 \arrowdown \arrowleft \arrowup \arrowright \OE ];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, , , ;
