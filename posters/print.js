@@ -3,7 +3,7 @@ var nb_page = 2;
 
 
 // Loads main content into <section id="container">
-$("section#container").load("content.html");
+//$("section#container").load("content.html");
 
 $(window).load(function(){
     // __________________________________ DEBUG __________________________________ //
@@ -51,11 +51,11 @@ $(window).load(function(){
 
 
     // __________________________________ MOVEABLE ELEMENTS __________________________________ //
-    $("div.moveable").
+    $(".moveable").
         append("<div class='properties button'>Properties</div>").
         draggable({
                 cursor: "move",
-                stack: "div.moveable", 
+                stack: ".moveable", 
         }).
         resizable();
 
