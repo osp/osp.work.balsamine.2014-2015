@@ -19,12 +19,14 @@ $(window).load(function(){
         e.preventDefault();
         $(this).toggleClass("button-active");
         $("html").toggleClass("export");
-        $("img").each(function(){
-            var hires = $(this).attr("data-alt-src");
-            var lores = $(this).attr("src");
-            $(this).attr("data-alt-src", lores)
-            $(this).attr("src", hires)
-        });
+        //$("img").each(function(){
+            //var hires = $(this).attr("data-alt-src");
+            //var lores = $(this).attr("src");
+            //$(this).attr("data-alt-src", lores)
+            //$(this).attr("src", hires)
+        //});
+        $(".moveable img").toggle();
+        $(".moveable svg").toggle();
     });
 
 
@@ -56,17 +58,21 @@ $(window).load(function(){
         draggable({
                 cursor: "move",
                 stack: ".moveable", 
+                cancel: ".properties",
         }).
         resizable();
-
-    $('.properties').on('click', function() {
-        var top = $(this).parent().css('top');
-        var left = $(this).parent().css('left');
-        var width = $(this).parent().width();
-        var height = $(this).parent().height();
-        var p = new Popelt({
-            title: "Properties to copy/paste into this object's style attribute.",
-            content: 'style="top: ' + top + '; left: ' + left + '; width: ' + width + 'px; height: ' + height + 'px;"',
-        }).show();
+    $("button#back2front").click(function(){
+        $(this).toggleClass("button-active");
+        $(".moveable").toggleClass("foreground");
+        $(".preview-page").toggleClass("overflow");
     });
+
+    $('.properties').on('mouseover', function() {
+        var top = Math.floor(parseInt($(this).parent().css('top')));
+        var left = Math.floor(parseInt($(this).parent().css('left')));
+        var width = Math.floor($(this).parent().width());
+        var height = Math.floor($(this).parent().height());
+        $(this).text('top: ' + top + 'px; left: ' + left + 'px; width: ' + width + 'px; height: ' + height + 'px;')
+    });
+
 });
