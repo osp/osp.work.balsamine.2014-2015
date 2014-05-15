@@ -9,11 +9,11 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="65.811852"
-   height="70.510147"
+   width="100"
+   height="107.13898"
    id="svg3861"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="fede-wallonie-bruxelles.svg">
   <defs
      id="defs3863">
@@ -39,10 +39,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1375"
-     inkscape:window-height="876"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:window-width="1276"
+     inkscape:window-height="775"
+     inkscape:window-x="0"
+     inkscape:window-y="21"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -64,9 +64,9 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-549.95121,-688.53568)">
+     transform="translate(-549.95121,-651.90685)">
     <g
-       transform="matrix(0.13252439,0,0,-0.13252439,546.67704,762.62595)"
+       transform="matrix(0.20136858,0,0,-0.20136858,544.97616,764.48576)"
        inkscape:label="ink_ext_XXXXXX"
        id="g3113"
        style="fill:#000000;fill-opacity:1">
