@@ -1,7 +1,7 @@
-.logos-balsa{
-width: 55px;
+body {
+    font-size: 32px;
+    line-height: 1.4em;
 }
-
 h2{
 font-size:77px;
 }
@@ -14,24 +14,71 @@ h1{
 h1 + h2 {
     margin-top: 0.3em;
 }
+h3 {
+    text-transform: none;
+}
 
 .artiste{
-font-size:57px;
+    font-size:57px;
+}
+div.infos {
+    text-align: center;
+}
+.column50 {
+    float: left;
+    width: 50%;
+    padding: 0 1.4em;
 
+    & + .column50 {
+        border-left: 1px solid white;
+    }
 }
 
 .sommaire{
-    width: 32%;
-    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    font-size: 1em;
 
     date{
-    font-size:50px;
-
+        font-size:50px;
     }
     div.spectacle-infos {
-    width:100%;
+        width:100%;
+        text-align: left;
+        display: inline;
+        padding: 0;
+
+        &:after {
+            content: "";
+            display: block;
+        }
     }
-    h3{
-      border-top:1px solid white;
+    h3 {
+        text-align: left;
+        display: inline;
+
+        &:after {
+            content: ", ";
+        }
     }
 }
+
+figcaption {
+    color: white;
+    font-size: 1em;
+    h3 {
+    }
+    .spectacle-infos {
+        width: auto;
+    }
+}
+.moveable svg,
+.moveable img {
+    height: 70%;
+    width: auto;
+}
+.logos-balsa{
+    width: 55px;
+}
+
