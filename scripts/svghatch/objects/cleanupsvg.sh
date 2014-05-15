@@ -2,13 +2,14 @@
 
 # REMOVE SODIPODI IMAGE LINKS
 
- for SVG in `find . -name  "*.svg"`
-  do
+$SVG = $1
+ #for SVG in `find . -name  "*.svg"`
+  #do
      echo $SVG
      sed -i 's/sodipodi:absref=".*"//g' $SVG
      sed -i 's/inkscape:export-filename=".*"//g' $SVG
      inkscape --vacuum-defs $SVG
- done
+ #done
 
 exit 0;
 

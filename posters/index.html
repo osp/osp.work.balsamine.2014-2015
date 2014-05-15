@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: affiche de saison</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+
+<style>
+	.moveable svg {
+		display: none;
+	}
+	path,
+	circle {
+	    fill: white !important;
+	    stroke: white !important;
+	}
+	path {
+	    stroke-width: 2px !important;
+	}
+</style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <!--<img src="page-height.png" />-->
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+        <!--<div id="toc">-->
+            <!--<button id="goto" class="button" href="#">Go to</button>-->
+            <!--<ul id="toc-pages"></ul>-->
+        <!--</div>-->
+    </div>
+
+    <section id="container">
+				    <h2> Involution Ⅳ </h2>
+				    <h1>L’art
+				<br/>
+				  &#119100; 
+				<br/>
+				    propre de l’homme ?</h1>
+				<h2>saison 2014–2015</h2>
+				
+				
+							<div class="artiste column20">
+								Créations Théâtre 
+								&#119056; 
+								Danse
+								&#119056; 
+								Performance 
+								&#119056; 
+								Conférence
+							</div>
+						
+				<div class="sommaire">
+				
+					<h3>ANIMALIA</h3>  
+				<div class="spectacle-infos">
+					les 18 et 19 septembre 
+				</div>
+					
+				<h3>CRISS CROSS</h3>  
+				<div class="spectacle-infos">
+					du 1er au 4 octobre
+				</div>
+					
+				<h3>NOS PETITES MADELEINES</h3>  
+				<div class="spectacle-infos"> 
+					( dans le cadre de la Quinzaine numérique 2014) 
+					</br>du 13 au 25 octobre
+				</div>
+				
+					
+					<h3>BLEU </h3> 
+				<div class="spectacle-infos">
+					du 24 au 27 novembre
+				</div>
+				
+					
+					<h3>Festival Noël au Théâtre </h3> 
+				<div class="spectacle-infos">
+					du 26 au 30 décembre
+					</div>
+					
+					
+					<h3>KÄTHCHEN DE HEILBRONN OU L’ÉPREUVE DU FEU  </h3> 
+					<div class="spectacle-infos">
+					du 3 au 14 février 
+				</div>
+				
+					
+					<h3>cOMMENT dIRE </h3> 
+					<div class="spectacle-infos">
+					du 24 février au 4 mars 
+				</div>
+				
+					
+					<h3>ENFONçURES </h3> 
+				<div class="spectacle-infos">
+					du 24 au 28 mars
+				</div>
+				
+					
+					<h3>ÊTRE(S) OU LE JARDIN D’EDEN </h3> 
+					<div class="spectacle-infos">
+					les 31 mars et 1er avril
+				</div>
+				
+					
+					<h3>PRINTEMPS PRÉCOCE </h3> 
+					<div class="spectacle-infos">
+					les 3 et 4 avril  
+				</div>
+				
+					
+					<h3>L’ÉCOLIER KÉVIN </h3> 
+					<div class="spectacle-infos">
+					du 21 au 25 avril 
+				</div>
+				
+					
+					<h3>HANTOLOGIE</h3> 
+					<div class="spectacle-infos"> 
+					du 29 avril au 2 mai 
+				</div>
+				
+					
+					<h3>PAUVRE ET INFORME FESTIVAL (PIF)</h3> 
+					<div class="spectacle-infos"> 
+					juin 
+				</div>
+				
+			</div>
+				
+				<div class="infos">
+					<p>
+					réservations 
+					02 735 64 68 
+					</p>
+					<p>
+					www.balsamine.be
+					</p>
+					<p>
+					avenue Félix Marchal, 1</br>
+					1030 Bruxelles
+					</p>
+				</div>
+				
+				<div id="logos">
+			
+				    <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+			            <use xlink:href="logos/fede-wallonie-bruxelles.svg#svg3861" />
+		        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/culture-be.svg#svg3420" />
+			        </svg>
+			        <svg viewBox="0 0 100 200" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/cocof.svg#svg3978" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/wbi.svg#svg3780" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/wbtd.svg#svg3735" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/loterie.svg#svg3465" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/arts-sceniques.svg#svg3375" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/article27.svg#svg3645" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/arsene50.svg#svg3690" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/gracq.svg#svg3555" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/dyoxide-gambette.svg#svg3600" />
+			        </svg>
+			
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/CTEJ-black-sans-baseline.svg#svg2" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/insas.svg#svg3239" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/cifas.svg#svg3171" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/mediatheque.svg#svg3137" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/point-culture.svg#svg3047" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/rtbf.svg#svg2" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/musiq3.svg#svg2" />
+			        </svg>
+			        <svg viewBox="0 0 100 100" style="width: 100px; height: 200px;">
+							<use xlink:href="logos/tropismes.svg#svg2" />
+			        </svg>
+				</div>
+				<div class="logos-balsa">
+				        <img style="width: 55px" src="balsa-logo-haute-def/noir/balsamine-logo.svg" />
+				</div>
+    </section>
+    
+    
+    <!-- MOVEABLE ELEMENTS -->
+    <div class="moveable"  style="top: 200px; left: 98.9375px; width: 300px; height: 80px; font-size: 2em; color: white;">
+        I'm a moveable element.
+    </div>
+
+    <!--   B  L  E  U  -->
+    <div class="moveable"  style="top: 2324px; left: 1495px; width: 712px; height: 524px;">
+        <img class="fit-width preview" src="images/bleu-stipple-etire/lo-res/bleu5-rot.png" />
+        <svg id="bleu-img" viewBox="0 0 4782 3338">
+            <use xlink:href="images/bleu-stipple-etire/bleu5-rot.svg#svg2985" />
+        </svg>
+    </div>
+
+    <!--   C O M M E N T    D I R E  -->
+    <div class="moveable"  style="top: 2184px; left: 855px; width: 756px; height: 644px;">
+        <img class="fit-width preview" src="images/comment-dire/comment_octopus.gif" />
+    <svg id="comment-dire-img" viewBox="0 0 910 617">
+        <use xlink:href="images/comment-dire/comment-dire-octopus_hatched.svg#svg3037" />
+        </svg>
+    </div>
+    
+    <!--   C R I S S    C R O S S  -->
+    <div class="moveable"  style="top: 348px; left: 1131px; width: 640px; height: 924px;">
+        <img class="fit-width preview" src="images/criss-cross/lo-res/criss-cross-canards.png" />
+     <svg id="criss-cross-img" viewBox="0 0 1573 2081">
+            <use xlink:href="images/criss-cross/criss-cross-canards_hatched.svg#svg2995" />
+        </svg>
+    </div>
+
+    <!--   E N F O N C U R E S  -->
+    <div class="moveable"  style="top: 2096px; left: 99px; width: 684px; height: 656px;">
+		<img class="fit-width preview" src="images/enfoncures/lo-res/enfoncures_cochons.png" />
+	    <svg id="enfoncures-img" viewBox="0 0 2400 1330">
+	        <use xlink:href="images/enfoncures/enfoncures-cochons-couches_hatched.svg#svg3037" />
+	    </svg>
+    </div>
+
+    <!--   H A N T O L O G I E  -->
+    <div class="moveable"  style="top: 948px; left: 803px; width: 392px; height: 1336px;">
+            <img class="fit-width preview" src="images/hantologie/hantologie-cigogne-paperjs.gif" />
+    </div>
+
+    <!--   K A T C H E N  -->
+    <div class="moveable"  style="top: 1098px; left: 255px; width: 680px; height: 856px;">
+        <img class="fit-width preview" src="images/katchen/katchen-armure.gif" />
+    </div>
+
+    <!--   K E V I N  -->
+    <div class="moveable"  style="top: 2496px; left: 456px; width: 468px; height: 344px;">
+        <img class="fit-width preview" src="images/kevin/kevin-singe01.gif" />
+    <svg id="kevin-img" viewBox="0 0 1739 1201">
+            <use xlink:href="images/kevin/kevin-singe01.svg#svg2" />
+        </svg>
+    </div>
+
+    <!--   M A D E L E I N E S  -->
+    <div class="moveable"  style="top: 1633px; left: 1321px; width: 696px; height: 644px;">
+        <img class="fit-width preview" src="images/madeleines/madeleines-elephant.gif" />
+    <svg id="madeleine-img" >
+            <use xlink:href="images/madeleines/madeleines-elephant.svg#svg2985" />
+        </svg>
+    </div>
+
+    <!--   P I F  -->
+    <div class="moveable"  style="top: 1140px; left: 1327px; width: 704px; height: 628px;">
+        <img class="fit-width preview" src="images/pif/balsa-detoure-tsp.gif" />
+    <svg id="pif-img" viewBox="0 0 1028 649">
+            <use xlink:href="images/pif/balsa-detoure-tsp.svg#svg2985" />
+        </svg>
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
+

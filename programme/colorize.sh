@@ -2,7 +2,7 @@
 
 mkdir colors
 
-convert Balsa\ 2014-2015.pdf colors/Balsa2014-2015%d.gif
+convert "Balsa 2014-2015.pdf" colors/Balsa2014-2015%d.gif
 
 function colorize {
     convert colors/Balsa2014-2015$((${1} - 1)).gif -colorspace Gray  +level-colors $2, colors/Balsa2014-2015$((${1} - 1))-color.gif
