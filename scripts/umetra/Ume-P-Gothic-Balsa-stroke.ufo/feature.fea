@@ -28,7 +28,7 @@
 	\uni266F \uni2167 \uni2468 \uni2164 \musicalnotedbl \uni24EA \uni2161 \uni216A 
 	\uni2162 \arrowleft \uni216E \uni216C \arrowup \uni2163 \uni2466 \uni2169 
 	\uni216B \arrowright \uni2460 \OE \uni216D \uni216F \uni2168 \uni2669 \minute 
-	\uni2222 \second ];
+	\uni2222 \second \uni1EA1 ];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, , , ;

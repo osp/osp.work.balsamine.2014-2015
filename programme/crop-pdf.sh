@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-#./colorize.sh
+./colorize.sh
 
 mkdir cahier
 mkdir chutes
