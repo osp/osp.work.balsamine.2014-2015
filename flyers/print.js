@@ -1,9 +1,11 @@
 // Choose the number of pages of the document
-var nb_page = 2;
+//var nb_page = 3;
+var nb_page = $(".preview-page").length;
+
 
 
 // Loads main content into <section id="container">
-//$("section#container").load("content.html");
+$("section#container").load("content.html");
 
 $(window).load(function(){
     // __________________________________ DEBUG __________________________________ //
@@ -32,7 +34,7 @@ $(window).load(function(){
     var doc_height = $("body").height();
     var page_height = $("#master-page").height(); 
 
-    for (i = 1; i < nb_page; i++){
+    for (i = 1; i <= nb_page; i++){
         $("#master-page").clone().addClass("preview-page").attr("id","page-"+i).insertBefore($("#master-page"));
     }
     $("#master-page").hide();
