@@ -6,8 +6,9 @@
     <contour>
       <point x="111" y="3164" type="move"/>
       <point x="111" y="274" type="line"/>
-      <point x="111" y="1419" type="line"/>
-      <point x="111" y="1799" type="line"/>
+    </contour>
+    <contour>
+      <point x="111" y="1799" type="move"/>
       <point x="111" y="1989" type="line"/>
       <point x="117" y="2014" type="line"/>
       <point x="111" y="2026" type="line"/>
