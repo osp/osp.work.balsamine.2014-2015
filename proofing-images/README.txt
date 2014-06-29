@@ -1,4 +1,5 @@
-J'ai finalement produit 7 types de test, sur les 2 images, donc 14 pdf.
+Épreuves avec 7 types de test, sur les 2 images, donc 14 pdf.
+
 1. la sortie html de Ludi sans traitement
 2. idem avec ajout de profil euroscale uncoated (adobe) par gs
 3. idem avec profil munken print *
@@ -7,23 +8,33 @@ J'ai finalement produit 7 types de test, sur les 2 images, donc 14 pdf.
 6. export scribus du tiff mis au format et avec un sharpen 0,5-1,3 toujours avec ajout icc uncoated par scribus
 7. idem avec en plus courbe pour contraster
 
-Je push ce qui n'est pas trop lourd avec petit readme.
-
 * http://www.arcticpaper.com/en/Home/Arctic-Paper1/Arctic-Paper-ICC-Webb-Service/Download-profiles/
-gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=AP_Munken_Print_White_260v4.1.icc -sOutputFile=bleu_html_munkenprint.pdf bleu_html.pdf
 
-C'est en train de passer vers Dirk. 
-Inch'Allah.
+Sur les sorties pdf html, injecté le profil par
+gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
 
-Pierre
+----
+
+Résultat sur l'épreuve laser sur le Munken Print, garantie très proche par Dirk Gillis : 
+- les 3 traitements GS sur le pdf html semblent identiques. Peut-être parce que les courbes sont très faibles, ou bien parce que ça ne marche pas?
+- les Scribus pas très différents, sauf la version curve bien sur
+
+----
+
+Hichem décide pour sa version originale.
+Je décide de ne pas passer par Scribus pour simplifier le traitement.
+
+----
+
+En Gimp, je sélectionne les couleurs sombres, avec un bord dégradé de 5px, et je mets du sharpen plus large 5px - 0,7 pour tenter d'attraper certains détails.
+Pour compenser la manière dont le Munken Print va boire plus l'encre offset que l'encre laser en croute, j'applique une courbe légère, fichier 'curve2-original-hichem-compensated-laserproof-to-offset' à appliquer dans Curves.
+
+Il faut dans l'html choisir les images traitées, puis injecter la courbe au pdf résultat, toujours avec 
+gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
 
 
 
-2014-06-26 0:44 GMT+02:00 Ludi <hello@ludi.be>:
-oho
-sur cette constellation rouge, je file au lit
-
-
+Historique :
 
 Le 26 juin 2014 00:34, Stéphanie Vilayphiou <stephanie@stdin.fr> a écrit :
 > yes le profil gs, bien joué
