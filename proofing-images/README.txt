@@ -1,5 +1,7 @@
 Épreuves avec 7 types de test, sur les 2 images, donc 14 pdf.
 
+D'abord resize violent vers la taille finale environ, à 300 dpi, pour optimiser, supprimer le bruit inutile et premettre un sharpen réel.
+
 1. la sortie html de Ludi sans traitement
 2. idem avec ajout de profil euroscale uncoated (adobe) par gs
 3. idem avec profil munken print *
