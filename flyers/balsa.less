@@ -3,9 +3,19 @@
 body,
 #print-marks,
 #container {
+
+    color: @color;
+    border-color: @color;
+    /*.recto{
     background-color: @color;
     color: white;
     border-color: white;
+    }
+    .verso{
+    background-color: white;
+    color: @color;
+    border-color: @color;
+    }*/
 }
 
 .column50 {
@@ -24,5 +34,9 @@ body,
 
     & + .column20 {
         padding-left: 0.5em;
+        
+        & + .column20 {
+                padding-left: 0.5em; }
+
     }
 }
