@@ -548,5 +548,15 @@
 	<string>second.glif</string>
 	<key>uni1EA1</key>
 	<string>uni1E_A_1.glif</string>
+	<key>u1D184</key>
+	<string>u1D_184.glif</string>
+	<key>u1D183</key>
+	<string>u1D_183.glif</string>
+	<key>uni21DD</key>
+	<string>uni21D_D_.glif</string>
+	<key>uni21DC</key>
+	<string>uni21D_C_.glif</string>
+	<key>uniFFFF</key>
+	<string>uniF_F_F_F_.glif</string>
     </dict>
 </plist>
