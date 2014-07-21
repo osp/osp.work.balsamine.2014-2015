@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: flyer</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+
+<style>
+	.moveable svg {
+		display: none;
+	}
+	path,
+	circle {
+	    fill: white !important;
+	    stroke: white !important;
+	}
+	path {
+	    stroke-width: 2px !important;
+	}
+</style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+     <div id="pages">
+        <div id="page-1" class="preview-page">
+        </div>
+        <div id="page-2" class="preview-page">
+        </div>
+
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+    </div>
+
+    <section id="container" style="z-index:100;">
+
+        <!-- R E C T O -->
+        <article class="recto infos-spectacle">
+    
+                <img id="photo" style="margin-top: -13px;" src="criss-cross-sharp-compensated.jpg">
+
+                <div class="column20 dates">
+                    01 ⇝ 04/10/2014<br/>à 20h30
+                </div>
+
+                <div class="column20">
+                    <h1>Criss Cross </h1>
+                    Kyung-A Ryu ECHOINTHEDREAM cie<br/>
+                    Création danse
+                </div>
+
+                <div class="column20">
+                    <h1 id='logo'>bạlsa</h1>
+                </div>
+        </article>
+
+
+        <!-- V E R S O -->
+        <article class="verso">
+
+            <div class="intro column20">
+
+                <h1>Criss Cross</h1>
+                <div class="dates">
+                    01 ⇝ 04/10/2014<br/>à 20h30
+                </div>
+
+                <p>                           
+                    Criss Cross développe une chorégraphie qui propose aux spectateurs une troublante «&#8239;illusion visuelle&#8239;». Par cette recherche poétique, Kyung-A Ryu nous propose un voyage d’une audace inouïe, elle nous ouvre la voie de la gravitation, de&nbsp;la tension, de la flexibilité,<br/> de l’apesanteur … 
+                </p>
+
+                <img src="/images/criss-cross/criss-cross_birds.png" style="width: 30%; margin-top: 7px;"/>
+
+                <div class="date-ailleurs" style="letter-spacing: -0.1px;">
+                    <p>Représentations de Criss Cross les 10 et 11 octobre 2014 à l’Espace Senghor.</p>
+                </div>
+
+            </div>
+
+
+            <div class="bible column20">
+                <dl>                          
+                    <dt>Chorégraphie, scénographie et montage musique</dt> <dd>Kyung-A Ryu</dd>
+                    <dt>Assistanat</dt><dd> Julie Devigne</dd>
+                    <dt>Interprétation</dt><dd> Nora Alberdi, Raffaella Pollastrini </dd>
+                    <dt>Création lumières et régie générale</dt><dd> Olivier Vincent </dd>
+                    <dt>Musique originale </dt><dd>Baudouin de Jaer - musique pour Geomungo </dd>
+                </dl>
+
+                <div class="quarter-rest">&#119101;</div> 
+
+                <div class="production" style="margin-top: 0px !important;">
+                    Production Noodik Productions en coproduction avec le Théâtre la Balsamine (la Balsamine fait partie du Réseau des Scènes chorégraphiques de la Commission Communautaire française de la Région de Bruxelles-Capitale), avec le soutien de l’Espace Senghor, du théâtre Wolubilis, de la Maison de la Création, de la Sabam et l’aide de la Fédération Wallonie-Bruxelles - Service de la Danse
+                </div>
+            </div>
+
+
+            <div class="column20" style="margin-bottom: -30px;">
+                <div class="pratique1">
+                    Tarifs <br/>de 5 à 15&thinsp;€
+                </div>
+
+                <div class="pratique11">
+                    Nouveauté <br/>
+                    JAMAIS DEUX SANS TOI <br/>6&thinsp;€ pour tous, lors de la deuxième représentation<br/> du 2 octobre.
+                </div>
+
+                <div class="adresse">
+                        Théâtre la Balsamine<br/>
+                        Avenue Félix Marchal, 1<br/>
+                        1030 Bruxelles<br/>
+                        RÉSERVATIONS <br/>
+                        02 735 64 68<br/> 
+                        www.balsamine.be
+                </div>
+
+                <div id="logos" style="margin: 0px 0px 0px 7px;">
+                    <img style="width: 32px; margin: -1px 2px; margin-top: 6px;" src="logos/fede-wallonie-bruxelles.svg" />
+                    <img style="width: 23px; margin: 5px 2px;padding-bottom: 11px;" src="logos/culture-be.svg" />
+                    <img style="width: 19px; margin: 5px 2px;padding-bottom: 14px;" src="logos/cocof.svg" />
+                    <img style="width: 28px; margin: 5px 2px;padding-bottom: 3px;" src="logos/wbi.svg" />
+                    <img style="width: 26px; margin: -12px 2px;padding-bottom: 10px;" src="logos/wbtd.svg" />
+                    <img style="width: 20px; margin: 5px 2px;" src="logos/article27.svg" />
+                    <img style="width: 28px; margin: 5px 2px;padding-bottom: 12px;" src="logos/arsene50.svg" />
+                    <img style="width: 47px; margin: 5px 2px;padding-bottom: 19px;" src="logos/mediatheque.svg" />
+                    <img style="width: 43px; margin: 2px 2px 0px 51px;" src="logos/point-culture.svg" />
+                    <img style="width: 35px; margin: 5px 2px;" src="logos/rtbf.svg" />
+                    <img style="width: 27px; margin: 12px 2px 11px 50px;" src="logos/musiq3.svg" />
+                    <img style="width: 54px; margin: 1px 2px 11px 8px;" src="logos/LOGO_SABAM_CULTURE_1LINE_RVB.svg" />
+
+                </div>
+            </div>
+
+
+                <dl id="colophon">
+                    <dt>ÉDITEUR RESPONSABLE</dt> <dd>Fabien&nbsp;Dehasseler, avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1 - 1030 Bruxelles</dd>
+                    <br/>
+                    <dt> Photographie </dt><dd>Hichem&nbsp;Dahes</dd> 
+                    &#119056; <dt>DESIGN</dt> <dd>Open Source Publishing</dd>
+                </dl>
+        </article>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
+
+

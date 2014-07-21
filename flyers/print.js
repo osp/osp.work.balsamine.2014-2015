@@ -5,7 +5,8 @@ var nb_page = $(".preview-page").length;
 
 
 // Loads main content into <section id="container">
-$("section#container").load("content-bleu.html");
+// For the flyers, we don't need this as everything is in one file
+//$("section#container").load("content-bleu.html");
 
 $(window).load(function(){
     // __________________________________ DEBUG __________________________________ //

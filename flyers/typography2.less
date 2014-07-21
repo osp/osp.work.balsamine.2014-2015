@@ -1,130 +1,157 @@
 @color: black;
 
-.recto{
-position:absolute;
-float:left;
-color:black;
+.column20 {
+    width: 33%;
 }
-.verso{
-font-size: 7.8pt;
-margin-top:1px;
-color:black;
-
-}
-div.notes{
-font-size: 1.1em;
-line-height:1.35em;
-margin-bottom:10px;
-
-}
-.bible{
-font-size: 1.2em;
-border-top: 0px solid @color;
-margin-top:0px;
-
-}
-dt{
-font-size: 8.1pt;
-letter-spacing: 0.03em;
-}
-dl{
-border-top: 0px solid @color;
-line-height: 1.2em;
-font-size: 8.35pt;
-
-}
-dd{
-line-height: 1em;
-font-size: 8.35pt;
-}
-.production{
-    font-family: "UmePlumePGothic-260";
-border-bottom: 0px solid @color !important;
-margin-top: 6px;
-line-height: 1.2em;
-font-size: 8.3pt;
-
-
-}
-.adresse{
-    font-family: "UmePlumePGothic-260";
-text-align:center;
-}
-.infos{
-margin-top:10px;
-
-}
-.infos-spectacle{
-font-size: 0.75em;
-line-height: 1.1em;
-margin-top: 300px;
-text-align:center;
-}
-turn-left{
-  transform:rotate(270deg);
+.column20 + .column20 {
+    padding-left: 1em;
 }
 
 h1{
-font-size: 1.45em;
+    font-size: 1.45em;
     font-family: "UmePlumePGothic-220";
-margin-bottom:0px;
-
+    margin-bottom:0px;
 }
-.column20 + .column20 {
-padding-left: 0.7em;
+dl{
+    border-top: 0px;
+    line-height: 1.2em;
+    font-size: 8.35pt;
+}
+dt{
+    font-size: 8.1pt;
+    letter-spacing: 0.03em;
+    font-family: 'UmePlumePGothic-260';
+}
+dd{
+    line-height: 1em;
+    font-size: 8.35pt;
+    font-family: 'UmePlumePMincho-260';
 }
 
-.date-ailleurs{
-border-bottom: 1px solid black !important;
-border-top: 1px solid black !important;
-padding-bottom: 5px;
-padding-top: 5px;
-margin-top: 12px !important;
-font-size: 0.9em !important;
 
-}
-    .pratique1 {
-        text-align:center;
-	border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        vertical-align: middle;
-        font-family: 'UmePlumePGothic-260';
-	font-size:1.1em;
-	padding: 5px 0px;
-	
-    }
-        .pratique11 {
-        text-align:center;
-	border-top: 0px solid black;
-        border-bottom: 1px solid black;
-        vertical-align: middle;
-        font-family: 'UmePlumePGothic-260';
-	font-size:1.1em;
-	padding: 5px 0px;
-	}
-
-
-.intro {
-    font-family: "UmePlumePGothic-220" !important;
-}
-div.notes p:first-child:first-letter {
-    font-family: inherit;
-    font-size: 8.3pt;
+.recto{
+    color: @color;
+    font-family: 'UmePlumePGothic-260';
+    text-align: center;
+    font-size: 0.75em;
     line-height: 1.1em;
 }
-dt {
-        font-family: 'UmePlumePGothic-260';
+img#photo {
+    width: 395px;
+    margin-bottom: 1em;
 }
-dd {
-        font-family: 'UmePlumePMincho-260';
+.recto h1 {
+    margin-bottom: 5px;
+}
+.recto .dates {
+    margin-top: 23.5px;
+}
+#logo {
+    font-family: 'UmePlumePGothic-200';
+    text-transform: none; 
+    border-right: 1px solid black; 
+    overflow: hidden; 
+    width: 36px; 
+    margin: auto; 
+    margin-top: 24px; 
+    font-size: 1.5em;
+    text-align: center;
 }
 
-.verso.dates {
-        font-family: 'UmePlumePGothic-260';
+
+
+.verso{
+    font-size: 7.8pt;
+    margin-top: 1px;
+    color: @color;
+    -webkit-region-break-before: always;
+    text-align: center;
 }
-.recto {
-        font-family: 'UmePlumePGothic-260';
-    }
-#logo {
-        font-family: 'UmePlumePGothic-200';
+
+
+.verso h1 {
+    font-size: 1.2em;
+}
+div.intro {
+    font-family: "UmePlumePGothic-220";
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+.verso p {
+    text-align: left;
+}
+.verso .dates {
+    font-family: 'UmePlumePGothic-260';
+    font-size: 11px;
+    line-height: 1.35em;
+    margin-bottom: 11px;
+}
+.date-ailleurs{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+
+.bible{
+    font-size: 1.2em;
+    border-top: 0px solid @color;
+    margin-top:0px;
+}
+.production{
+    font-family: "UmePlumePGothic-260";
+    border-bottom: 0px solid @color !important;
+    margin-top: 6px;
+    line-height: 1.2em;
+    font-size: 8.3pt;
+}
+
+
+.pratique1 {
+    text-align:center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    vertical-align: middle;
+    font-family: 'UmePlumePGothic-260';
+    font-size:1.1em;
+    padding: 5px 0px;
+}
+.pratique11 {
+    text-align:center;
+    border-top: 0px solid black;
+    border-bottom: 1px solid black;
+    vertical-align: middle;
+    font-family: 'UmePlumePGothic-260';
+    font-size:1.1em;
+    padding: 5px 0px;
+}
+div.adresse {
+    font-size: 1.1em;
+    line-height: 1.35em;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "UmePlumePGothic-260";
+}
+
+
+#colophon {
+    clear: both;
+    text-align: left;
+}
+
+
+
+/* S E P A R A T E U R S */
+.segno {
+    font-size: 1.3em;
+    margin-top: 6px;
+}
+.quarter-rest {
+    font-size: 1em;
 }
