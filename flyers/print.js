@@ -5,7 +5,7 @@ var nb_page = $(".preview-page").length;
 
 
 // Loads main content into <section id="container">
-$("section#container").load("content-crisscross.html");
+$("section#container").load("content-bleu.html");
 
 $(window).load(function(){
     // __________________________________ DEBUG __________________________________ //
