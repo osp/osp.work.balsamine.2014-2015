@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: flyer</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+
+<style>
+	.moveable svg {
+		display: none;
+	}
+	path,
+	circle {
+	    fill: white !important;
+	    stroke: white !important;
+	}
+	path {
+	    stroke-width: 2px !important;
+	}
+</style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <!--<img src="page-height.png" />-->
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+     <div id="pages">
+        <div id="page-1" class="preview-page">
+        </div>
+        <div id="page-2" class="preview-page">
+        </div>
+
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+    </div>
+
+    <section id="container" style="z-index:100;">
+
+        <!-- R E C T O -->
+        <article class="recto infos-spectacle">
+
+            <img id="photo" src="bleu-sharp-compensated.jpg">
+
+            <div class="column20 dates">                           
+                24 ⇝ 27/11/2014<br/> à 20h30
+            </div>
+
+            <div class="column20">
+              <h1>Bleu</h1>
+              Éléonore Valère Lachky<br/>
+              Création danse
+            </div>
+
+            <div class="column20">
+                <h1 id='logo'>bạlsa</h1>
+            </div>
+
+        </article>
+
+
+        <!-- V E R S O -->
+        <article class="verso">
+
+            <div class="intro column20">
+                <h1>Bleu</h1>
+                <div class="dates">                           
+                    24 ⇝ 27/11/2014 <br/>à 20h30
+                </div>
+
+                <p>                          
+                    Bleu pose le corps et ses bouleversements au centre de&nbsp;son propos. La danse, surgie d'une exploration de soi, devient fil conducteur vers l'autre, et&nbsp;interpelle ce qui chez tous transporte, exulte, jaillit et meurt.
+
+                    Bleu part à la recherche du geste juste, qui&nbsp;percute le&nbsp;monde et tisse la trame souterraine d'une communication directe et sans&nbsp;appel.
+                </p>
+            </div>
+
+            <div class="bible column20">
+
+                <img src="/images/bleu-stipple-etire/bleu5-rot.svg" style="width:20%; margin-bottom: 11px; margin-left: 10px;"> 
+
+                <dl>                          
+                    <dt>Chorégraphie</dt> <dd>Éléonore&nbsp;Valère&nbsp;Lachky</dd>
+                    <dt>Interprètes/Danseurs</dt> <dd>Meytal&nbsp;Blanaru, Clara&nbsp;Furey, Martin&nbsp;Kilvady</dd>
+                    <dt>Création lumières</dt> <dd>Jef&nbsp;Philips </dd>
+                </dl>
+
+                <div class="segno">&#119051;</div> 
+
+                <div class="production">
+                    Production Éléonore Valère Lachky Company en coproduction avec le Théâtre la Balsamine et Charleroi Danses, Centre Chorégraphique de la Fédération Wallonie-Bruxelles et le Cuvier CDC de Bordeaux,<br/> avec l’aide de la Fédération<br/> Wallonie-Bruxelles&nbsp;-<br/> Service de la Danse
+                </div>
+            </div>
+
+            <div class="column20" style="margin-top: 32px;">
+
+                <div class="pratique1">
+                    Tarifs <br/>de 5 à 15&thinsp;€
+                </div>
+                <div class="pratique11">
+                    Nouveauté <br/>
+                    JAMAIS DEUX SANS TOI <br/>6&thinsp;€ pour tous, lors de la deuxième représentation du&nbsp;25&nbsp;novembre.
+                </div>
+
+                <div class="adresse">
+                        Théâtre la Balsamine<br/>
+                        Avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1<br/>
+                        1030 Bruxelles<br/>
+                        RÉSERVATIONS <br/>
+                        02 735 64 68<br/> 
+                        www.balsamine.be
+                </div>
+
+            </div>
+
+            <div id="logos" style="clear: both; margin-bottom: 1.2em;">
+                <img style="width: 32px; margin: 0px 10px 0px 0px; margin-top: 6px;" src="logos/fede-wallonie-bruxelles.svg" />
+                <img style="width: 23px; margin: 0px 9px;padding-bottom: 11px;" src="logos/culture-be.svg" />
+                <img style="width: 19px; margin: 0px 12px;padding-bottom: 14px;" src="logos/cocof.svg" />
+                <img style="width: 28px; margin: 0px 10px;padding-bottom: 3px;" src="logos/wbi.svg" />
+                <img style="width: 26px; margin: 0px 2px;padding-bottom: 10px;" src="logos/wbtd.svg" />
+                <img style="width: 20px; margin: 0px 9px;" src="logos/article27.svg" />
+                <img style="width: 28px; margin:0px 13px;padding-bottom: 12px;" src="logos/arsene50.svg" />
+                <img style="width: 47px; margin: 0px 2px;padding-bottom: 19px;" src="logos/mediatheque.svg" />
+                <img style="width: 43px; margin: 0px 7px;" src="logos/point-culture.svg" />
+                <img style="width: 35px; margin: 0px 8px;padding-bottom: 10px;" src="logos/rtbf.svg" />
+                <img style="width: 27px; margin: 0px 2px;padding-bottom: 21px;" src="logos/musiq3.svg" />
+            </div>
+
+                <dl id="colophon">
+                    <dt>ÉDITEUR RESPONSABLE</dt> <dd>Fabien&nbsp;Dehasseler, avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1 - 1030 Bruxelles</dd>
+                    <br />
+                    <dt>Photographie </dt> <dd>Hichem&nbsp;Dahes</dd> &#119056; 
+                    <dt>DESIGN</dt> <dd>Open Source Publishing</dd>
+                </dl>
+
+        </article>
+
+
+    </section>
+    
+
+
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
+
+
