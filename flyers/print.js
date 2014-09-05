@@ -1,5 +1,5 @@
 // Choose the number of pages of the document
-var nb_page = 12;
+var nb_page = 14;
 //var nb_page = $(".preview-page").length;
 
 
