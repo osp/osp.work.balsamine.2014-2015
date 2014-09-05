@@ -1,8 +1,8 @@
 Épreuves avec 7 types de test, sur les 2 images, donc 14 pdf.
 
-D'abord resize violent vers la taille finale environ, à 300 dpi, pour optimiser, supprimer le bruit inutile et premettre un sharpen réel.
+D'abord resize violent vers la taille finale environ, à 300 dpi, pour optimiser, supprimer le bruit inutile et remettre un piqué (sharpen) plus réaliste.
 
-1. la sortie html de Ludi sans traitement
+1. la sortie html sans traitement
 2. idem avec ajout de profil euroscale uncoated (adobe) par gs
 3. idem avec profil munken print *
 4. export scribus du tiff original d'hichem, avec ajout icc uncoated par scribus
@@ -12,29 +12,39 @@ D'abord resize violent vers la taille finale environ, à 300 dpi, pour optimiser
 
 * http://www.arcticpaper.com/en/Home/Arctic-Paper1/Arctic-Paper-ICC-Webb-Service/Download-profiles/
 
-Sur les sorties pdf html, injecté le profil par
-gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
+Sur les sorties pdf html, injecter le profil par
+$ gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
 
 ----
 
 Résultat sur l'épreuve laser sur le Munken Print, garantie très proche par Dirk Gillis : 
 - les 3 traitements GS sur le pdf html semblent identiques. Peut-être parce que les courbes sont très faibles, ou bien parce que ça ne marche pas?
-- les Scribus pas très différents, sauf la version curve bien sur
+- les Scribus pas très différents, sauf la version curve bien sur.
 
 ----
 
-Hichem décide pour sa version originale.
+Hichem décide d'opter pour sa version originale.
 Je décide de ne pas passer par Scribus pour simplifier le traitement.
 
 ----
 
-En Gimp, je sélectionne les couleurs sombres, avec un bord dégradé de 5px, et je mets du sharpen plus large 5px - 0,7 pour tenter d'attraper certains détails.
-Pour compenser la manière dont le Munken Print va boire plus l'encre offset que l'encre laser en croute, j'applique une courbe légère, fichier 'curve2-original-hichem-compensated-laserproof-to-offset' à appliquer dans Curves.
+En conclusion pour les flyers :
+1. D'abord passage vers grayscale, puis un resize violent vers la taille finale environ, à 300 dpi, pour optimiser, supprimer le bruit inutile et remettre un piqué (sharpen) plus réaliste 0,5px 1,3.
+2. Sélectionner les éventuelles couleurs sombres, avec un bord dégradé de 5px, et mettre du sharpen plus large 5px 0,7 pour tenter d'attraper certains détails.
+3. Pour compenser la manière dont le Munken Print va boire plus l'encre offset que l'encre laser en croute, appliquer une courbe légère, fichier 'curve2-original-hichem-compensated-laserproof-to-offset' à appliquer dans Curves.
+4. Puis utiliser dans l'html les images traitées.
+5. Et injecter la courbe au pdf résultant, toujours avec 
+$ gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
 
-Il faut dans l'html choisir les images traitées, puis injecter la courbe au pdf résultat, toujours avec 
-gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
+En conclusion pour les affiches :
+1. D'abord passage vers grayscale, puis pas de resize, ajouter un piqué (sharpen) de compensation, 1px 0,9.
+2. Sélectionner les éventuelles couleurs sombres, avec un bord dégradé de 5px, et mettre du sharpen plus large 5px 0,7 pour tenter d'attraper certains détails.
+3. Papier couché donc pas de compensation nécessaire.
+4. Puis utiliser dans l'html les images traitées.
+5. Et injecter la courbe au pdf résultant, toujours avec 
+$ gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
 
-
+----
 
 Historique :
 
