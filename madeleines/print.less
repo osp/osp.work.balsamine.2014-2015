@@ -14,10 +14,10 @@
 @page-margin-top: 5mm;
 @page-margin-bottom: 5mm;
 
-@header-height: 0mm;
-@header-text: "";
-@footer-height: 0mm;
-@footer-text: "";
+@header-height: 10mm;
+@header-text: "Nos petites madeleines";
+@footer-height: 10mm;
+@footer-text: counter(page-counter);
 
 
 /* __________________________________ DEBUG __________________________________ */
@@ -258,9 +258,9 @@ section.header {
     page-break-after: always !important;
     page-break-before: always !important;
 
-    .column33 {
-        -webkit-flow-from: myFlow;
-    }
+}
+.page div {
+    -webkit-flow-from: myFlow;
 }
 section#container {
     -webkit-flow-into: myFlow;
