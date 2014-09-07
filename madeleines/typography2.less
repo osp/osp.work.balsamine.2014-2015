@@ -1,7 +1,14 @@
 @color: black;
 
+* {
+    color: @color;
+    border-color: @color;
+    outline-color: @color;
+}
+
 body {
     font-size: 12pt;
+    color: @color !important;
 }
 
 .tetiere {
@@ -16,10 +23,14 @@ body {
     width: 33%;
     float: left;
     height: 80%;
+    color: @color !important;
+
 }
 .column20 + .column20,
 .column33 + .column33 {
     padding-left: 1em;
+    color: @color !important;
+
 }
 
 h1{
@@ -118,6 +129,8 @@ div.intro {
     border-top: 0px solid @color;
     margin-top:0px;
     line-height: 0.7em;
+        color: @color !important;
+
 }
 .production{
     font-family: "UmePlumePGothic-260";
@@ -125,13 +138,30 @@ div.intro {
     margin-top: 6px;
     line-height: 1.2em;
     font-size: 8.3pt;
+    padding-bottom: 0;
 }
 
+.notes-quinzaine{
+    font-family: "UmePlumePGothic-260";
+    font-size: 8.3pt;
+    line-height: 1.1em;
+    position:absolute; 
+    top: 1578px; 
+    width: 100%;
+    text-align: center;
+    }
 
+
+.piece-madeleine {
+        font-size:1.3em;
+        font-family: "UmePlumePMincho-200";
+        letter-spacing: 0.03em;
+    }
+    
 .pratique1 {
     text-align:center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+   border-top: 1px solid @color;
+    border-bottom: 1px solid @color;
     vertical-align: middle;
     font-family: 'UmePlumePGothic-260';
     font-size:1.1em;
@@ -146,6 +176,7 @@ div.intro {
     font-size:1.1em;
     padding: 5px 0px;
 }
+
 div.adresse {
     font-size: 1.1em;
     line-height: 1.35em;
@@ -194,6 +225,38 @@ h2 {
 }
 h1 + h2 {
     margin-top: 0;
+}
+.dates {
+    text-align: center;
+}
+.quinzaine {
+    float: left;
+}
+#cover1 {
+    text-align: center;
+}
+.notes {
+    -webkit-region-break-before: avoid !important;
+    -webkit-region-break-after: avoid !important;
+}
+article#infos-pratiques .separateur2 {
+    margin-top: 0;
+    margin-bottom: -8px;
+}
+article#infos-pratiques h3 {
+    margin-top: 0;
+}
+article#infos-pratiques .pratique2 {
+    text-align: center;
+    border-bottom: 0;
+    border-top: 0;
+    padding: 2px 0;
+}
+.avant-bible {
+    border-top: 0;
+}
+#address {
+    text-align: center;
 }
 
 /* S E P A R A T E U R S */
