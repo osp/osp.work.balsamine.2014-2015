@@ -1,5 +1,13 @@
 @color: black;
 
+body {
+    font-size: 12pt;
+}
+
+.tetiere {
+    width: 100%;
+    height: 20%;
+}
 
 .column20 {
     width: 20%;
@@ -7,8 +15,10 @@
 .column33 {
     width: 33%;
     float: left;
+    height: 80%;
 }
-.column20 + .column20 {
+.column20 + .column20,
+.column33 + .column33 {
     padding-left: 1em;
 }
 
@@ -150,6 +160,21 @@ div.adresse {
     text-align: left;
 }
 
+div.spectacle-infos {
+    width: 100%;
+}
+.madeleines {
+    border-top: 1px solid @color;
+    .liste {
+	    text-align:center; 
+        }
+}
+div.production {
+    font-size: 0.8em;
+}
+article img {
+    max-width: 33%;
+}
 
 
 /* S E P A R A T E U R S */
