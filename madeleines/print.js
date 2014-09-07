@@ -35,43 +35,6 @@ $(window).load(function(){
     var doc_height = $("body").height();
     var page_height = $("#master-page").height(); 
 
-    //printmarks = "\
-            //<div class="crop-top-left">                                              \n \
-                //<div class="crop-right" style="top: 0; right: 0;"></div>             \n \
-                //<div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>        \n \
-            //</div>                                                                   \n \
-            //<div class="crop-top-right">                                             \n \
-                //<div class="crop-left" style="top: 0; left: 0;"></div>               \n \
-                //<div class="crop-bottom" style="bottom: 0; right: 0;"></div>         \n \
-            //</div>                                                                   \n \
-            //<div class="crop-bottom-right">                                          \n \
-                //<div class="crop-left" style="left: 0; bottom: 0;"></div>            \n \
-                //<div class="crop-top" style="right: 0cm; top: 0;"></div>             \n \
-            //</div>                                                                   \n \
-            //<div class="crop-bottom-left">                                           \n \
-                //<div class="crop-right" style="bottom: 0cm; right: 0;"></div>        \n \
-                //<div class="crop-top" style="left: 0cm; top: 0"></div>               \n \
-            //</div>                                                                   \n \
-    //"
-
-    //$(".bla").append(' \
-            //<div class="crop-top-left">                                              \n \
-                //<div class="crop-right" style="top: 0; right: 0;"></div>             \n \
-                //<div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>        \n \
-            //</div>                                                                   \n \
-            //<div class="crop-top-right">                                             \n \
-                //<div class="crop-left" style="top: 0; left: 0;"></div>               \n \
-                //<div class="crop-bottom" style="bottom: 0; right: 0;"></div>         \n \
-            //</div>                                                                   \n \
-            //<div class="crop-bottom-right">                                          \n \
-                //<div class="crop-left" style="left: 0; bottom: 0;"></div>            \n \
-                //<div class="crop-top" style="right: 0cm; top: 0;"></div>             \n \
-            //</div>                                                                   \n \
-            //<div class="crop-bottom-left">                                           \n \
-                //<div class="crop-right" style="bottom: 0cm; right: 0;"></div>        \n \
-                //<div class="crop-top" style="left: 0cm; top: 0"></div>               \n \
-            //</div>                                                                   \n \
-    //');
 
     //for (i = 1; i <= nb_page; i++){
         //$("#master-page").clone().addClass("preview-page").attr("id","page-"+i).insertBefore($("#master-page"));
@@ -88,7 +51,6 @@ $(window).load(function(){
             parents = $(this).parent();
             flow = $(this).detach();
             section = $("section.page", parents)[0];
-            console.log(section);
             $(section).append(flow);
         });
     });
@@ -98,6 +60,12 @@ $(window).load(function(){
         $("#toc-pages").toggle();
     });
 
+    // __________________________________ SPREAD __________________________________ //
+    $("button#spread").click(function(e){
+        e.preventDefault();
+        $(this).toggleClass("button-active");
+        $("html").toggleClass("spread");
+    });
 
     // __________________________________ MOVEABLE ELEMENTS __________________________________ //
     $(".moveable").
