@@ -117,6 +117,7 @@ div.intro {
     font-size: 1.2em;
     border-top: 0px solid @color;
     margin-top:0px;
+    line-height: 0.7em;
 }
 .production{
     font-family: "UmePlumePGothic-260";
@@ -165,17 +166,35 @@ div.spectacle-infos {
 }
 .madeleines {
     border-top: 1px solid @color;
-    .liste {
-	    text-align:center; 
-        }
+    margin-top: 0;
 }
+#sommaire .liste,
+#sommaire .separateur {
+	text-align: center;
+}
+#sommaire .separateur {
+    margin-bottom: -5px;
+}
+
 div.production {
     font-size: 0.8em;
 }
-article img {
-    max-width: 33%;
-}
 
+.footer {
+    font-size: 10pt;
+}
+.type {
+    text-align: center;
+}
+.artiste {
+    margin-top: 0;
+}
+h2 {
+    font-size: 1em;
+}
+h1 + h2 {
+    margin-top: 0;
+}
 
 /* S E P A R A T E U R S */
 .segno {
