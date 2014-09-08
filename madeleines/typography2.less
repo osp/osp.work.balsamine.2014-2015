@@ -26,12 +26,26 @@ body {
     color: @color !important;
 
 }
+.column66 {
+    width: 66%;
+    float: left;
+    height: 80%;
+    color: @color !important;
+}
+.column66low {
+    width: 66%;
+    height: 80%;
+    color: @color !important;
+}
 .column20 + .column20,
-.column33 + .column33 {
+.column33 + .column33,
+.column33 + .column66,
+.column66 + .column33 {
     padding-left: 1em;
     color: @color !important;
-
 }
+
+
 p{
 text-align:left;
 }
