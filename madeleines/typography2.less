@@ -15,19 +15,23 @@ body {
     width: 100%;
     height: 20%;
 }
+.column {
+        float: left;
+    height: 80%;
+}
+.column + .column {
+        padding-left: 1em;
+}
 
 .column20 {
     width: 20%;
 }
 .column33 {
     width: 33%;
-    float: left;
-    height: 80%;
-    color: @color !important;
-
 }
 .column66 {
     width: 66%;
+<<<<<<< HEAD
     float: left;
     height: 80%;
     color: @color !important;
@@ -48,6 +52,8 @@ body {
 
 p{
 text-align:left;
+=======
+>>>>>>> 53283f7cbaeeac15fd1ae83d976a7b751ddd4cde
 }
 
 h1{
@@ -147,6 +153,8 @@ div.intro {
     margin-top:0px;
     line-height: 0.7em;
         color: @color !important;
+        text-align: center;
+        display: block;
 
 }
 .production{
@@ -162,12 +170,17 @@ div.intro {
     font-family: "UmePlumePGothic-260";
     font-size: 8.3pt;
     line-height: 1.1em;
-    position:absolute; 
-    top: 1565px;
-    width: 100%;
-    text-align: left;
-    }
+    text-align: center;
+    margin-top: 15px;
+      }
 
+.notes-in {
+    font-family: "UmePlumePGothic-260";
+    font-size: 8.3pt;
+    line-height: 1.5em;
+    text-align:center;
+    margin-top:0px;
+}
 
 .piece-madeleine {
         font-size:1.3em;
@@ -215,7 +228,8 @@ div.spectacle-infos {
 .madeleines {
     border-top: 1px solid @color;
     margin-top: 0;
-    padding-top:4px;
+    font-size: 0.85em !important;
+    padding-top: 3px;
 }
 #sommaire .liste,
 #sommaire .separateur {
@@ -275,6 +289,16 @@ article#infos-pratiques .pratique2 {
 }
 #address {
     text-align: center;
+}
+#page-1 .footer,
+#page-12 .footer {
+    display: none;
+}
+
+sup {
+    font-size: 0.6em;
+    vertical-align: 5px;
+    line-height: 0;
 }
 
 /* S E P A R A T E U R S */
