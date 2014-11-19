@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: flyer</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+
+<style>
+	.moveable svg {
+		display: none;
+	}
+	path,
+	circle {
+	    fill: white !important;
+	    stroke: white !important;
+	}
+	path {
+	    stroke-width: 2px !important;
+	}
+</style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <!--<img src="page-height.png" />-->
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+     <div id="pages">
+        <div id="page-1" class="preview-page">
+        </div>
+        <div id="page-2" class="preview-page">
+        </div>
+
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+    </div>
+
+    <section id="container" style="z-index:100;">
+
+        <!-- R E C T O -->
+        <article class="recto infos-spectacle">
+
+            <img id="photo" style="width: auto; height: 280px;" src="hichem/final/1417px/armure.jpg">
+            <div>
+                <div class="column20 dates">                           
+                    3 ⇝ 14/02/2015<br/> à 20h30
+                </div>
+
+                <div class="column33" style="width: 60%">
+                    <h1 style="margin-bottom: 0;">KÄTHCHEN DE HEILBRONN</h1><h2>OU L’ÉPREUVE DU FEU</h2>
+                    Sabine Durand<br/>
+                  Création théâtre
+                </div>
+
+                <div class="column20">
+                    <h1 id='logo'>bạlsa</h1>
+                </div>
+            </div>
+
+        </article>
+
+
+        <!-- V E R S O -->
+        <article class="verso">
+
+            <div class="intro column66">
+                <div class="column50">
+                    <h1 style="margin-bottom: 0;">KÄTHCHEN DE HEILBRONN</h1><h2>OU L’ÉPREUVE DU FEU</h2>
+                </div>
+                <div class="column50">
+                    <!--<img src="/images/katchen/katchen-chateau-4.gif" style="width: 100px; margin-bottom: 11px; margin-left: 10px;"> -->
+                    <div class="dates">                           
+                        3 ⇝ 14/02/2015 <br/>à 20h30 <br/>
+                        (relâche dimanche et lundi))
+                    </div>
+                </div>
+
+                <p style="clear: both;">                          
+                    Frappé de mélancolie morbide, le comte vom Strahl ne désire plus que la
+                    mort. Une nuit de la Saint-Sylvestre, un ange lui désigne une très jeune
+                    fille qui l'aime et qui est fille d'em&shy;pe&shy;reur. À son réveil, il lui faudra
+                    toute l'ardeur et la foi du che&shy;valier pour déjouer les plans de la vénale
+                    Kunigunde et remon&shy;ter le fil de son désir jusqu'au cœur de la nuit. Car
+                    c'est là que brille une vérité plus éclatante que celle du soleil.
+                </p>
+            <!--</div>-->
+
+            <!--<div class="intro column33">-->
+                <p>
+                    Fable épique et incandes&shy;cen&shy;te, <em>Käthchen de Heil&shy;bronn</em> défait les frontières
+                    du mystique et du mondain, du caché et du visible, de l'idéal et de
+                    l'ordinaire, de l'âme et de la chair, de la simplicité et de la subtilité,
+                    de l'ancien et du nouveau.
+                </p>
+
+
+                <div class="adresse column33" style="margin-top: 7px;">
+                        Théâtre la Balsamine<br/>
+                        Avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1<br/>
+                        1030 Bruxelles<br/>
+                        RÉSERVATIONS <br/>
+                        02 735 64 68<br/> 
+                        www.balsamine.be
+                </div>
+                <div class="column66">
+                    <div id="logos" style="clear: both; margin-top: 7px;">
+                        <img style="width: 32px; margin: 0px 2px;" src="logos/fede-wallonie-bruxelles.svg" />
+                        <img style="width: 23px; margin: 0px 2px;" src="logos/culture-be.svg" />
+                        <img style="width: 19px; margin: 0px 2px;" src="logos/cocof.svg" />
+                        <img style="width: 28px; margin: 0px 2px;" src="logos/wbi.svg" />
+                        <img style="width: 26px; margin: 0px 2px;" src="logos/wbtd.svg" />
+                        <img style="width: 26px; margin: 0px 2px;" src="logos/rab.svg" />
+                        <img style="width: 20px; margin: 0px 2px;" src="logos/article27.svg" />
+                        <img style="width: 28px; margin: 0px 2px;" src="logos/arsene50.svg" />
+                        <img style="width: 43px; margin: 0px 2px;" src="logos/point-culture.svg" />
+                        <img style="width: 35px; margin: 0px 2px;" src="logos/rtbf.svg" />
+                        <img style="width: 27px; margin: 0px 2px;" src="logos/musiq3.svg" />
+                        <img style="width: 55px; margin: 0px 2px;" src="logos/theatrez-moi.svg" />
+                        <img style="width: 40px; margin: 0px 2px;" src="logos/cinematek.svg" />
+                        <img style="width: 40px; margin: 0px 2px;" src="logos/arts-sceniques.svg" />
+                    </div>
+                </div>
+
+                <dl id="colophon">
+                    <dt>ÉDITEUR RESPONSABLE</dt> <dd>Fabien&nbsp;Dehasseler, avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1 - 1030 Bruxelles</dd>
+                    <dt>Photographie </dt> <dd>Hichem&nbsp;Dahes</dd> &#119056; 
+                    <dt>DESIGN</dt> <dd>OSP</dd>
+                </dl>
+
+            </div>
+
+
+
+            <div class="column33" style="margin-top: 0;">
+
+
+                <dl>                          
+                    <dt>Traduction</dt> <dd>Pierre Deshusses</dd>
+                    <dt>Mise en scène et adaptation</dt><dd> Sabine Durand</dd>
+                    <dt>Avec</dt><dd> Céline Beigbeder, Fabien Dehasseler, Émile Falk-Blin, Maurice Ginvert, Fabien Magry, Émilie Maréchal, Jean-Baptiste Polge, Dominique Thomas, Martine Wijckaert, Lotfi Yahya</dd>
+                    <dt>Assistanat</dt><dd> Judith Ribardière</dd>
+                    <dt>Second assistant</dt><dd> Dominique Llorca</dd>
+                    <dt>Scénographie</dt><dd> Estelle Rullier et David Scarpuzza (stagiaire)</dd>
+                    <dt>Costumes</dt><dd> Estelle Rullier avec Ada Rajszys et Marine Vanhaesendonck</dd>
+                    <dt>Lumières</dt><dd> Sylvie Garot</dd>
+                    <dt>Création sonore</dt><dd> Thomas Turine</dd>
+                    <dt>Production et diffusion</dt><dd> Arnaud Timmermans</dd>
+                </dl>
+
+                <div class="segno">&#119051;</div> 
+
+                <div class="production">
+                    Un spectacle de SIX-65 compagnie en coproduction avec le Théâtre la&nbsp;Balsamine, avec l'aide du Ministère de la Fédération Wallonie-Bruxelles–
+                    service du Théâtre et la participation du Centre des Arts scéniques.
+                </div>
+
+
+                <!--
+                <div class="pratique1">
+                    Tarifs <br/>de 5 à 15&thinsp;€
+                </div>
+                <div class="pratique11">
+                    Nouveauté <br/>
+                    JAMAIS DEUX SANS TOI <br/>6&thinsp;€ pour tous, lors de la deuxième représentation du&nbsp;25&nbsp;novembre.
+                </div>
+                -->
+
+
+            </div>
+
+
+        </article>
+
+
+    </section>
+    
+
+
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
+
+
