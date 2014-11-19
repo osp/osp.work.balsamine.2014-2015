@@ -8,8 +8,28 @@
     width: 33%;
     float: left;
 }
+.column50 {
+    width: 50%;
+    float: left;
+}
+.column66 {
+    width: 66%;
+    float: left;
+}
 .column20 + .column20 {
     padding-left: 1em;
+}
+.column33 + .column33 {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.column33:first-child {
+    padding-left: 0;
+    padding-right: 0.5em;
+}
+.column33:last-child {
+    padding-left: 0.5em;
+    padding-right: 0;
 }
 
 h1{
@@ -47,6 +67,13 @@ img#photo {
 }
 .recto h1 {
     margin-bottom: 5px;
+}
+h1 + h2 {
+    margin-top: 0;
+}
+h2 {
+    font-size: 13px;
+    font-family: 'UmePlumePGothic-260';
 }
 .recto .dates {
     margin-top: 23.5px;
@@ -136,7 +163,7 @@ div.intro {
     padding: 5px 0px;
 }
 div.adresse {
-    font-size: 1.1em;
+    font-size: 11px;
     line-height: 1.35em;
     margin-top: 14px;
     margin-bottom: 10px;

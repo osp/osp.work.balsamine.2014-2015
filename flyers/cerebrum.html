@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: flyer</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+
+<style>
+	.moveable svg {
+		display: none;
+	}
+	path,
+	circle {
+	    fill: white !important;
+	    stroke: white !important;
+	}
+	path {
+	    stroke-width: 2px !important;
+	}
+</style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <!--<img src="page-height.png" />-->
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+     <div id="pages">
+        <div id="page-1" class="preview-page">
+        </div>
+        <div id="page-2" class="preview-page">
+        </div>
+
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+    </div>
+
+    <section id="container" style="z-index:100;">
+
+        <!-- R E C T O -->
+        <article class="recto infos-spectacle">
+
+            <img id="photo" style="width: auto; height: 280px;" src="images/cerebrum/cerebrum, (c) jacques gautier d'agoty.jpg">
+
+            <div class="column33 dates">                           
+                14 ⇝ 24/01/2015<br/> à 20h30
+            </div>
+
+            <div class="column33">
+                <h1 style="margin-bottom: 0;">Cerebrum</h1><h2>Le faiseur de réalités</h2>
+              Yvain Juillard<br/>
+              Création conférence-spectacle
+            </div>
+
+            <div class="column33">
+                <h1 id='logo'>bạlsa</h1>
+            </div>
+
+        </article>
+
+
+        <!-- V E R S O -->
+        <article class="verso">
+
+
+            <div class="intro column33">
+                <h1 style="margin-bottom: 0;">Cerebrum</h1><h2>Le faiseur de réalités</h2>
+                <div class="dates">                           
+                    14 ⇝ 24/01/2015 <br/>à 20h30 <br/>
+                    (relâche dimanche, lundi, mardi)
+                </div>
+
+
+                <p>                          
+                    Et si la réalité n'était qu'une fabrication de notre cerveau&thinsp;?
+                    Ancien biophysicien spécialisé dans la plasticité cérébrale,
+                    aujourd'hui acteur, Yvain Juillard nous propose lors d'une 
+                    conférence-spectacle d'interroger le fonctionnement de notre cerveau
+                    afin de ques&shy;tionner la nature multiple de la réalité. Une occasion
+                    unique, à&nbsp;travers des expériences simples et ludiques, d'accéder aux
+                    dernières connaissances scientifiques en la matière.
+                </p>
+            </div>
+
+
+            <div class="bible column33">
+
+
+                <dl>                          
+                    <dt>Écriture, conception et jeu</dt> <dd>Yvain Juillard</dd>
+                    <dt>Œil extérieur</dt> <dd>Lorent Wanson</dd>
+                    <dt>Conseil dramaturgique</dt> <dd>Dominique Roodthooft</dd>
+                    <dt>Conseil scientifique</dt> <dd>Céline Cappe</dd>
+                </dl>
+
+                <div class="segno">&#119051;</div> 
+
+                <div class="production">
+                    Production Les Faiseurs de Réalités en coproduction avec le Théâtre
+                    Épique, soutenu par la Fédération Wallonie-Bruxelles, la Fondation
+                    Mons 2015 et le Centre culturel de Colfontaine dans le cadre du
+                    projet culturel et participatif Une Aube Boraine. Avec le soutien du
+                    Théâtre la&nbsp;Balsamine, du Théâtre Universitaire de Liège, du
+                    Corridor, de la Fédération Wallonie-Bruxelles/COPIC et de&nbsp;la&nbsp;SACD.
+                </div>
+            </div>
+
+            <div class="column33" style="margin-top: 0px;">
+
+                <div class="pratique1">
+                    Tarifs <br/>de 5 à 15&thinsp;€
+                </div>
+                <div class="pratique11">
+                    Nouveauté <br/>
+                    JAMAIS DEUX SANS TOI <br/>6&thinsp;€ pour tous, lors de la deuxième représentation du&nbsp;15&nbsp;janvier.
+                </div>
+
+                <div class="adresse">
+                        Théâtre la Balsamine<br/>
+                        Avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1<br/>
+                        1030 Bruxelles<br/>
+                        RÉSERVATIONS <br/>
+                        02 735 64 68<br/> 
+                        www.balsamine.be
+                </div>
+
+            </div>
+
+            <div id="logos" style="">
+                <img style="width: 32px; margin: 0px 10px 0px 0px; margin-top: 6px;" src="logos/fede-wallonie-bruxelles.svg" />
+                <img style="width: 23px; margin: 0px 9px;padding-bottom: 11px;" src="logos/culture-be.svg" />
+                <img style="width: 19px; margin: 0px 12px;padding-bottom: 14px;" src="logos/cocof.svg" />
+                <img style="width: 28px; margin: 0px 10px;padding-bottom: 3px;" src="logos/wbi.svg" />
+                <img style="width: 26px; margin: 0px 2px;padding-bottom: 10px;" src="logos/wbtd.svg" />
+                <img style="width: 26px; margin: 0px 2px;padding-bottom: 10px;" src="logos/rab.svg" />
+                <img style="width: 20px; margin: 0px 9px;" src="logos/article27.svg" />
+                <img style="width: 28px; margin:0px 13px;padding-bottom: 12px;" src="logos/arsene50.svg" />
+                <img style="width: 43px; margin: 0px 7px;" src="logos/point-culture.svg" />
+                <img style="width: 35px; margin: 0px 8px;padding-bottom: 10px;" src="logos/rtbf.svg" />
+                <img style="width: 27px; margin: 0px 2px;padding-bottom: 21px;" src="logos/musiq3.svg" />
+                <img style="width: 55px; margin: 0px 2px;padding-bottom: 21px;" src="logos/theatrez-moi.svg" />
+                <img style="width: 40px; margin: 0px 2px;padding-bottom: 21px;" src="logos/cinematek.svg" />
+            </div>
+
+                <dl id="colophon" class="column66" style="clear: none; margin-top: -5px;">
+                    <dt>ÉDITEUR RESPONSABLE</dt> <dd>Fabien&nbsp;Dehasseler, avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1 - 1030 Bruxelles</dd>
+                    <dt>Gravure</dt> <dd>Jacques Gautier d'Agoty</dd> &#119056; 
+                    <dt>DESIGN</dt> <dd>OSP</dd>
+                </dl>
+
+        </article>
+
+
+    </section>
+    
+
+
+            <img src="/images/cerebrum/cerveau-gravure.png" style="width:30%; position: absolute; left: 120px; top: 885px; width: 40px;">
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
+
+
