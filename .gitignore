@@ -5,3 +5,6 @@
 *.pdf
 *.swo
 *.swp
+*~
+*.log
+*.~lock*
