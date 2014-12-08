@@ -37,10 +37,11 @@ En conclusion pour les flyers :
 $ gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
 
 En conclusion pour les affiches :
-1. D'abord passage vers grayscale, puis pas de resize, ajouter un piqué (sharpen) de compensation, 1px 0,9.
+1. D'abord passage vers grayscale, puis resize si nécessaire (en fonction de la taille de l'image dans l'affiche → viser 180 px/inches minimum aux dimensions réelles d'impression ), ajouter un piqué (sharpen) de compensation, 1px 0,9.
 2. Sélectionner les éventuelles couleurs sombres, avec un bord dégradé de 5px, et mettre du sharpen plus large 5px 0,7 pour tenter d'attraper certains détails.
 3. Papier couché donc pas de compensation nécessaire.
-4. Puis utiliser dans l'html les images traitées.
+4. Puis utiliser dans l'html les images traitées ou dans importer l'image dans Inkscape
+4+.Passer le pdf en graysclae avec gs -sOutputFile=grayscale.pdf -sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.3 -dNOPAUSE -dBATCH color.pdf
 5. Et injecter la courbe au pdf résultant, toujours avec 
 $ gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputICCProfile=munken/AP_Munken_Print_White_260v4.1.icc -sOutputFile=avec-profil.pdf sans-profil.pdf
 
