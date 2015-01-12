@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: flyer</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+
+    <style>
+        .moveable svg {
+                display: none;
+        }
+        path,
+        circle {
+            fill: white !important;
+            stroke: white !important;
+        }
+        path {
+            stroke-width: 2px !important;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <!--<img src="page-height.png" />-->
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+     <div id="pages">
+        <div id="page-1" class="preview-page">
+        </div>
+        <div id="page-2" class="preview-page">
+        </div>
+
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+    </div>
+
+    <section id="container" style="z-index:100;">
+
+        <!-- R E C T O -->
+        <article class="recto infos-spectacle"> 
+        
+            <img id="photo" style="margin-top:-18px;" src="pict/compo.jpg">
+            <div class="column33 dates">
+                    29/04 ⇝ 02/05/2015<br/>
+                    à 20h30
+            </div>
+
+            <div class="column33">
+                <h1>HANTOLOGIE</h1>
+                N50°51’7.039’’E4°23’22.215’’
+                Groupe ENTORSE<br/>
+                Création danse
+            </div>
+
+            <div class="column33">
+                <h1 id='logo'>bạlsa</h1>
+            </div>
+        </article>
+
+        <!-- V E R S O -->
+        <article class="verso">
+
+            <div class="intro column33">
+            
+                <h1>HANTOLOGIE</h1>
+                N50°51’7.039’’E4°23’22.215’’ 
+
+                <div class="dates">
+                    29/04 ⇝ 02/05/2015<br/>à 20h30
+                </div>
+                
+                <p>
+                Hantologie est une cérémonie moderne, un spectacle rituel, une transe au cours de laquelle les spectateurs comme les acteurs sont au cœur d'un dispositif déambulatoire. Cette expérience chorégraphique, musicale, scénographique est à chaque fois réinventée en fonction du lieu qui l’abrite. Avec cette nouvelle création, le groupe ENTORSE propose une anthologie ludique des gestes qui ont marqué l’Histoire de la danse. 
+                </p>
+            </div>   
+            
+            <div class="bible column33">
+                <dl>
+                    <dt>CHORÉGRAPHIE ET INTERPRÉTATION</dt><dd>Florencia Demestri et Samuel Lefeuvre</dd>
+                    <dt>CRÉATION MUSICALE</dt><dd>Mathias Delplanque et Raphaëlle Latini</dd>
+                    <dt>CRÉATION LUMIÈRES</dt><dd>Nicolas Olivier</dd>
+                    <dt>SCÉNOGRAPHIE ET COSTUMES</dt><dd>Groupe ENTORSE</dd>
+                    <dt>GAME DESIGNER</dt><dd>Manuel Rozoy</dd>
+                    <dt>MACHINISTE</dt><dd>Thomas Béni</dd>
+                 </dl>
+             </div>
+                 
+             <div class="quarter-rest">&#119101;</div> 
+             
+             <div class="production" style="margin-top: 0px !important;">
+                Production du Groupe ENTORSE et LOG asbl en coproduction avec la Scène Nationale 61, l’ Atelier de Paris-Carolyn Carlson / CDC, le Théâtre la Balsamine, Charleroi Danses,  le Relais Culturel Régional du Pays de Falaise , The Point – Eastleigh, CNDC Angers, LE CENTQUATRE - PARIS . Ce projet bénéficie du soutien de la DRAC de Basse-Normandie, du Conseil Régional de Basse Normandie, du Conseil Général du Calvados et de la Ville de Caen et de la Fédération Wallonie-Bruxelles - Service de la danse.
+             </div>
+           
+             <div class="column33" style="margin-bottom: -30px;">
+                <div class="pratique1">
+                    Tarifs <br/>de 5 à 15&thinsp;€
+              </div>          
+
+              <div class="pratique11">
+                    6€ pour tous, lors de la deuxième représentation du 30 avril 
+                </div>  
+                
+
+              <div class="adresse">
+                        Théâtre la Balsamine<br/>
+                        Avenue Félix Marchal, 1<br/>
+                        1030 Bruxelles<br/>
+                        RÉSERVATIONS <br/>
+                        02 735 64 68<br/> 
+                        www.balsamine.be
+              </div>
+              
+              
+                <div id="logos" style="margin: 0px 0px 0px 7px;">
+                    <img style="width: 32px; margin: -1px 2px; margin-top: 6px;" src="logos/fede-wallonie-bruxelles.svg" />
+                    <img style="width: 23px; margin: 5px 2px;padding-bottom: 11px;" src="logos/culture-be.svg" />
+                    <img style="width: 19px; margin: 5px 2px;padding-bottom: 14px;" src="logos/cocof.svg" />
+                    <img style="width: 28px; margin: 5px 2px;padding-bottom: 3px;" src="logos/wbi.svg" />
+                    <img style="width: 26px; margin: -12px 2px;padding-bottom: 10px;" src="logos/wbtd.svg" />
+                    <img style="width: 35px; margin: 5px 2px;" src="logos/reseau-des-arts.svg" />
+                    <img style="width: 20px; margin: 5px 2px;" src="logos/article27.svg" />
+                    <img style="width: 28px; margin: 5px 2px;padding-bottom: 12px;" src="logos/arsene50.svg" />
+                    <img style="width: 43px; margin: 2px 2px 0px 51px;" src="logos/point-culture.svg" />
+                    <img style="width: 35px; margin: 5px 2px;" src="logos/rtbf.svg" />
+                    <img style="width: 27px; margin: 12px 2px 11px 50px;" src="logos/musiq3.svg" />
+                    <img style="width: 35px; margin: 5px 2px;" src="logos/cinematek.svg" />
+                    <img style="width: 35px; margin: 5px 2px;" src="logos/charleroi-danse.svg" />
+                </div>
+            </div>
+
+
+                <dl id="colophon">
+                    <dt>ÉDITEUR RESPONSABLE</dt> <dd>Fabien&nbsp;Dehasseler, avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1 - 1030 Bruxelles</dd>
+                    <br/>
+                    <dt> Photographie </dt><dd>Hichem&nbsp;Dahes</dd> 
+                    &#119056; <dt>DESIGN</dt> <dd>Open Source Publishing</dd>
+                </dl>
+        </article>
+
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
