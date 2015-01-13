@@ -1,42 +1,205 @@
-Recto 
-Visuel : photo d’Hichem 
-cOMMENT dIRE / Où se mettre
-Léa Drouet 
-Création théâtre
-24/02 -> 04/03/2015 
-à 20h30
-Logo Balsa 
-Verso
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: flyer</title>
 
-cOMMENT dIRE / Où se mettre
-Du 24 février au 4 mars 2015 à 20h30
-(relâche samedi et dimanche)
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
 
-Créé à partir d’un poème en prose de Danielle Collobert (tiré de son recueil intitulé Meurtre), cOMMENT dIRE nous propose une exploration des espaces et de leurs usages. Quatre corps cherchent de nouveaux horizons et parcourent le théâtre en tous sens. Ils cherchent une place pour ne pas être mis en boîte, pour échapper à l’enfermement. Comment dire/Où se mettre délocalise la fiction pour élargir le territoire habituel de la représentation. Une résistance à l’immobilité et aux impasses ! 
+<style>
+	.moveable svg {
+		display: none;
+	}
+	path,
+	circle {
+	    fill: white !important;
+	    stroke: white !important;
+	}
+	path {
+	    stroke-width: 2px !important;
+	}
+</style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <!--<img src="page-height.png" />-->
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+     <div id="pages">
+        <div id="page-1" class="preview-page">
+        </div>
+        <div id="page-2" class="preview-page">
+        </div>
+
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+    </div>
+
+    <section id="container" style="z-index:100;">
+
+        <!-- R E C T O -->
+        <article class="recto infos-spectacle">
+
+            <img id="photo" style="width: auto; height: 280px;" src="hichem/final/600px/Octopus.jpg">
+
+            <div class="column33 dates">                           
+                24/02 ⇝ 04/03/2015<br/> à 20h30
+            </div>
+
+            <div class="column33">
+                <h1 style="margin-bottom: 0;"><em style="text-transform:lowercase;">c</em>OMMENT <em style="text-transform:lowercase;">d</em>IRE</h1><h2>Où se mettre</h2>
+              Léa Drouet<br/>
+              Création théâtre
+            </div>
+
+            <div class="column33">
+                <h1 id='logo'>bạlsa</h1>
+            </div>
+
+        </article>
+
+
+        <!-- V E R S O -->
+        <article class="verso">
+
+
+            <div class="intro column33" style="margin-bottom: 0px;">
+                <h1 style="margin-bottom: 0;"><em style="text-transform:lowercase;">c</em>OMMENT <em style="text-transform:lowercase;">d</em>IRE</h1><h2>Où se mettre</h2>
+                <div class="dates" style="margin-bottom: 5px;">                           
+                    24/02 ⇝ 04/03/2015 &mdash; à 20h30 <br/>
+                    (relâche samedi et dimanche)
+
+                </div>
+
+                <p>                          
+		 Créé à partir d’un poème en prose de Danielle Collobert, cOMMENT dIRE nous pro&shy;pose une explora&shy;tion des espaces et de leurs usages. Quatre corps cherchent de&nbsp;nouveaux horizons et parcourent le théâtre en tous sens. Ils cher&shy;chent une&nbsp;place pour ne pas être mis&nbsp;en boîte. cOMMENT dIRE déloca&shy;lise la fiction pour élargir le ter&shy;ritoire habituel de la représentat&shy;ion. Une résis&shy;tance à l’im&shy;mobilité et aux&nbsp;impasses&thinsp;!
+                </p>
+
+            </div>
+
+	    <div class="column33" style="">
+		  <div class="bible">
+
+
+		      <dl>                          
+			  <dt>CONCEPTION, MISE EN SCÈNE  <br/>ET SCÉNOGRAPHIE</dt> <dd>Léa Drouet</dd>
+			  <dt>D’APRÈS LE TEXTE DE</dt><br/> <dd>Danielle Collobert, Meurtre ©P.O.L. Éditeur, 2004</dd><br/>
+			  <dt>AVEC</dt> <dd>Céline Beigbeder, <br/>Heidi Brouzeng, Nicolas Patouraux, Rachel Sassi</dd>
+			  <dt>CRÉATION LUMIÈRES</dt> <br/><dd>Matthieu Ferry ASSISTÉ DE Noémie Crosse</dd>
+			  <dt>MUSIQUE ET COMPOSITION</dt> <dd>Jean-Philippe Gross</dd>
+			  <dt>INTERPRÉTATION STUDIO VIOLONCELLE</dt> <dd>Aude Romary</dd>
+			  <dt>PLASTICIEN</dt> <dd>Frédéric Bernier</dd>
+			  <dt>WORKSHOP INTERVENTION URBAINE</dt> <dd>Jérôme Giller</dd>
+			  
+		      </dl>
+
+                <!--<div class="segno" style="margin-top: 1px;">&#119051;</div> -->
+
+		     
+		  </div>
+		  
+			<div class="adresse" style="margin-top: 16px;">
+                        Théâtre la Balsamine<br/>
+                        Avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1<br/>
+                        1030 Bruxelles<br/>
+                        RÉSERVATIONS <br/>
+                        02 735 64 68<br/> 
+                        www.balsamine.be
+                </div>
+
+	    </div>
+            <div class="column33" style="">
+             <div class="production" style="margin-top: 0px;">
+		      Production Vaisseau en coproduction avec le Théâtre la Balsamine et le CCAM Scène Nationale de Vandœuvre-lès-Nancy et avec l’aide du Ministère de la Fédération Wallonie-Bruxelles, service du Théâtre. Avec le soutien Les Ateliers Claus et Iles/Artist Project Programme Suitcase.
+	      </div>
+            
+		<img src="/images/comment-dire/comment-dire-octopus_hatched-ludi.svg" style="width:30%; position: absolute; width: 68px;margin-left: -34px;margin-top: 0;">
+
+                <!--<div class="pratique1" style="margin-top: 10px;">
+                    Tarifs <br/>de 5 à 15&thinsp;€
+                </div>-->
+                <div class="pratique11" style="border-top: 1px solid black;margin-top: 53px;">
+                    Nouveauté <br/>
+		    6€ pour tous, lors de la deuxième représentation du 25 février
+                </div>
+		    <div id="logos" style="margin-top: 4px;">
+		      <img style="width: 32px; margin: 0px 10px 0px 0px; margin-top: 6px;" src="logos/fede-wallonie-bruxelles.svg" />
+		      <img style="width: 23px; margin: 0px 9px;padding-bottom: 11px;" src="logos/culture-be.svg" />
+		      <img style="width: 19px; margin: 0px 2px;padding-bottom: 14px;" src="logos/cocof.svg" />
+		      <img style="width: 28px; margin: 0px 3px;padding-bottom: 3px;" src="logos/wbi.svg" />
+		      <img style="width: 26px; margin: 0px 2px;padding-bottom: 10px;" src="logos/wbtd.svg" />
+		      <img style="width: 26px; margin: 0px 2px;padding-bottom: 10px;" src="logos/reseau-des-arts.svg" />
+		      <img style="width: 20px; margin: 5px 9px;" src="logos/article27.svg" />
+		      <img style="width: 28px; margin: 0px 6px;padding-bottom: 12px;position: relative;top: 6px;left: -5px;" src="logos/arsene50.svg" />
+		      <img style="width: 43px; margin: -1px 0px;" src="logos/point-culture.svg" />
+		      <img style="width: 35px;margin: 0px 9px 0px 1px;s" src="logos/rtbf.svg" />
+		      <img style="width: 27px; margin: 0px 2px;margin-left: -2px;position: relative;top: -4px;" src="logos/musiq3.svg" />
+		      <img style="width: 40px; margin: 0px -2px;position: relative;top:-2px;left: 7px;" src="logos/cinematek.svg" />
+
+		  </div>
+
+
+            </div>
+
+
+	    <div class="" style="">
+                <dl id="colophon" class="" style="clear: both;padding-top: àpx;text-align:center;">
+                    <dt>ÉDITEUR RESPONSABLE</dt> <dd>Fabien&nbsp;Dehasseler, avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1 - 1030 Bruxelles</dd>
+                     <br/> <dt>Photographie</dt> <dd>Hichem Dahes</dd> &#119056; 
+                    <dt>DESIGN</dt> <dd>osp</dd>
+                </dl>
+	    </div>
+        </article>
+
+
+    </section>
+    
 
 
 
-CONCEPTION, MISE EN SCÈNE  ET SCÉNOGRAPHIE Léa Drouet
-D’APRÈS LE TEXTE DE Danielle Collobert Meurtre ©P.O.L. Éditeur, 2004 
-AVEC Céline Beigbeder, Heidi Brouzeng, Nicolas Patouraux, Rachel Sassi 
-CRÉATION LUMIÈRES Matthieu Ferry ASSISTÉ DE Noémie Crosse
-MUSIQUE ET COMPOSITION  Jean-Philippe Gross 
-INTERPRÉTATION STUDIO VIOLONCELLE Aude Romary 
-PLASTICIEN Frédéric Bernier
-WORKSHOP INTERVENTION URBAINE Jérôme Giller
-Production Vaisseau en coproduction avec le Théâtre la Balsamine et le CCAM Scène Nationale de Vandœuvre-lès-Nancy et avec l’aide du Ministère de la Fédération Wallonie-Bruxelles, service du Théâtre. Avec le soutien Les Ateliers Claus et d' Iles/Artist Project Programme Suitcase.
-Tarifs
-De 5 à 15€
-Nouveauté
-6€ pour tous, lors de la deuxième représentation du 25 février
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
 
-Théâtre la Balsamine
-Avenue Félix Marchal, 1
-1030 Bruxelles
-RÉSERVATIONS  
-02 735 64 68 
-www.balsamine.be
 
-+ logos : Fédération, Culture.be, CoCof, WBI, WBTD, Réseau des arts de Bruxelles, Art.27, ARSENE 50,  Point Culture, La première, Musique 3, Cinematek
-
-Éditeur responsable Fabien Dehasseler, avenue Félix Marchal, 1 - 1030 Bruxelles  Photographie Hichem Dahes DESIGN Open Source Publishing
