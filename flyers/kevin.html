@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: flyer</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+
+<style>
+	.moveable svg {
+		display: none;
+	}
+	path,
+	circle {
+	    fill: white !important;
+	    stroke: white !important;
+	}
+	path {
+	    stroke-width: 2px !important;
+	}
+</style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <!--<img src="page-height.png" />-->
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+     <div id="pages">
+        <div id="page-1" class="preview-page">
+        </div>
+        <div id="page-2" class="preview-page">
+        </div>
+
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+    </div>
+
+    <section id="container" style="z-index:100;">
+
+        <!-- R E C T O -->
+        <article class="recto infos-spectacle">
+
+            <img id="photo" style="width: auto; height: 300px;" src="hichem/final/600px/primates.jpg">
+
+            <div class="column33 dates" style="margin-top: 17.5px;">                           
+                21 ⇝ 25/04/2015<br/> à 20h30
+            </div>
+
+            <div class="column33">
+                <h1 style="margin-bottom: 0;">L’écolier Kévin</h1>
+              Jean-Baptiste Calame<br/>
+              Théâtre
+            </div>
+
+            <div class="column33">
+                <h1 id='logo'>bạlsa</h1>
+            </div>
+
+        </article>
+
+
+        <!-- V E R S O -->
+        <article class="verso">
+
+
+            <div class="intro column33" style="margin-top: 15px;">
+                <h1 style="margin-bottom: 0;">L’écolier Kévin</h1>
+                <div class="dates" style="margin-bottom: 15px;">                           
+                    21 ⇝ 25/04/2015 à 20h30 <br/>
+                </div>
+
+
+                <p>                          
+		  C'est l'histoire d'un papa qui&nbsp;a perdu sa femme et son&nbsp;travail. Heureusement, il&nbsp;lui reste son fils ado&shy;lescent, Kévin.
+		</p>
+		<p>
+		  L’écolier Kévin est un enfant de l’Union, à la culture jeune-porno-ultra-violente. Dans le carcan obs&shy;curantiste de sa famille, ici décomposée, il projette le&nbsp;rêve de la démocratie et de l’égalité des sexes. Une&nbsp;re&shy;construction est-elle&nbsp;possible&thinsp;?
+                </p>
+                <!--<img src="/images/kevin/kevin-singe04.svg" style="width:30%; position: absolute; width: 63px;margin-left: -1px;">-->
+            </div>
+
+	    <div class="column33" style="margin-top: 15px;">
+		  <div class="bible">
+
+
+		      <dl>                          
+			  <dt>Texte et mise en scène</dt> <br/> <dd>Jean-Baptiste&nbsp;Calame</dd><br/> 
+			  <dt>Avec</dt> <dd>Lucie&nbsp;Debay, <br/> Émile&nbsp;Falk-Blin, Fabien&nbsp;Magry, Réhab&nbsp;Mehal et Morgane&nbsp;Naas</dd>
+		      </dl>
+
+		      <div class="segno">&#119051;</div> 
+
+		      <div class="production">
+			  Production <br/>Les Viandes magnétiques.
+		      </div>
+		  </div>
+		    <div id="logos" style="margin-top: 17px;">
+		      <img style="width: 32px; margin: 0px 10px 0px 0px; margin-top: 6px;" src="logos/fede-wallonie-bruxelles.svg" />
+		      <img style="width: 23px; margin: 0px 9px;padding-bottom: 11px;" src="logos/culture-be.svg" />
+		      <img style="width: 19px; margin: 0px 12px;padding-bottom: 14px;" src="logos/cocof.svg" />
+		      <img style="width: 28px; margin: 0px 10px;padding-bottom: 3px;" src="logos/wbi.svg" />
+		      <img style="width: 26px; margin: 0px 2px;padding-bottom: 10px;" src="logos/wbtd.svg" />
+		      <img style="width: 26px; margin: 0px 2px;padding-bottom: 10px;" src="logos/reseau-des-arts.svg" />
+		      <img style="width: 20px; margin: 5px 9px;" src="logos/article27.svg" />
+		      <img style="width: 28px; margin:0px 8px;padding-bottom: 12px; position: relative; top: 15px;left: -7px;" src="logos/arsene50.svg" />
+		      <img style="width: 43px; margin: 0px 7px;" src="logos/point-culture.svg" />
+		      <img style="width: 35px; margin: 0px 10px 0px 1px;padding-bottom: 10px;" src="logos/rtbf.svg" />
+		      <img style="width: 27px; margin: 0px 2px;padding-bottom: 21px;margin-left: 11px;position: relative;top: 8px;" src="logos/musiq3.svg" />
+		      <img style="width: 40px; margin: 0px 2px;padding-bottom: 21px;position: relative;top: 0px;left: 13px;" src="logos/cinematek.svg" />
+		      <img style="width: 24px; margin: 0px 2px;padding-bottom: 21px;position: relative;top: 11px;left: 25px;" src="logos/thm.svg" />
+		  </div>
+	    </div>
+            <div class="column33" style="margin-top: 15px;">
+            
+		<img src="/images/kevin/kevin-singe01.svg" style="width:30%; position: absolute; width: 100px;margin-left: -50px;margin-top: 15px;">
+
+                <div class="pratique1" style="margin-top: 108px;">
+                    Tarifs <br/>de 5 à 15&thinsp;€
+                </div>
+                <div class="pratique11">
+                    Nouveauté <br/>
+                    6€ pour tous, lors de la deuxième représentation du 22 avril
+                </div>
+
+                <div class="adresse">
+                        Théâtre la Balsamine<br/>
+                        Avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1<br/>
+                        1030 Bruxelles<br/>
+                        RÉSERVATIONS <br/>
+                        02 735 64 68<br/> 
+                        www.balsamine.be
+                </div>
+		<!--<img src="/images/kevin/kevin-singe04.svg" style="width:30%; position: absolute; width: 100px;margin-left: -10px;">-->
+            </div>
+
+
+	    <div>
+                <dl id="colophon" class="" style="clear: both;padding-top: 20px;text-align: center;">
+                    <dt>ÉDITEUR RESPONSABLE</dt> <dd>Fabien&nbsp;Dehasseler, avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1 - 1030 Bruxelles</dd>
+                     <br/> <dt>Photographie</dt> <dd>Hichem Dahes</dd> &#119056; 
+                    <dt>DESIGN</dt> <dd>osp</dd>
+                </dl>
+	    </div>
+        </article>
+
+
+    </section>
+    
+
+
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Balsa: flyer</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" charset="utf-8">
+
+    <style>
+        .moveable svg {
+                display: none;
+        }
+        path,
+        circle {
+            fill: white !important;
+            stroke: white !important;
+        }
+        path {
+            stroke-width: 2px !important;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+     <div id="pages">
+        <div id="page-1" class="preview-page">
+        </div>
+        <div id="page-2" class="preview-page">
+        </div>
+
+    </div>
+
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="preview" class="button" href="#">Preview</button>
+    </div>
+
+    <section id="container" style="z-index:100;">
+
+        <!-- R E C T O -->
+        <article class="recto infos-spectacle">
+    
+               <img id="photo" style="margin-top:-18px; width:375px;" src="./hichem/cube-sharp-flyer.jpg">
+
+               <div class="column33 dates">
+                    24 ⇝ 28/03/2015<br/>à 20h30
+               </div>
+               
+                <div class="column33">
+                    <h1>ENFONçURES</h1>
+                    
+                    de sDidier–Georges Gabily<br/>
+                    Caroline Logiou<br/>
+                    Création théâtre
+                 </div>
+                    
+
+                <div class="column33">
+                    <h1 id='logo'>bạlsa</h1>
+                </div>
+        </article>
+
+        <!-- V E R S O -->
+        
+        <article class="verso">
+
+            <div class="intro column66" style="margin-bottom: -4px !important;">
+
+                    <h1>Enfonçures</h1>
+                    Cinq rêves de théâtre en temps de guerre
+                    <div class="dates">
+                        24 ⇝ 28/03/2015 à 20h30
+                    </div>
+
+                    <p>« Et des poètes, à quoi bon en ces temps d'indigence ? » questionne Hölderlin. 
+            Enfonçures juxtapose une double fable : les dernières années de la vie du poète allemand Hölderlin alors qu'il sombrait dans la folie avec les premiers jours de la guerre du Golfe. Ces deux sujets s'emmêlent reliés par un point commun : la perte de la réalité. </br>Dans Enfonçures, la voix de Gabily s'exprime, comme en écho au poète allemand Hölderlin. Les deux figures se confondent et questionnent la place du poète, de l'artiste dans notre société.
+                    </p>
+
+                
+
+                    
+                    <div class="column50">
+
+                    <div id="logos" style="margin:3px 0px 0px 8px">
+                    <img style="width: 32px; margin: 0px 2px;" src="logos/fede-wallonie-bruxelles.svg" />
+                    <img style="width: 23px; margin: 8px 2px;" src="logos/culture-be.svg" />
+                    <img style="width: 19px; margin: 8px 2px;" src="logos/cocof.svg" />
+                    <img style="width: 28px; margin: 8px 2px;" src="logos/wbi.svg" />
+                    <img style="width: 26px; margin: 8px 2px;" src="logos/wbtd.svg" />
+                    <img style="width: 26px; margin: 9px 5px;" src="logos/reseau-des-arts.svg" />
+                    <img style="width: 20px; margin:5px 4px 11px 2px;" src="logos/article27.svg" />
+                    <img style="width: 28px; margin: 7px 2px 10px 5px;" src="logos/arsene50.svg" />
+                    <img style="width: 43px; margin: 7px 2px 8px 7px;" src="logos/point-culture.svg" />
+                    </br>
+                    <img style="width: 35px; margin: 1px 2px 11px 2px;" src="logos/rtbf.svg" />
+                    <img style="width: 27px; margin: 5px 2px 6px 2px;" src="logos/musiq3.svg" />
+                    <img style="width: 35px; margin: 9px 5px;" src="logos/cinematek.svg" />
+
+                    </div>   
+         
+
+                
+             </div> 
+         		    <div class="adresse column50" style="margin-top: -95px;margin-left: 168px;">
+			Théâtre la Balsamine<br/>
+			Avenue Félix Marchal, 1<br/>
+			1030 Bruxelles<br/>
+			RÉSERVATIONS <br/>
+			02 735 64 68<br/> 
+			www.balsamine.be
+                    </div> 
+            
+            </div>
+            
+            
+                <div class="column33">
+                           <!-- <div class="pratique1">
+                                    Tarifs <br/>de 5 à 15&thinsp;€
+                            </div>-->
+                    
+                            <div class="pratique11" style="border-top: 1px solid black;">
+                                    Nouveauté <br/>
+                                    6€ pour tous, lors de la deuxième représentation </br>du 25 mars
+                            </div>
+                </div> 
+            
+                    <div class="bible column33"  style="margin-top: 15px">
+                    
+               
+                    
+                        <dl>
+                            <dt>Mise en scène</dt><dd> Caroline Logiou</dd>
+                            <dt>Collaboratrice artistique</dt><dd> Sarah Siré</dd>
+                            <dt>Avec</dt><dd> Pedro Cabanas, Marie-Pierre Meinzel, Didier Poiteaux, Luc Schiltz</dd>
+                            <dt>Création sonore</dt><dd> Tshomas Turine</dd>
+                            <dt>Vidéaste</dt><dd> Damien Petitot</dd>
+                            <dt>Scénographie</dt><dd> Raquel Morais</dd>
+                            <dt>Costumes</dt><dd> Marilyne Grimmer</dd> 
+                        </dl>
+                        
+                     
+                
+                <div class="quarter-rest">&#119101;</div> 
+
+                <div class="production" style="margin-top: 0px !important;">
+                Production Nu asbl </br>en coproduction avec le Théâtre </br>la Balsamine, avec les soutiens </br>de La Fabrique de Théâtre, </br>le Centre Culturel de Forest, </br>le BAMP, AuQuai et la Cellule 133. 
+                </div>
+             
+		<img src="/images/enfoncures/enfoncures-cochons-couches_hatched.svg" style="width:30%; position: absolute; width: 91px;margin-left: -11px;margin-top: 9px;">
+
+
+                
+                </div>
+
+                <dl id="colophon" class="column50" style="clear: both; margin-top: 6px;width: 80%;">
+                    <dt>ÉDITEUR RESPONSABLE</dt> <dd>Fabien&nbsp;Dehasseler, avenue&nbsp;Félix&nbsp;Marchal,&nbsp;1 - 1030 Bruxelles</dd>
+                    <br/>
+                    <dt> Photographie </dt><dd>Hichem&nbsp;Dahes</dd> 
+                    &#119056; <dt>DESIGN</dt> <dd>Open Source Publishing</dd>
+                </dl>
+                
+        </article>
+
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
