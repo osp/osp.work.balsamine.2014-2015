@@ -93,8 +93,8 @@
      showgrid="false"
      inkscape:current-layer="layer3"
      inkscape:document-units="px"
-     inkscape:cy="539.19653"
-     inkscape:cx="381.33161"
+     inkscape:cy="138.11344"
+     inkscape:cx="100.07295"
      inkscape:zoom="1.708943"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -322,7 +322,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:23px;line-height:100%;font-family:UmePlumePMincho;-inkscape-font-specification:'UmePlumePMincho, Semi-Expanded';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000" /><flowPara
          id="flowPara3776"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:23px;line-height:100%;font-family:UmePlumePMincho;-inkscape-font-specification:'UmePlumePMincho, Semi-Expanded';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000" /></flowRoot>    <flowRoot
-       transform="translate(-100.79301,170.42351)"
+       transform="matrix(0,1,-1,0,213.94556,132.23594)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="flowRoot3971"
        xml:space="preserve"><flowRegion
@@ -561,7 +561,7 @@
        xml:space="preserve"
        id="flowRoot3336-5-7"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:expanded;font-size:7.5px;line-height:125%;font-family:UmePlumePGothic;-inkscape-font-specification:'UmePlumePGothic, Expanded';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-       transform="matrix(0,1,-1,0,206.81409,168.57582)"><flowRegion
+       transform="matrix(0,1,-1,0,206.81409,46.57582)"><flowRegion
          id="flowRegion3338-4-6"><rect
            id="rect3340-2-0"
            width="114.69339"
